@@ -14,6 +14,7 @@
 		78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C561D05838000E14A7B /* iefa.xcdatamodeld */; };
 		78D44C5A1D05838000E14A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D44C591D05838000E14A7B /* Assets.xcassets */; };
 		78D44C5D1D05838000E14A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D44C5B1D05838000E14A7B /* LaunchScreen.storyboard */; };
+		78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C651D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		78D44C591D05838000E14A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78D44C5C1D05838000E14A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78D44C5E1D05838000E14A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78D44C641D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteesCollectionViewController.h; sourceTree = "<group>"; };
+		78D44C651D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteesCollectionViewController.m; sourceTree = "<group>"; };
+		78D44C691D05F16300E14A7B /* IEFAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEFAConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				78D44C4D1D05838000E14A7B /* AppDelegate.h */,
+				78D44C691D05F16300E14A7B /* IEFAConstants.h */,
 				78D44C4E1D05838000E14A7B /* AppDelegate.m */,
 				78D44C501D05838000E14A7B /* ViewController.h */,
 				78D44C511D05838000E14A7B /* ViewController.m */,
@@ -70,6 +75,8 @@
 				78D44C5E1D05838000E14A7B /* Info.plist */,
 				78D44C561D05838000E14A7B /* iefa.xcdatamodeld */,
 				78D44C4A1D05838000E14A7B /* Supporting Files */,
+				78D44C641D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.h */,
+				78D44C651D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m */,
 			);
 			path = iefa;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 			files = (
 				78D44C521D05838000E14A7B /* ViewController.m in Sources */,
 				78D44C4F1D05838000E14A7B /* AppDelegate.m in Sources */,
+				78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */,
 				78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */,
 				78D44C4C1D05838000E14A7B /* main.m in Sources */,
 			);
