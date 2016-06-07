@@ -9,7 +9,7 @@
         <!--Schedule-->
         <scene sceneID="8Cj-9X-ezR">
             <objects>
-                <viewController id="vQe-ps-27J" sceneMemberID="viewController">
+                <viewController id="vQe-ps-27J" customClass="IEFAScheduleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OEY-1H-fL5"/>
                         <viewControllerLayoutGuide type="bottom" id="Sml-3B-cdj"/>
@@ -18,33 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-sV-BQE">
-                                <rect key="frame" x="39" y="104" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY7-7r-L8q">
                                 <rect key="frame" x="224" y="104" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="July 4"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RR-Fl-mqm">
                                 <rect key="frame" x="39" y="208" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="July 5"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-ia-gvD">
                                 <rect key="frame" x="224" y="302" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="July 8"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rz2-ol-A3S">
                                 <rect key="frame" x="224" y="208" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="July 6"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3e-Kq-uwM">
                                 <rect key="frame" x="39" y="302" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="July 7"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb1-3h-Fjd">
                                 <rect key="frame" x="137" y="388" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="July 9"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-sV-BQE">
+                                <rect key="frame" x="39" y="104" width="46" height="30"/>
+                                <state key="normal" title="July 3"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,7 +52,7 @@
                     <tabBarItem key="tabBarItem" title="Schedule" id="OX8-wi-LCv"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="fQn-uL-IeI" kind="show" id="u2Z-Kv-IVq"/>
+                        <segue destination="fQn-uL-IeI" kind="show" identifier="DailySceduleSegue" id="u2Z-Kv-IVq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Peo-W2-Jyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,8 +299,8 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uW0-vr-Oso">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35t-rc-VXj">
-                                                    <rect key="frame" x="130" y="39" width="61" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35t-rc-VXj">
+                                                    <rect key="frame" x="140" y="39" width="40" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

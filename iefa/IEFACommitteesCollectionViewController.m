@@ -8,6 +8,7 @@
 
 #import "IEFACommitteesCollectionViewController.h"
 #import "IEFACommitteeCollectionViewCell.h"
+#import "IEFAConstants.h"
 
 @interface IEFACommitteesCollectionViewController ()
 
@@ -15,7 +16,6 @@
 
 @implementation IEFACommitteesCollectionViewController
 
-static NSString * const reuseIdentifier = @"CommitteeIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,7 +58,7 @@ static NSString * const reuseIdentifier = @"CommitteeIdentifier";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    IEFACommitteeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    IEFACommitteeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifierCommittees forIndexPath:indexPath];
     
     // Configure the cell
     

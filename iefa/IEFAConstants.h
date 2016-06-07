@@ -10,5 +10,6 @@
 #define IEFAConstants_h
 
 static NSString *const kCellIdentifierCommittees = @"CommitteeIdentifier";
+static NSString *const kSegueIdentifierDailySceduleSegue = @"DailySceduleSegue";
 
 #endif /* IEFAConstants_h */
