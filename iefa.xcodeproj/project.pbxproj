@@ -132,6 +132,10 @@
 				CE01F7861D072DBE00C61C6E /* IEFAScheduleViewController.m */,
 				CEFCF3E01D074CEC0023D9BE /* IEFADailyScheduleViewController.h */,
 				CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */,
+				A0FEF1C71D08ACFB00710597 /* IEFADictionaryViewController.h */,
+				A0FEF1C81D08ACFB00710597 /* IEFADictionaryViewController.m */,
+				A0FEF1D01D08C0D400710597 /* IEFAMoreTableViewController.h */,
+				A0FEF1D11D08C0D400710597 /* IEFAMoreTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +222,7 @@
 				78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */,
 				78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */,
 				CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */,
+				786D4ECB1D097D2100FB2ABF /* IEFAAFCOViewController.m in Sources */,
 				CE01F77E1D0721CB00C61C6E /* IEFAMainViewController.m in Sources */,
 				78D44C4C1D05838000E14A7B /* main.m in Sources */,
 			);

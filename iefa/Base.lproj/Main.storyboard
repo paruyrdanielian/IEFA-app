@@ -497,8 +497,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="goR-aC-5QL" kind="relationship" relationship="viewControllers" id="E4j-Rj-oUX"/>
-                        <segue destination="pyU-io-IaL" kind="relationship" relationship="viewControllers" id="6Jd-Uh-z7N"/>
-                        <segue destination="vQe-ps-27J" kind="relationship" relationship="viewControllers" id="O0q-Ec-4Zz"/>
+                        <segue destination="Rnr-VQ-vDo" kind="relationship" relationship="viewControllers" id="6Jd-Uh-z7N"/>
+                        <segue destination="vQe-ps-27J" kind="relationship" relationship="viewControllers" id="ZaL-Gi-NFH"/>
                         <segue destination="JMg-tg-bFc" kind="relationship" relationship="viewControllers" id="cOj-BK-3Co"/>
                         <segue destination="7fX-3c-hyY" kind="relationship" relationship="viewControllers" id="Xnr-bF-fOI"/>
                     </connections>
