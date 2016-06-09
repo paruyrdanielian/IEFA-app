@@ -10,8 +10,10 @@
 #import "IEFACommitteeCollectionViewCell.h"
 #import "IEFAConstants.h"
 
-@interface IEFACommitteesCollectionViewController ()
+@interface IEFACommitteesCollectionViewController () <UICollectionViewDelegate, UICollectionViewDelegate>
 
+@property (nonatomic, strong) NSArray *committeeNames;
+@property (nonatomic, strong) NSArray *commmitteeCellBgImages;
 @end
 
 @implementation IEFACommitteesCollectionViewController
@@ -19,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.committeeNames = @[@"AFCO", @"ECON", @"AFET", @"PECH", @"JURI", @"SEDE", @"DROI", @"DEVE", @"LIBE", @"ENVI"];
+    self.commmitteeCellBgImages = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10"];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -54,7 +59,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of items
-    return 10;
+    return [self.committeeNames count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,12 +67,11 @@
     
     // Configure the cell
     
-    NSArray *committeeNames = @[@"AFCO", @"ECON", @"AFET", @"PECH", @"JURI", @"SEDE", @"DROI", @"DEVE", @"LIBE", @"ENVI"];
     
-    cell.CommitteeNameLabel.text = [NSString stringWithFormat:@"%@",committeeNames[indexPath.row]];
+    //cell.committeeNameLabel.text = [NSString stringWithFormat:@"%@", self.committeeNames[indexPath.row]];
     
-
-    
+    [[cell committeeCellBgImage]setImage:[UIImage imageNamed:[self.commmitteeCellBgImages objectAtIndex:indexPath.item]]];
+    [[cell committeeNameLabel]setText:[self.committeeNames objectAtIndex:indexPath.item]];
     return cell;
 }
 
@@ -75,9 +79,16 @@
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.item == 0) {
+        [self performSegueWithIdentifier:@"SegueToCommittee" sender:self];
+        
+        //change parameters for scrollView
+        
+    }
+
     
     
-    
+//    NSLog(@"%ld selected", (long)indexPath.item);
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,6 +98,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
     
+// NSLog(@"%ld highlighted", (long)indexPath.item);
     
 }
 

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IEFACommitteesCollectionViewController : UICollectionViewController
+@interface IEFACommitteesCollectionViewController : UICollectionViewController 
 
 @end
