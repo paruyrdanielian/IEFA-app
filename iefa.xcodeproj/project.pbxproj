@@ -16,6 +16,9 @@
 		78D44C5D1D05838000E14A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D44C5B1D05838000E14A7B /* LaunchScreen.storyboard */; };
 		78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C651D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m */; };
 		78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */; };
+		A0FEF1C61D08AC7400710597 /* dictionary.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A0FEF1C51D08AC7400710597 /* dictionary.pdf */; };
+		A0FEF1C91D08ACFB00710597 /* IEFADictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FEF1C81D08ACFB00710597 /* IEFADictionaryViewController.m */; };
+		A0FEF1D21D08C0D400710597 /* IEFAMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FEF1D11D08C0D400710597 /* IEFAMoreTableViewController.m */; };
 		CE01F77E1D0721CB00C61C6E /* IEFAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE01F77D1D0721CB00C61C6E /* IEFAMainViewController.m */; };
 		CE01F7811D0727E700C61C6E /* IEFADailyScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE01F7801D0727E700C61C6E /* IEFADailyScheduleTableViewCell.m */; };
 		CE01F7871D072DBE00C61C6E /* IEFAScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE01F7861D072DBE00C61C6E /* IEFAScheduleViewController.m */; };
@@ -38,6 +41,11 @@
 		78D44C691D05F16300E14A7B /* IEFAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEFAConstants.h; sourceTree = "<group>"; };
 		78D44C6A1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteeCollectionViewCell.h; sourceTree = "<group>"; };
 		78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteeCollectionViewCell.m; sourceTree = "<group>"; };
+		A0FEF1C51D08AC7400710597 /* dictionary.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dictionary.pdf; sourceTree = "<group>"; };
+		A0FEF1C71D08ACFB00710597 /* IEFADictionaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADictionaryViewController.h; sourceTree = "<group>"; };
+		A0FEF1C81D08ACFB00710597 /* IEFADictionaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADictionaryViewController.m; sourceTree = "<group>"; };
+		A0FEF1D01D08C0D400710597 /* IEFAMoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMoreTableViewController.h; sourceTree = "<group>"; };
+		A0FEF1D11D08C0D400710597 /* IEFAMoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMoreTableViewController.m; sourceTree = "<group>"; };
 		CE01F77C1D0721CB00C61C6E /* IEFAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMainViewController.h; sourceTree = "<group>"; };
 		CE01F77D1D0721CB00C61C6E /* IEFAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMainViewController.m; sourceTree = "<group>"; };
 		CE01F77F1D0727E700C61C6E /* IEFADailyScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADailyScheduleTableViewCell.h; sourceTree = "<group>"; };
@@ -62,6 +70,7 @@
 			children = (
 				78D44C491D05838000E14A7B /* iefa */,
 				78D44C481D05838000E14A7B /* Products */,
+				A0FEF1C51D08AC7400710597 /* dictionary.pdf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +122,10 @@
 				CE01F77D1D0721CB00C61C6E /* IEFAMainViewController.m */,
 				CE01F7851D072DBE00C61C6E /* IEFAScheduleViewController.h */,
 				CE01F7861D072DBE00C61C6E /* IEFAScheduleViewController.m */,
+				A0FEF1C71D08ACFB00710597 /* IEFADictionaryViewController.h */,
+				A0FEF1C81D08ACFB00710597 /* IEFADictionaryViewController.m */,
+				A0FEF1D01D08C0D400710597 /* IEFAMoreTableViewController.h */,
+				A0FEF1D11D08C0D400710597 /* IEFAMoreTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0FEF1C61D08AC7400710597 /* dictionary.pdf in Resources */,
 				78D44C5D1D05838000E14A7B /* LaunchScreen.storyboard in Resources */,
 				78D44C5A1D05838000E14A7B /* Assets.xcassets in Resources */,
 				78D44C551D05838000E14A7B /* Main.storyboard in Resources */,
@@ -188,8 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0FEF1D21D08C0D400710597 /* IEFAMoreTableViewController.m in Sources */,
 				CE01F7871D072DBE00C61C6E /* IEFAScheduleViewController.m in Sources */,
 				78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */,
+				A0FEF1C91D08ACFB00710597 /* IEFADictionaryViewController.m in Sources */,
 				CE01F7811D0727E700C61C6E /* IEFADailyScheduleTableViewCell.m in Sources */,
 				78D44C4F1D05838000E14A7B /* AppDelegate.m in Sources */,
 				78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */,
