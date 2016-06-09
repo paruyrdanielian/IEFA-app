@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wo4-80-tmF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wo4-80-tmF">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Schedule-->
+        <!--Schedule View Controller-->
         <scene sceneID="8Cj-9X-ezR">
             <objects>
                 <viewController id="vQe-ps-27J" customClass="IEFAScheduleViewController" sceneMemberID="viewController">
@@ -18,38 +18,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY7-7r-L8q">
-                                <rect key="frame" x="224" y="104" width="46" height="30"/>
-                                <state key="normal" title="July 4"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY7-7r-L8q">
+                                <rect key="frame" x="185" y="28" width="141" height="125"/>
+                                <color key="backgroundColor" red="0.7137255072593689" green="0.12549020349979401" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="July 4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="YnU-Rq-nsz"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RR-Fl-mqm">
-                                <rect key="frame" x="39" y="208" width="46" height="30"/>
-                                <state key="normal" title="July 5"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RR-Fl-mqm">
+                                <rect key="frame" x="0.0" y="171" width="141" height="123"/>
+                                <color key="backgroundColor" red="0.7137255072593689" green="0.12549020349979401" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="July 5">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="DzK-uC-PuY"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-ia-gvD">
-                                <rect key="frame" x="224" y="302" width="46" height="30"/>
-                                <state key="normal" title="July 8"/>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-ia-gvD">
+                                <rect key="frame" x="185" y="322" width="135" height="122"/>
+                                <color key="backgroundColor" red="0.7137255072593689" green="0.12549020349979401" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="July 8">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="Ovy-B3-tpS"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rz2-ol-A3S">
-                                <rect key="frame" x="224" y="208" width="46" height="30"/>
-                                <state key="normal" title="July 6"/>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rz2-ol-A3S">
+                                <rect key="frame" x="185" y="171" width="135" height="124"/>
+                                <color key="backgroundColor" red="0.35294118523597717" green="0.062745101749897003" blue="0.074509806931018829" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="July 6">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="mNu-2f-EIy"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3e-Kq-uwM">
-                                <rect key="frame" x="39" y="302" width="46" height="30"/>
-                                <state key="normal" title="July 7"/>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3e-Kq-uwM">
+                                <rect key="frame" x="0.0" y="322" width="141" height="123"/>
+                                <color key="backgroundColor" red="0.35294118523597717" green="0.062745101749897003" blue="0.074509806931018829" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="July 7">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="OZG-Kv-Xgp"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb1-3h-Fjd">
-                                <rect key="frame" x="137" y="388" width="46" height="30"/>
-                                <state key="normal" title="July 9"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-sV-BQE">
+                                <rect key="frame" x="0.0" y="28" width="141" height="124"/>
+                                <color key="backgroundColor" red="0.35294118523597717" green="0.062745101749897003" blue="0.074509806931018829" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="July 3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="sxw-J0-Gfl"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-sV-BQE">
-                                <rect key="frame" x="39" y="104" width="46" height="30"/>
-                                <state key="normal" title="July 3"/>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb1-3h-Fjd">
+                                <rect key="frame" x="90" y="453" width="141" height="66"/>
+                                <color key="backgroundColor" red="0.7137255072593689" green="0.12549020349979401" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="July 9">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="D8j-qH-rL9"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" id="OX8-wi-LCv"/>
+                    <navigationItem key="navigationItem" id="82y-8y-83d"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="fQn-uL-IeI" kind="show" identifier="DailySceduleSegue" id="u2Z-Kv-IVq"/>
@@ -57,19 +99,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Peo-W2-Jyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="604"/>
+            <point key="canvasLocation" x="792" y="604"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="o3i-Um-loH">
             <objects>
-                <tableViewController id="fQn-uL-IeI" sceneMemberID="viewController">
+                <tableViewController id="fQn-uL-IeI" customClass="IEFADailyScheduleViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V6v-Lo-XHl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pui-5k-Lne">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DailyScheduleCellIdentifier" id="pui-5k-Lne" customClass="IEFADailyScheduleTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pui-5k-Lne" id="veR-rS-i2q">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -156,7 +198,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2F-nI-zTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="10"/>
+            <point key="canvasLocation" x="1280" y="10"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="u5J-Q4-7zt">
@@ -408,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OlW-6i-x9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798" y="97"/>
+            <point key="canvasLocation" x="2330" y="97"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZWr-nm-AAf">
@@ -442,7 +484,7 @@
                     <connections>
                         <segue destination="goR-aC-5QL" kind="relationship" relationship="viewControllers" id="E4j-Rj-oUX"/>
                         <segue destination="pyU-io-IaL" kind="relationship" relationship="viewControllers" id="6Jd-Uh-z7N"/>
-                        <segue destination="vQe-ps-27J" kind="relationship" relationship="viewControllers" id="ZaL-Gi-NFH"/>
+                        <segue destination="NAd-VJ-Uhj" kind="relationship" relationship="viewControllers" id="ZaL-Gi-NFH"/>
                         <segue destination="JMg-tg-bFc" kind="relationship" relationship="viewControllers" id="cOj-BK-3Co"/>
                         <segue destination="7fX-3c-hyY" kind="relationship" relationship="viewControllers" id="Xnr-bF-fOI"/>
                     </connections>
@@ -518,6 +560,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoc-sX-pq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="748" y="-755"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="Yne-9j-03d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NAd-VJ-Uhj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" id="OX8-wi-LCv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MXd-w1-k0E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vQe-ps-27J" kind="relationship" relationship="rootViewController" id="h8r-tp-1nu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncr-2t-f7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="604"/>
         </scene>
     </scenes>
 </document>

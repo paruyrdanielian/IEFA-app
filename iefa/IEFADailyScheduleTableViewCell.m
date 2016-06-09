@@ -8,6 +8,12 @@
 
 #import "IEFADailyScheduleTableViewCell.h"
 
+
+@interface IEFADailyScheduleTableViewCell ()
+
+
+@end
+
 @implementation IEFADailyScheduleTableViewCell
 
 - (void)awakeFromNib {

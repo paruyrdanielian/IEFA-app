@@ -10,4 +10,6 @@
 
 @interface IEFADailyScheduleTableViewCell : UITableViewCell
 
+//@property (weak, nonatomic) IBOutlet UILabel *scheduleTextLabel;
+
 @end
