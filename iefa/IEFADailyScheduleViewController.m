@@ -8,6 +8,7 @@
 
 #import "IEFADailyScheduleViewController.h"
 #import "IEFADailyScheduleTableViewCell.h"
+#import "IEFAEvantDayViewController.h"
 #import "IEFAConstants.h"
 #import "IEFASchedule.h"
 
@@ -47,7 +48,7 @@
     
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -73,10 +74,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIFont *cellFont = [UIFont systemFontOfSize:12];;
+    UIFont *cellFont = [UIFont systemFontOfSize:17];
     CGSize constraintSize = CGSizeMake(self.view.frame.size.width - 150, MAXFLOAT);
     CGRect labelSize = [[[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"] boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
-    return labelSize.size.height + 30;
+    return labelSize.size.height + 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -111,8 +112,7 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
+    [self performSegueWithIdentifier:kSegueIdentifierDay sender:indexPath];
     return NO;
 }
 
@@ -151,14 +151,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath *)sender {
+    
+    IEFAEvantDayViewController *vc = [segue destinationViewController];
+    vc.aboutPlace = [self.evants[sender.row] objectForKey:@"aboutPlace"];
+    vc.dressCode = [self.evants[sender.row] objectForKey:@"dressCode"];
+    vc.place = [self.evants[sender.row] objectForKey:@"place"];
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

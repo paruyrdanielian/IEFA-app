@@ -13,6 +13,7 @@ static NSString *const kCellIdentifierCommittees = @"CommitteeIdentifier";
 static NSString *const kSegueIdentifierDailySceduleSegue = @"DailySceduleSegue";
 static NSString *const kCellIdentifierDailySchedule = @"DailyScheduleCellIdentifier";
 static NSString *const kCellIdentifierDay = @"DayCellIdentifier";
+static NSString *const kSegueIdentifierDay = @"DayIdentifier";
 
 
 #endif /* IEFAConstants_h */
