@@ -10,90 +10,30 @@
         <scene sceneID="8Cj-9X-ezR">
             <objects>
                 <viewController id="vQe-ps-27J" customClass="IEFAScheduleViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OEY-1H-fL5"/>
-                        <viewControllerLayoutGuide type="bottom" id="Sml-3B-cdj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="na0-oY-pg2">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WjJ-wc-sr9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY7-7r-L8q">
-                                <rect key="frame" x="185" y="28" width="141" height="125"/>
-                                <color key="backgroundColor" red="0.7137255072593689" green="0.12549020349979401" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="July 4">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="YnU-Rq-nsz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RR-Fl-mqm">
-                                <rect key="frame" x="0.0" y="171" width="141" height="123"/>
-                                <color key="backgroundColor" red="0.7137255072593689" green="0.12549020349979401" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="July 5">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="DzK-uC-PuY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-ia-gvD">
-                                <rect key="frame" x="185" y="322" width="135" height="122"/>
-                                <color key="backgroundColor" red="0.7137255072593689" green="0.12549020349979401" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="July 8">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="Ovy-B3-tpS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rz2-ol-A3S">
-                                <rect key="frame" x="185" y="171" width="135" height="124"/>
-                                <color key="backgroundColor" red="0.35294118523597717" green="0.062745101749897003" blue="0.074509806931018829" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="July 6">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="mNu-2f-EIy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3e-Kq-uwM">
-                                <rect key="frame" x="0.0" y="322" width="141" height="123"/>
-                                <color key="backgroundColor" red="0.35294118523597717" green="0.062745101749897003" blue="0.074509806931018829" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="July 7">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="OZG-Kv-Xgp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-sV-BQE">
-                                <rect key="frame" x="0.0" y="28" width="141" height="124"/>
-                                <color key="backgroundColor" red="0.35294118523597717" green="0.062745101749897003" blue="0.074509806931018829" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="July 3">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="sxw-J0-Gfl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb1-3h-Fjd">
-                                <rect key="frame" x="90" y="453" width="141" height="66"/>
-                                <color key="backgroundColor" red="0.7137255072593689" green="0.12549020349979401" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="July 9">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="D8j-qH-rL9"/>
-                                </connections>
-                            </button>
-                        </subviews>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DayCellIdentifier" id="9Ai-yN-Rfh">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ai-yN-Rfh" id="sWu-X1-uz0">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vQe-ps-27J" id="iWj-0X-QwK"/>
+                            <outlet property="delegate" destination="vQe-ps-27J" id="ruj-1b-4Lf"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" id="82y-8y-83d"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="tableView" destination="WjJ-wc-sr9" id="LEG-Pa-Cb2"/>
                         <segue destination="fQn-uL-IeI" kind="show" identifier="DailySceduleSegue" id="u2Z-Kv-IVq"/>
                     </connections>
                 </viewController>
@@ -105,7 +45,7 @@
         <scene sceneID="o3i-Um-loH">
             <objects>
                 <tableViewController id="fQn-uL-IeI" customClass="IEFADailyScheduleViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V6v-Lo-XHl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V6v-Lo-XHl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,10 +54,10 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pui-5k-Lne" id="veR-rS-i2q">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 - 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFb-2A-o1d">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00 - 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFb-2A-o1d">
                                             <rect key="frame" x="0.0" y="10" width="120" height="19"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="92f-ku-xw1"/>
@@ -132,7 +72,7 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KZ-qW-2qx">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KZ-qW-2qx">
                                             <rect key="frame" x="290" y="10" width="20" height="23"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="VZ9-uW-ixi"/>

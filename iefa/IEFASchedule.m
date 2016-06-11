@@ -16,7 +16,7 @@
                  @"endTime" : @"11:00",
                  @"evant" : @"Arrival of international delegates",
                  @"place" : @"",
-                 @"dressCode" : @"",
+                 @"dressCode" : @"asdsad",
                  @"aboutPlace" : @""},
                      
               @{ @"startTime" : @"11:00",
