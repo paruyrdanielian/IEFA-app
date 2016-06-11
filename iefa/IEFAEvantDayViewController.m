@@ -7,13 +7,16 @@
 //
 
 #import "IEFAEvantDayViewController.h"
+#import "IEFAConstants.h"
+#import <MapKit/MapKit.h>
 
-@interface IEFAEvantDayViewController ()
+@interface IEFAEvantDayViewController () <MKAnnotation>
 
 @property (weak, nonatomic) IBOutlet UILabel *dressCodeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *aboutPlaceLabel;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *secondView;
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 
 @end
 
@@ -23,6 +26,13 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height)];
+    
+    [self setupLabels];
+    [self setupMap];
+}
+
+
+- (void)setupLabels {
     
     self.aboutPlaceLabel.numberOfLines = 0;
     self.dressCodeLabel.numberOfLines = 0;
@@ -35,7 +45,27 @@
     
     self.aboutPlaceLabel.text = self.aboutPlace;
     self.dressCodeLabel.text = self.dressCode;
-        
+    
+
+}
+
+
+
+- (void)setupMap {
+    
+    CLLocationCoordinate2D coordinats;
+    coordinats.latitude = [self.place[0] floatValue];
+    coordinats.longitude = [self.place[1] floatValue];
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    annotation.coordinate = coordinats;
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(coordinats, 500,500);
+    
+    
+    [self.map setRegion:viewRegion];
+    [self.map addAnnotation:annotation];
+
 }
 
 - (void)didReceiveMemoryWarning {

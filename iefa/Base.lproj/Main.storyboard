@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Schedule View Controller-->
@@ -162,6 +163,9 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fk-mT-bdu">
+                                        <rect key="frame" x="16" y="160" width="288" height="260"/>
+                                    </mapView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNo-Lh-bc0">
                                         <rect key="frame" x="10" y="119" width="310" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -172,11 +176,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="DAh-Rh-5n1" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="10" id="A5S-hJ-xRS"/>
+                                    <constraint firstItem="1fk-mT-bdu" firstAttribute="width" secondItem="8A4-SL-JOh" secondAttribute="width" multiplier="0.9" id="Cvc-wx-O3F"/>
+                                    <constraint firstItem="1fk-mT-bdu" firstAttribute="centerX" secondItem="8A4-SL-JOh" secondAttribute="centerX" id="HmJ-z0-Z8U"/>
                                     <constraint firstAttribute="trailing" secondItem="sNo-Lh-bc0" secondAttribute="trailing" id="K9x-x2-Xy3"/>
+                                    <constraint firstItem="1fk-mT-bdu" firstAttribute="top" secondItem="sNo-Lh-bc0" secondAttribute="bottom" constant="20" id="ZB7-Z2-iEC"/>
                                     <constraint firstItem="sNo-Lh-bc0" firstAttribute="top" secondItem="DAh-Rh-5n1" secondAttribute="bottom" constant="10" id="bey-OH-88j"/>
                                     <constraint firstItem="apI-ov-UyB" firstAttribute="top" secondItem="8A4-SL-JOh" secondAttribute="top" constant="10" id="esk-zr-YKj"/>
                                     <constraint firstItem="pyv-bP-ebi" firstAttribute="top" secondItem="apI-ov-UyB" secondAttribute="bottom" constant="10" id="fJZ-YF-LXo"/>
                                     <constraint firstItem="pyv-bP-ebi" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="10" id="hYY-67-k6R"/>
+                                    <constraint firstItem="1fk-mT-bdu" firstAttribute="height" secondItem="8A4-SL-JOh" secondAttribute="height" multiplier="0.5" id="u4Y-pV-gDI"/>
                                     <constraint firstItem="sNo-Lh-bc0" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="10" id="vEQ-IC-YHI"/>
                                     <constraint firstItem="DAh-Rh-5n1" firstAttribute="top" secondItem="pyv-bP-ebi" secondAttribute="bottom" constant="20" id="vRF-pl-Ckg"/>
                                     <constraint firstItem="apI-ov-UyB" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="10" id="wZJ-m7-xIX"/>
@@ -201,6 +209,7 @@
                     <connections>
                         <outlet property="aboutPlaceLabel" destination="sNo-Lh-bc0" id="r88-Aq-geX"/>
                         <outlet property="dressCodeLabel" destination="pyv-bP-ebi" id="bTI-Rn-yQM"/>
+                        <outlet property="map" destination="1fk-mT-bdu" id="03V-Dt-x58"/>
                         <outlet property="scrollView" destination="aNB-ml-9Ly" id="xaC-vk-4YE"/>
                         <outlet property="secondView" destination="8A4-SL-JOh" id="Pil-XS-jaR"/>
                     </connections>
