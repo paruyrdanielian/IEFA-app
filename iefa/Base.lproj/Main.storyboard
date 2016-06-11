@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Schedule-->
+        <!--Schedule View Controller-->
         <scene sceneID="8Cj-9X-ezR">
             <objects>
                 <viewController id="vQe-ps-27J" customClass="IEFAScheduleViewController" sceneMemberID="viewController">
@@ -91,7 +91,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" id="ctv-x8-iod"/>
                     <navigationItem key="navigationItem" id="82y-8y-83d"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -100,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Peo-W2-Jyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="604"/>
+            <point key="canvasLocation" x="1324" y="604"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="o3i-Um-loH">
@@ -112,7 +111,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DailyScheduleCellIdentifier" id="pui-5k-Lne" customClass="IEFADailyScheduleTableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pui-5k-Lne" id="veR-rS-i2q">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -200,7 +199,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2F-nI-zTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280" y="10"/>
+            <point key="canvasLocation" x="1812" y="10"/>
         </scene>
         <!--More Table View Controller-->
         <scene sceneID="u5J-Q4-7zt">
@@ -449,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OlW-6i-x9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330" y="97"/>
+            <point key="canvasLocation" x="2862" y="97"/>
         </scene>
         <!--Dictionary View Controller-->
         <scene sceneID="ZWr-nm-AAf">
@@ -498,7 +497,7 @@
                     <connections>
                         <segue destination="goR-aC-5QL" kind="relationship" relationship="viewControllers" id="E4j-Rj-oUX"/>
                         <segue destination="Rnr-VQ-vDo" kind="relationship" relationship="viewControllers" id="6Jd-Uh-z7N"/>
-                        <segue destination="vQe-ps-27J" kind="relationship" relationship="viewControllers" id="ZaL-Gi-NFH"/>
+                        <segue destination="GSI-IL-Hqx" kind="relationship" relationship="viewControllers" id="ZaL-Gi-NFH"/>
                         <segue destination="JMg-tg-bFc" kind="relationship" relationship="viewControllers" id="cOj-BK-3Co"/>
                         <segue destination="7fX-3c-hyY" kind="relationship" relationship="viewControllers" id="Xnr-bF-fOI"/>
                     </connections>
@@ -534,7 +533,7 @@
                                             <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwS-ft-zzS">
-                                            <rect key="frame" x="23" y="36.5" width="109" height="48"/>
+                                            <rect key="frame" x="23" y="37" width="109" height="48"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -707,6 +706,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHc-Zr-S62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1289" y="1370"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="7pf-Rf-tze">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GSI-IL-Hqx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" id="ctv-x8-iod"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j1h-d4-n1b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vQe-ps-27J" kind="relationship" relationship="rootViewController" id="Bbo-9e-tJN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UuI-l8-d6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="604"/>
         </scene>
     </scenes>
 </document>
