@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		786D4ECB1D097D2100FB2ABF /* IEFAAFCOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ECA1D097D2100FB2ABF /* IEFAAFCOViewController.m */; };
+		786D4ECE1D0AD4DC00FB2ABF /* IEFACommitteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ECD1D0AD4DC00FB2ABF /* IEFACommitteViewController.m */; };
 		78D44C4C1D05838000E14A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4B1D05838000E14A7B /* main.m */; };
 		78D44C4F1D05838000E14A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4E1D05838000E14A7B /* AppDelegate.m */; };
 		78D44C551D05838000E14A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D44C531D05838000E14A7B /* Main.storyboard */; };
@@ -27,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		786D4EC91D097D2100FB2ABF /* IEFAAFCOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAAFCOViewController.h; sourceTree = "<group>"; };
-		786D4ECA1D097D2100FB2ABF /* IEFAAFCOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAAFCOViewController.m; sourceTree = "<group>"; };
+		786D4ECC1D0AD4DC00FB2ABF /* IEFACommitteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteViewController.h; sourceTree = "<group>"; };
+		786D4ECD1D0AD4DC00FB2ABF /* IEFACommitteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteViewController.m; sourceTree = "<group>"; };
 		78D44C471D05838000E14A7B /* iefa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iefa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D44C4B1D05838000E14A7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78D44C4D1D05838000E14A7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,10 +122,10 @@
 			children = (
 				78D44C641D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.h */,
 				78D44C651D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m */,
+				786D4ECC1D0AD4DC00FB2ABF /* IEFACommitteViewController.h */,
+				786D4ECD1D0AD4DC00FB2ABF /* IEFACommitteViewController.m */,
 				78D44C6A1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.h */,
 				78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */,
-				786D4EC91D097D2100FB2ABF /* IEFAAFCOViewController.h */,
-				786D4ECA1D097D2100FB2ABF /* IEFAAFCOViewController.m */,
 				CE01F77C1D0721CB00C61C6E /* IEFAMainViewController.h */,
 				CE01F77D1D0721CB00C61C6E /* IEFAMainViewController.m */,
 				CE01F7851D072DBE00C61C6E /* IEFAScheduleViewController.h */,
@@ -213,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0FEF1D21D08C0D400710597 /* IEFAMoreTableViewController.m in Sources */,
+				786D4ECE1D0AD4DC00FB2ABF /* IEFACommitteViewController.m in Sources */,
 				CE01F7871D072DBE00C61C6E /* IEFAScheduleViewController.m in Sources */,
 				78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */,
 				A0FEF1C91D08ACFB00710597 /* IEFADictionaryViewController.m in Sources */,
@@ -222,7 +223,6 @@
 				78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */,
 				78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */,
 				CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */,
-				786D4ECB1D097D2100FB2ABF /* IEFAAFCOViewController.m in Sources */,
 				CE01F77E1D0721CB00C61C6E /* IEFAMainViewController.m in Sources */,
 				78D44C4C1D05838000E14A7B /* main.m in Sources */,
 			);

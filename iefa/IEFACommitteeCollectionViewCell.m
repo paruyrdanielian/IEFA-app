@@ -17,4 +17,5 @@
     self.backgroundView = backgroundView;
     self.backgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"someImageName"]];
 }
+
 @end

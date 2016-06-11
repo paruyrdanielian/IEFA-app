@@ -9,8 +9,9 @@
 #import "IEFACommitteesCollectionViewController.h"
 #import "IEFACommitteeCollectionViewCell.h"
 #import "IEFAConstants.h"
+#import "IEFACommitteViewController.h"
 
-@interface IEFACommitteesCollectionViewController () <UICollectionViewDelegate, UICollectionViewDelegate>
+@interface IEFACommitteesCollectionViewController () <UICollectionViewDelegate, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSArray *committeeNames;
 @property (nonatomic, strong) NSArray *commmitteeCellBgImages;
@@ -34,20 +35,30 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath*)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    IEFACommitteViewController *vc = [segue destinationViewController];
+//    
+//    switch (sender.item) {
+//        case 0:
+//            statements
+//            break;
+//            
+//        default:
+//            break;
+//    }
+    
+    
 }
-*/
+
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -79,13 +90,8 @@
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.item == 0) {
-        [self performSegueWithIdentifier:@"SegueToCommittee" sender:self];
-        
-        //change parameters for scrollView
-        
-    }
-
+    
+    [self performSegueWithIdentifier:@"SegueToCommittee" sender:indexPath];
     
     
 //    NSLog(@"%ld selected", (long)indexPath.item);
@@ -107,7 +113,13 @@
     
 }
 
+- (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    float width = collectionView.frame.size.width / 2.07;
+    float height = collectionView.frame.size.height / 4;
+    return CGSizeMake(width, height);
 
+}
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
