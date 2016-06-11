@@ -75,11 +75,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UIFont *cellFont = [UIFont systemFontOfSize:12];;
-    CGSize constraintSize = CGSizeMake(self.view.frame.size.width - 30, MAXFLOAT);
-    CGRect labelSize = [[NSString stringWithFormat:@"%@ - %@  %@",
-                         [[self.evants objectAtIndex:indexPath.row] objectForKey:@"startTime"],
-                         [[self.evants objectAtIndex:indexPath.row] objectForKey:@"endTime"],
-                         [[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"] ] boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
+    CGSize constraintSize = CGSizeMake(self.view.frame.size.width - 150, MAXFLOAT);
+    CGRect labelSize = [[[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"] boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
     return labelSize.size.height + 30;
 }
 
@@ -88,24 +85,28 @@
     
     if (indexPath.row % 2 == 0) {
         cell.contentView.backgroundColor = self.kColorDarkRed;
-        cell.textLabel.backgroundColor = self.kColorDarkRed;
+        cell.evantLabel.backgroundColor = self.kColorDarkRed;
+        cell.timeLabel.backgroundColor = self.kColorDarkRed;
+        cell.arroyLabel.backgroundColor = self.kColorDarkRed;
     } else {
         cell.contentView.backgroundColor = self.kColorLightRed;
-        cell.textLabel.backgroundColor = self.kColorLightRed;
+        cell.evantLabel.backgroundColor = self.kColorLightRed;
+        cell.timeLabel.backgroundColor = self.kColorLightRed;
+        cell.arroyLabel.backgroundColor = self.kColorLightRed;
     }
-    cell.textLabel.textAlignment = NSTextAlignmentLeft;
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@  %@",
+    cell.timeLabel.text = [NSString stringWithFormat:@"%@ - %@",
                            [[self.evants objectAtIndex:indexPath.row] objectForKey:@"startTime"],
-                           [[self.evants objectAtIndex:indexPath.row] objectForKey:@"endTime"],
-                           [[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"] ];
-    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    cell.textLabel.numberOfLines = 0;
+                           [[self.evants objectAtIndex:indexPath.row] objectForKey:@"endTime"]];
+    cell.evantLabel.text = [[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"];
+    ;
     
-    UIFont *cellFont = cell.textLabel.font;
-    CGSize constraintSize = CGSizeMake(cell.frame.size.width - 30, MAXFLOAT);
-    CGRect labelSize = [cell.textLabel.text boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
-    cell.textLabel.frame = labelSize;
+    cell.evantLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.evantLabel.numberOfLines = 0;
+    
+    UIFont *cellFont = cell.evantLabel.font;
+    CGSize constraintSize = CGSizeMake(cell.frame.size.width - 150, MAXFLOAT);
+    CGRect labelSize = [cell.evantLabel.text boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
+    cell.evantLabel.frame = labelSize;
     
     return cell;
 }

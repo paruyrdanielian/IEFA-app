@@ -52,7 +52,7 @@
                                 <rect key="frame" x="185" y="171" width="135" height="124"/>
                                 <color key="backgroundColor" red="0.35294118523597717" green="0.062745101749897003" blue="0.074509806931018829" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="July 6">
-                                    <color key="titleColor" red="0.27843137254901962" green="0.039215686274509803" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dailyScheduleAction:" destination="vQe-ps-27J" eventType="touchUpInside" id="mNu-2f-EIy"/>
@@ -105,7 +105,7 @@
         <scene sceneID="o3i-Um-loH">
             <objects>
                 <tableViewController id="fQn-uL-IeI" customClass="IEFADailyScheduleViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V6v-Lo-XHl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V6v-Lo-XHl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,7 +116,62 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pui-5k-Lne" id="veR-rS-i2q">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 - 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFb-2A-o1d">
+                                            <rect key="frame" x="0.0" y="10" width="120" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="92f-ku-xw1"/>
+                                                <constraint firstAttribute="width" constant="120" id="hQf-9q-Eyd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="92f-ku-xw1"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KZ-qW-2qx">
+                                            <rect key="frame" x="290" y="10" width="20" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="VZ9-uW-ixi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-od-YLG">
+                                            <rect key="frame" x="120" y="11" width="170" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="X5W-od-YLG" firstAttribute="leading" secondItem="VFb-2A-o1d" secondAttribute="trailing" id="A0x-jM-oB7"/>
+                                        <constraint firstItem="6KZ-qW-2qx" firstAttribute="leading" secondItem="X5W-od-YLG" secondAttribute="trailing" id="BaY-ct-QDp"/>
+                                        <constraint firstAttribute="bottom" secondItem="VFb-2A-o1d" secondAttribute="bottom" constant="14" id="DcF-eG-McQ"/>
+                                        <constraint firstItem="X5W-od-YLG" firstAttribute="centerY" secondItem="veR-rS-i2q" secondAttribute="centerY" id="IF5-aw-MXy"/>
+                                        <constraint firstItem="6KZ-qW-2qx" firstAttribute="top" secondItem="veR-rS-i2q" secondAttribute="top" constant="10" id="LEb-cx-zh8"/>
+                                        <constraint firstItem="X5W-od-YLG" firstAttribute="top" secondItem="veR-rS-i2q" secondAttribute="top" constant="10" id="XeL-lZ-21r"/>
+                                        <constraint firstItem="VFb-2A-o1d" firstAttribute="leading" secondItem="veR-rS-i2q" secondAttribute="leading" id="fxC-vH-dY8"/>
+                                        <constraint firstAttribute="trailing" secondItem="6KZ-qW-2qx" secondAttribute="trailing" constant="10" id="kqh-M0-c1q"/>
+                                        <constraint firstAttribute="bottom" secondItem="6KZ-qW-2qx" secondAttribute="bottom" constant="10" id="piD-IQ-HUh"/>
+                                        <constraint firstItem="VFb-2A-o1d" firstAttribute="top" secondItem="veR-rS-i2q" secondAttribute="top" constant="10" id="y0m-Yq-ORg"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="XeL-lZ-21r"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="arroyLabel" destination="6KZ-qW-2qx" id="L70-5i-gZo"/>
+                                    <outlet property="evantLabel" destination="X5W-od-YLG" id="hrY-Nv-09k"/>
+                                    <outlet property="timeLabel" destination="VFb-2A-o1d" id="dsc-LW-krL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
