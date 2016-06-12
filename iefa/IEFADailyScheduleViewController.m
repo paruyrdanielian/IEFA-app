@@ -8,6 +8,7 @@
 
 #import "IEFADailyScheduleViewController.h"
 #import "IEFADailyScheduleTableViewCell.h"
+#import "IEFAEvantDayViewController.h"
 #import "IEFAConstants.h"
 #import "IEFASchedule.h"
 
@@ -26,7 +27,6 @@
     
     self.kColorLightRed = [UIColor colorWithRed:182.0/255.0 green:32.0/255.0 blue:32.0/255.0 alpha:1];
     self.kColorDarkRed = [UIColor colorWithRed:90.0/255.0 green:16.0/255.0 blue:19.0/255.0 alpha:1];
-    
     
     switch (self.day) {
         case 3: self.evants = [IEFASchedule scheduleForThirdDay];
@@ -48,7 +48,7 @@
     
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -74,13 +74,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIFont *cellFont = [UIFont systemFontOfSize:12];;
-    CGSize constraintSize = CGSizeMake(self.view.frame.size.width - 30, MAXFLOAT);
-    CGRect labelSize = [[NSString stringWithFormat:@"%@ - %@  %@",
-                         [[self.evants objectAtIndex:indexPath.row] objectForKey:@"startTime"],
-                         [[self.evants objectAtIndex:indexPath.row] objectForKey:@"endTime"],
-                         [[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"] ] boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
-    return labelSize.size.height + 30;
+    UIFont *cellFont = [UIFont systemFontOfSize:17];
+    CGSize constraintSize = CGSizeMake(self.view.frame.size.width - 150, MAXFLOAT);
+    CGRect labelSize = [[[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"] boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
+    return labelSize.size.height + 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,26 +85,35 @@
     
     if (indexPath.row % 2 == 0) {
         cell.contentView.backgroundColor = self.kColorDarkRed;
-        cell.textLabel.backgroundColor = self.kColorDarkRed;
+        cell.evantLabel.backgroundColor = self.kColorDarkRed;
+        cell.timeLabel.backgroundColor = self.kColorDarkRed;
+        cell.arroyLabel.backgroundColor = self.kColorDarkRed;
     } else {
         cell.contentView.backgroundColor = self.kColorLightRed;
-        cell.textLabel.backgroundColor = self.kColorLightRed;
+        cell.evantLabel.backgroundColor = self.kColorLightRed;
+        cell.timeLabel.backgroundColor = self.kColorLightRed;
+        cell.arroyLabel.backgroundColor = self.kColorLightRed;
     }
-    cell.textLabel.textAlignment = NSTextAlignmentLeft;
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@  %@",
+    cell.timeLabel.text = [NSString stringWithFormat:@"%@ - %@",
                            [[self.evants objectAtIndex:indexPath.row] objectForKey:@"startTime"],
-                           [[self.evants objectAtIndex:indexPath.row] objectForKey:@"endTime"],
-                           [[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"] ];
-    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    cell.textLabel.numberOfLines = 0;
+                           [[self.evants objectAtIndex:indexPath.row] objectForKey:@"endTime"]];
+    cell.evantLabel.text = [[self.evants objectAtIndex:indexPath.row] objectForKey:@"evant"];
+    ;
     
-    UIFont *cellFont = cell.textLabel.font;
-    CGSize constraintSize = CGSizeMake(cell.frame.size.width - 30, MAXFLOAT);
-    CGRect labelSize = [cell.textLabel.text boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
-    cell.textLabel.frame = labelSize;
+    cell.evantLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.evantLabel.numberOfLines = 0;
+    
+    UIFont *cellFont = cell.evantLabel.font;
+    CGSize constraintSize = CGSizeMake(cell.frame.size.width - 150, MAXFLOAT);
+    CGRect labelSize = [cell.evantLabel.text boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : cellFont} context:nil];
+    cell.evantLabel.frame = labelSize;
     
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:kSegueIdentifierDay sender:indexPath];
+    return NO;
 }
 
 
@@ -145,14 +151,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath *)sender {
+    
+    IEFAEvantDayViewController *vc = [segue destinationViewController];
+    vc.aboutPlace = [self.evants[sender.row] objectForKey:@"aboutPlace"];
+    vc.dressCode = [self.evants[sender.row] objectForKey:@"dressCode"];
+    vc.place = [self.evants[sender.row] objectForKey:@"place"];
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

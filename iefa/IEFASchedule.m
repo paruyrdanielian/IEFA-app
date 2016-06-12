@@ -15,9 +15,10 @@
     return @[ @{ @"startTime" : @"09:00",
                  @"endTime" : @"11:00",
                  @"evant" : @"Arrival of international delegates",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"I have a clone of a repo on Github in which I created a new feature for upstream. The problem is, I did that in my master branch which also contains other stuff I pulled in from other clones. That totally broke my ability to create a reasonable pull request.",
+                 @"dressCode" : @"formal",
+                 @"place" : @[@40.177353, @44.512671]
+                 },
                      
               @{ @"startTime" : @"11:00",
                  @"endTime" : @"13:00",
