@@ -46,15 +46,8 @@
     // Pass the selected object to the new view controller.
     
     IEFACommitteViewController *vc = [segue destinationViewController];
-//    
-//    switch (sender.item) {
-//        case 0:
-//            statements
-//            break;
-//            
-//        default:
-//            break;
-//    }
+    vc.selectedCommitteeCell = sender.item;
+
     
     
 }
@@ -94,7 +87,6 @@
     [self performSegueWithIdentifier:@"SegueToCommittee" sender:indexPath];
     
     
-//    NSLog(@"%ld selected", (long)indexPath.item);
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {

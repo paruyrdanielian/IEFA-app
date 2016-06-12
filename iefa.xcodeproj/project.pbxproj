@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		786D4ECE1D0AD4DC00FB2ABF /* IEFACommitteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ECD1D0AD4DC00FB2ABF /* IEFACommitteViewController.m */; };
+		786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */; };
 		78D44C4C1D05838000E14A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4B1D05838000E14A7B /* main.m */; };
 		78D44C4F1D05838000E14A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4E1D05838000E14A7B /* AppDelegate.m */; };
 		78D44C551D05838000E14A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D44C531D05838000E14A7B /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		786D4ECC1D0AD4DC00FB2ABF /* IEFACommitteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteViewController.h; sourceTree = "<group>"; };
 		786D4ECD1D0AD4DC00FB2ABF /* IEFACommitteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteViewController.m; sourceTree = "<group>"; };
+		786D4ECF1D0C167200FB2ABF /* IEFACommitteDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteDB.h; sourceTree = "<group>"; };
+		786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteDB.m; sourceTree = "<group>"; };
 		78D44C471D05838000E14A7B /* iefa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iefa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D44C4B1D05838000E14A7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78D44C4D1D05838000E14A7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				78D44C4D1D05838000E14A7B /* AppDelegate.h */,
 				78D44C4E1D05838000E14A7B /* AppDelegate.m */,
 				78D44C691D05F16300E14A7B /* IEFAConstants.h */,
+				786D4ECF1D0C167200FB2ABF /* IEFACommitteDB.h */,
+				786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */,
 				CE01F77F1D0727E700C61C6E /* IEFADailyScheduleTableViewCell.h */,
 				CE01F7801D0727E700C61C6E /* IEFADailyScheduleTableViewCell.m */,
 				CE70A8641D075A5200BA6740 /* IEFASchedule.h */,
@@ -166,6 +171,7 @@
 		78D44C3F1D05838000E14A7B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IEFA;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Paruyr Danielian";
 				TargetAttributes = {
@@ -214,6 +220,7 @@
 			files = (
 				A0FEF1D21D08C0D400710597 /* IEFAMoreTableViewController.m in Sources */,
 				786D4ECE1D0AD4DC00FB2ABF /* IEFACommitteViewController.m in Sources */,
+				786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */,
 				CE01F7871D072DBE00C61C6E /* IEFAScheduleViewController.m in Sources */,
 				78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */,
 				A0FEF1C91D08ACFB00710597 /* IEFADictionaryViewController.m in Sources */,

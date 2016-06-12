@@ -10,6 +10,7 @@
 
 @interface IEFACommitteViewController : UIViewController
 
+@property (assign, nonatomic) NSInteger selectedCommitteeCell;
 @property (strong, nonatomic) IBOutlet UIScrollView *committeScrollView;
 
 @end
