@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+ 
     [self.committeTopicLabel sizeToFit];
     self.committeTopicLabel.numberOfLines = 0;
 
@@ -72,10 +72,15 @@
     self.nameSurnameLabel.text = [committeInfo objectForKey:@"NameSurname"];
     self.chairDiscription.text = [committeInfo objectForKey:@"ChairDiscription"];
     [self.chairImage setImage:[UIImage imageNamed:[committeInfo objectForKey:@"ChairImage"]]];
+    
+    
+    [self.view layoutIfNeeded];
+    [self.committeScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.chairImage.frame.size.height + self.chairImage.frame.origin.y)];
+ 
 }
 
 - (void)viewDidLayoutSubviews {
-   [self.committeScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height)];
+ 
     
 //     self.committeScrollView.contentSize = self.view.frame.size;
 }
