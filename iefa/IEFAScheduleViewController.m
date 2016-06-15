@@ -13,7 +13,6 @@
 
 @interface IEFAScheduleViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) NSArray *days;
 @property (nonatomic, strong) UIColor *const kColorLightRed;
 @property (nonatomic, strong) UIColor *const kColorDarkRed;
 
@@ -29,16 +28,13 @@
     self.kColorLightRed = [UIColor colorWithRed:182.0/255.0 green:32.0/255.0 blue:32.0/255.0 alpha:1];
     self.kColorDarkRed = [UIColor colorWithRed:90.0/255.0 green:16.0/255.0 blue:19.0/255.0 alpha:1];
 
-
-    [self loadDays];
 }
 
 
 
 - (void)loadDays {
     
-    self.days = @[ @"July 3", @"July 4", @"July 5", @"July 6", @"July 7", @"July 8", @"July 9"];
-    
+        
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

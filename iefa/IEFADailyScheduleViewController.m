@@ -44,12 +44,12 @@
         case 9: self.evants = [IEFASchedule scheduleForNinthDay];
             break;
     }
-    
+    NSArray *days = @[ @"July 3", @"July 4", @"July 5", @"July 6", @"July 7", @"July 8", @"July 9"];
+
     
     
     // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
-    
+    self.navigationItem.title = days[self.day-3];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -161,6 +161,9 @@
     vc.aboutPlace = [self.evants[sender.row] objectForKey:@"aboutPlace"];
     vc.dressCode = [self.evants[sender.row] objectForKey:@"dressCode"];
     vc.place = [self.evants[sender.row] objectForKey:@"place"];
+    vc.time = [NSString stringWithFormat:@"%@ - %@",
+               [[self.evants objectAtIndex:sender.row] objectForKey:@"startTime"],
+               [[self.evants objectAtIndex:sender.row] objectForKey:@"endTime"]];
     // Pass the selected object to the new view controller.
 }
 

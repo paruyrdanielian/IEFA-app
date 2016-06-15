@@ -26,7 +26,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height)];
-    
+    self.navigationItem.title = self.time;
     [self setupLabels];
     [self setupMap];
 }
