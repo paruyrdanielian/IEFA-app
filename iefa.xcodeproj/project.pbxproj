@@ -28,6 +28,7 @@
 		CE2B1C261D0C45FE006ED92E /* IEFAEvantDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B1C251D0C45FE006ED92E /* IEFAEvantDayViewController.m */; };
 		CE2B1C281D0C91BC006ED92E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2B1C271D0C91BC006ED92E /* MapKit.framework */; };
 		CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70A8651D075A5200BA6740 /* IEFASchedule.m */; };
+		CEDCBE8C1D11BE8F00440662 /* IEFAScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */; };
 		CEFCF3E21D074CEC0023D9BE /* IEFADailyScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		CE2B1C271D0C91BC006ED92E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE70A8641D075A5200BA6740 /* IEFASchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFASchedule.h; sourceTree = "<group>"; };
 		CE70A8651D075A5200BA6740 /* IEFASchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASchedule.m; sourceTree = "<group>"; };
+		CEDCBE8A1D11BE8F00440662 /* IEFAScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAScheduleTableViewCell.h; sourceTree = "<group>"; };
+		CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAScheduleTableViewCell.m; sourceTree = "<group>"; };
 		CEFCF3E01D074CEC0023D9BE /* IEFADailyScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADailyScheduleViewController.h; sourceTree = "<group>"; };
 		CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADailyScheduleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +117,8 @@
 				786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */,
 				CE01F77F1D0727E700C61C6E /* IEFADailyScheduleTableViewCell.h */,
 				CE01F7801D0727E700C61C6E /* IEFADailyScheduleTableViewCell.m */,
+				CEDCBE8A1D11BE8F00440662 /* IEFAScheduleTableViewCell.h */,
+				CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */,
 				CE70A8641D075A5200BA6740 /* IEFASchedule.h */,
 				CE70A8651D075A5200BA6740 /* IEFASchedule.m */,
 				78D44C531D05838000E14A7B /* Main.storyboard */,
@@ -242,6 +247,7 @@
 				786D4ECE1D0AD4DC00FB2ABF /* IEFACommitteViewController.m in Sources */,
 				786D4ED71D116CD900FB2ABF /* IEFATopicOverviewViewController.m in Sources */,
 				786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */,
+				CEDCBE8C1D11BE8F00440662 /* IEFAScheduleTableViewCell.m in Sources */,
 				CE01F7871D072DBE00C61C6E /* IEFAScheduleViewController.m in Sources */,
 				78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */,
 				A0FEF1C91D08ACFB00710597 /* IEFADictionaryViewController.m in Sources */,

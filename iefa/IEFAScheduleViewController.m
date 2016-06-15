@@ -8,11 +8,11 @@
 
 #import "IEFAScheduleViewController.h"
 #import "IEFADailyScheduleViewController.h"
+#import "IEFAScheduleTableViewCell.h"
 #import "IEFAConstants.h"
 
-@interface IEFAScheduleViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface IEFAScheduleViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *days;
 @property (nonatomic, strong) UIColor *const kColorLightRed;
 @property (nonatomic, strong) UIColor *const kColorDarkRed;
@@ -29,7 +29,7 @@
     self.kColorLightRed = [UIColor colorWithRed:182.0/255.0 green:32.0/255.0 blue:32.0/255.0 alpha:1];
     self.kColorDarkRed = [UIColor colorWithRed:90.0/255.0 green:16.0/255.0 blue:19.0/255.0 alpha:1];
 
-    
+
     [self loadDays];
 }
 
@@ -50,7 +50,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return self.view.frame.size.height/5.0f ;
+    return self.view.frame.size.width/1140*349;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,20 +66,8 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifierDay forIndexPath:indexPath];
-    if (indexPath.row % 2 == 0) {
-        cell.contentView.backgroundColor = self.kColorDarkRed;
-        cell.textLabel.backgroundColor = self.kColorDarkRed;
-    } else {
-        cell.contentView.backgroundColor = self.kColorLightRed;
-        cell.textLabel.backgroundColor = self.kColorLightRed;
-    }
-    
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.textLabel.text = self.days[indexPath.row];
-    
-    
+    IEFAScheduleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifierDay forIndexPath:indexPath];
+    [cell.Image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"jul%ld",indexPath.row + 3]]]  ;
     return cell;
 }
 
