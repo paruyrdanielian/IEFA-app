@@ -45,13 +45,13 @@
                 committeInfo = [IEFACommitteDB PECH];
                 break;
             case 4:
-                committeInfo = [IEFACommitteDB JURI];
+                committeInfo = [IEFACommitteDB DROI];
                 break;
             case 5:
                 committeInfo = [IEFACommitteDB SEDE];
                 break;
             case 6:
-                committeInfo = [IEFACommitteDB DROI];
+                committeInfo = [IEFACommitteDB JURI];
                 break;
             case 7:
                 committeInfo = [IEFACommitteDB DEVE];
@@ -72,7 +72,7 @@
     self.nameSurnameLabel.text = [committeInfo objectForKey:@"NameSurname"];
     self.chairDiscription.text = [committeInfo objectForKey:@"ChairDiscription"];
     [self.chairImage setImage:[UIImage imageNamed:[committeInfo objectForKey:@"ChairImage"]]];
-    
+    [self.committeImage setImage:[UIImage imageNamed:[committeInfo objectForKey:@"CommitteImage"]]];
     
     [self.view layoutIfNeeded];
     [self.committeScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.chairImage.frame.size.height + self.chairImage.frame.origin.y)];
