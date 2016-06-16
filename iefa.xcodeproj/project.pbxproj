@@ -29,6 +29,7 @@
 		CE2B1C281D0C91BC006ED92E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2B1C271D0C91BC006ED92E /* MapKit.framework */; };
 		CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70A8651D075A5200BA6740 /* IEFASchedule.m */; };
 		CEDCBE8C1D11BE8F00440662 /* IEFAScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */; };
+		CEDCBE8F1D12BE0600440662 /* IEFARandomFactDB.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */; };
 		CEFCF3E21D074CEC0023D9BE /* IEFADailyScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		CE70A8651D075A5200BA6740 /* IEFASchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASchedule.m; sourceTree = "<group>"; };
 		CEDCBE8A1D11BE8F00440662 /* IEFAScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAScheduleTableViewCell.h; sourceTree = "<group>"; };
 		CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAScheduleTableViewCell.m; sourceTree = "<group>"; };
+		CEDCBE8D1D12BE0600440662 /* IEFARandomFactDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFARandomFactDB.h; sourceTree = "<group>"; };
+		CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFARandomFactDB.m; sourceTree = "<group>"; };
 		CEFCF3E01D074CEC0023D9BE /* IEFADailyScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADailyScheduleViewController.h; sourceTree = "<group>"; };
 		CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADailyScheduleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,19 +116,13 @@
 				78D44C4D1D05838000E14A7B /* AppDelegate.h */,
 				78D44C4E1D05838000E14A7B /* AppDelegate.m */,
 				78D44C691D05F16300E14A7B /* IEFAConstants.h */,
-				786D4ECF1D0C167200FB2ABF /* IEFACommitteDB.h */,
-				786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */,
-				CE01F77F1D0727E700C61C6E /* IEFADailyScheduleTableViewCell.h */,
-				CE01F7801D0727E700C61C6E /* IEFADailyScheduleTableViewCell.m */,
-				CEDCBE8A1D11BE8F00440662 /* IEFAScheduleTableViewCell.h */,
-				CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */,
-				CE70A8641D075A5200BA6740 /* IEFASchedule.h */,
-				CE70A8651D075A5200BA6740 /* IEFASchedule.m */,
 				78D44C531D05838000E14A7B /* Main.storyboard */,
 				78D44C591D05838000E14A7B /* Assets.xcassets */,
 				78D44C5B1D05838000E14A7B /* LaunchScreen.storyboard */,
 				78D44C5E1D05838000E14A7B /* Info.plist */,
 				78D44C561D05838000E14A7B /* iefa.xcdatamodeld */,
+				CEDCBE911D12BE3E00440662 /* Cells */,
+				CEDCBE901D12BE1F00440662 /* DB */,
 				78D44C4A1D05838000E14A7B /* Supporting Files */,
 				CE01F77B1D07219300C61C6E /* ViewControllers */,
 			);
@@ -151,8 +148,6 @@
 				786D4ED61D116CD900FB2ABF /* IEFATopicOverviewViewController.m */,
 				786D4ECC1D0AD4DC00FB2ABF /* IEFACommitteViewController.h */,
 				786D4ECD1D0AD4DC00FB2ABF /* IEFACommitteViewController.m */,
-				78D44C6A1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.h */,
-				78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */,
 				CE01F77C1D0721CB00C61C6E /* IEFAMainViewController.h */,
 				CE01F77D1D0721CB00C61C6E /* IEFAMainViewController.m */,
 				CE01F7851D072DBE00C61C6E /* IEFAScheduleViewController.h */,
@@ -167,6 +162,32 @@
 				A0953DFC1D128FA70097C9A1 /* IEFAMoreViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CEDCBE901D12BE1F00440662 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				CEDCBE8D1D12BE0600440662 /* IEFARandomFactDB.h */,
+				CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */,
+				786D4ECF1D0C167200FB2ABF /* IEFACommitteDB.h */,
+				786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */,
+				CE70A8641D075A5200BA6740 /* IEFASchedule.h */,
+				CE70A8651D075A5200BA6740 /* IEFASchedule.m */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		CEDCBE911D12BE3E00440662 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				78D44C6A1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.h */,
+				78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */,
+				CE01F77F1D0727E700C61C6E /* IEFADailyScheduleTableViewCell.h */,
+				CE01F7801D0727E700C61C6E /* IEFADailyScheduleTableViewCell.m */,
+				CEDCBE8A1D11BE8F00440662 /* IEFAScheduleTableViewCell.h */,
+				CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +272,7 @@
 				78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */,
 				A0FEF1C91D08ACFB00710597 /* IEFADictionaryViewController.m in Sources */,
 				CE01F7811D0727E700C61C6E /* IEFADailyScheduleTableViewCell.m in Sources */,
+				CEDCBE8F1D12BE0600440662 /* IEFARandomFactDB.m in Sources */,
 				A0953DFD1D128FA70097C9A1 /* IEFAMoreViewController.m in Sources */,
 				CEFCF3E21D074CEC0023D9BE /* IEFADailyScheduleViewController.m in Sources */,
 				78D44C4F1D05838000E14A7B /* AppDelegate.m in Sources */,
