@@ -10,4 +10,5 @@
 
 @interface IEFATopicOverviewViewController : UIViewController
 
+@property (strong, nonatomic) NSString *committeeOverview;
 @end

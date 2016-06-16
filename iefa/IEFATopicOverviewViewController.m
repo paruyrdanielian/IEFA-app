@@ -7,10 +7,11 @@
 //
 
 #import "IEFATopicOverviewViewController.h"
+#import <SafariServices/SafariServices.h>
+#import "IEFACommitteViewController.h"
 
-@interface IEFATopicOverviewViewController ()
-@property (strong, nonatomic) IBOutlet UITextView *myTextView;
-
+@interface IEFATopicOverviewViewController () <UITextViewDelegate>
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 @end
 
 @implementation IEFATopicOverviewViewController
@@ -18,7 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+   // self.title = ;
+}
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
+
+    if ([SFSafariViewController class] != nil) {
+        SFSafariViewController *sfvc = [[SFSafariViewController alloc] initWithURL:URL];
+        [self presentViewController:sfvc animated:YES completion:nil];
+    } else if (![[UIApplication sharedApplication] openURL:URL]) {
+        NSLog(@"%@%@",@"Failed to open url:",[URL description]);
+    }
     
+    return NO;
 }
 
 

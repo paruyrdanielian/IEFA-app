@@ -8,7 +8,6 @@
 
 #import "IEFACommitteViewController.h"
 #import "IEFACommitteDB.h"
-
 @interface IEFACommitteViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *committeTopicLabel;
 @property (weak, nonatomic) IBOutlet UILabel *peopleInCommittee;
@@ -67,8 +66,8 @@
                 
            }
     
-    self.committeTopicLabel.text = [committeInfo objectForKey:@"CommitteTopic"];
     self.peopleInCommittee.text = [committeInfo objectForKey:@"PeopleInCommitte"];
+    self.committeTopicLabel.text = [committeInfo objectForKey:@"CommitteTopic"];
     self.nameSurnameLabel.text = [committeInfo objectForKey:@"NameSurname"];
     self.chairDiscription.text = [committeInfo objectForKey:@"ChairDiscription"];
     [self.chairImage setImage:[UIImage imageNamed:[committeInfo objectForKey:@"ChairImage"]]];
@@ -79,11 +78,7 @@
  
 }
 
-- (void)viewDidLayoutSubviews {
- 
-    
-//     self.committeScrollView.contentSize = self.view.frame.size;
-}
+
 
 
 

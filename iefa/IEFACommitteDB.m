@@ -16,7 +16,7 @@
              @"PeopleInCommitte" : @"People in AFCO",
               @"ChairImage" : @"",
              @"CommitteImage": @"afco1",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Vardges Shahmenendyan",
              @"ChairDiscription" : @"Person Description"
             };
 }
@@ -28,7 +28,7 @@
              @"PeopleInCommitte" : @"People in ECON",
              @"ChairImage" : @"",
              @"CommitteImage": @"econ2",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Bella Vasilyan",
              @"ChairDiscription" : @"Person Description"
              };
 }
@@ -39,7 +39,7 @@
              @"PeopleInCommitte" : @"People in AFET",
              @"ChairImage" : @"",
              @"CommitteImage": @"afet3",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Gregor Bauer",
              @"ChairDiscription" : @"Person Description"
              };
 }
@@ -51,7 +51,7 @@
              @"PeopleInCommitte" : @"People in PECH",
              @"ChairImage" : @"",
              @"CommitteImage": @"pech4",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Mariam Kunchuliyan",
              @"ChairDiscription" : @"Person Description"
              };
 }
@@ -62,7 +62,7 @@
              @"PeopleInCommitte" : @"People in DROI",
              @"ChairImage" : @"",
              @"CommitteImage": @"droi5",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Svetlana Zakaryan",
              @"ChairDiscription" : @"Person Description"
              };
 }
@@ -74,7 +74,7 @@
              @"PeopleInCommitte" : @"People in SEDE",
              @"ChairImage" : @"",
              @"CommitteImage": @"sede6",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Lilit Gizhlaryan",
              @"ChairDiscription" : @"Person Description"
              };
 }
@@ -85,7 +85,7 @@
              @"PeopleInCommitte" : @"People in JURI",
              @"ChairImage" : @"",
              @"CommitteImage": @"juri7",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Riccardo Pagnan",
              @"ChairDiscription" : @"Person Description"
              };
 }
@@ -97,7 +97,7 @@
              @"PeopleInCommitte" : @"People in DEVE",
              @"ChairImage" : @"",
              @"CommitteImage": @"deve8",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Margarita Christodoulidou",
              @"ChairDiscription" : @"Person Description"
              };
 }
@@ -108,7 +108,7 @@
               @"PeopleInCommitte" : @"People in LIBE",
              @"ChairImage" : @"",
              @"CommitteImage": @"libe9",
-             @"NameSurname" : @"Name Surname",
+             @"NameSurname" : @"Rozalina Monjian",
              @"ChairDiscription" : @"Person Description"
              };
 }
@@ -120,8 +120,8 @@
              @"PeopleInCommitte" : @"People in ENVI",
              @"ChairImage" : @"",
              @"CommitteImage": @"envi10",
-             @"NameSurname" : @"Name Surname",
-             @"ChairDiscription" : @"Person Description"
+             @"NameSurname" : @"Fania Surname",
+             @"ChairDiscription" : @"Person Christodoulides"
              };
 }
 
