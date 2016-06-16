@@ -7,8 +7,16 @@
 //
 
 #import "IEFAHomeViewController.h"
+#import "IEFARandomFactDB.h"
 
 @interface IEFAHomeViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *randomFactImageView;
+@property (weak, nonatomic) IBOutlet UILabel *randomFactTitle1Label;
+@property (weak, nonatomic) IBOutlet UILabel *randomFactAbout1Label;
+@property (weak, nonatomic) IBOutlet UILabel *randomFactTitle2Label;
+@property (weak, nonatomic) IBOutlet UILabel *randomFactAbout2Label;
+
 
 @end
 
@@ -16,7 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSDictionary *randomFact = [[IEFARandomFactDB randomFacts] objectAtIndex:arc4random_uniform(5)];
+    [self.randomFactImageView setImage:[UIImage imageNamed:randomFact[@"image"]]];
+    self.randomFactTitle1Label.text = randomFact[@"title"];
+    self.randomFactAbout1Label.text = randomFact[@"about"];
 }
 
 - (IBAction)backToEventsButtonAction:(id)sender {

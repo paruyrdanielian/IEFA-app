@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSString *aboutPlace;
 @property (nonatomic, strong) NSString *dressCode;
 @property (nonatomic, strong) NSArray *place;
+@property (nonatomic, strong) NSString *time;
 
 @end

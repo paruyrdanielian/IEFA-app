@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IEFAScheduleViewController : UIViewController
+@interface IEFAScheduleViewController : UITableViewController
 
 @end

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "IEFAConstants.h"
+#import "IEFAWeatherAPIManager.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +20,7 @@
     // Override point for customization after application launch.
     
     [[UITabBar appearance] setTintColor:[UIColor redColor]];
-
+    [[IEFAWeatherAPIManager sharedManager] getWeather];
     return YES;
 }
 
