@@ -10,6 +10,5 @@
 
 @interface IEFACommitteeCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *committeeNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *committeeCellBgImage;
 @end
