@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51D7C0B636F2050980C12F7B /* Pods_iefa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866C4A0B9EF035DA26BB23C0 /* Pods_iefa.framework */; };
 		786D4ECE1D0AD4DC00FB2ABF /* IEFACommitteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ECD1D0AD4DC00FB2ABF /* IEFACommitteViewController.m */; };
 		786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */; };
 		786D4ED41D0F110F00FB2ABF /* IEFAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED31D0F110F00FB2ABF /* IEFAHomeViewController.m */; };
@@ -31,10 +32,13 @@
 		CEDCBE8C1D11BE8F00440662 /* IEFAScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */; };
 		CEDCBE8F1D12BE0600440662 /* IEFARandomFactDB.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */; };
 		CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE931D12CD6500440662 /* IEFAWeatherAPIManager.m */; };
+		CEDCBE991D13102F00440662 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEDCBE981D13102F00440662 /* Podfile */; };
 		CEFCF3E21D074CEC0023D9BE /* IEFADailyScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F81685EEB353ED5745D41B4 /* Pods-iefa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iefa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iefa/Pods-iefa.debug.xcconfig"; sourceTree = "<group>"; };
+		4E820823359A9FE9123F12FD /* Pods-iefa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iefa.release.xcconfig"; path = "Pods/Target Support Files/Pods-iefa/Pods-iefa.release.xcconfig"; sourceTree = "<group>"; };
 		786D4ECC1D0AD4DC00FB2ABF /* IEFACommitteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteViewController.h; sourceTree = "<group>"; };
 		786D4ECD1D0AD4DC00FB2ABF /* IEFACommitteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteViewController.m; sourceTree = "<group>"; };
 		786D4ECF1D0C167200FB2ABF /* IEFACommitteDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteDB.h; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 		78D44C691D05F16300E14A7B /* IEFAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEFAConstants.h; sourceTree = "<group>"; };
 		78D44C6A1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteeCollectionViewCell.h; sourceTree = "<group>"; };
 		78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteeCollectionViewCell.m; sourceTree = "<group>"; };
+		866C4A0B9EF035DA26BB23C0 /* Pods_iefa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iefa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0953DFB1D128FA70097C9A1 /* IEFAMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMoreViewController.h; sourceTree = "<group>"; };
 		A0953DFC1D128FA70097C9A1 /* IEFAMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMoreViewController.m; sourceTree = "<group>"; };
 		A0FB5EE31D12B345001AC691 /* dictionary.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dictionary.pdf; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 		CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFARandomFactDB.m; sourceTree = "<group>"; };
 		CEDCBE921D12CD6500440662 /* IEFAWeatherAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAWeatherAPIManager.h; sourceTree = "<group>"; };
 		CEDCBE931D12CD6500440662 /* IEFAWeatherAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAWeatherAPIManager.m; sourceTree = "<group>"; };
+		CEDCBE981D13102F00440662 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CEFCF3E01D074CEC0023D9BE /* IEFADailyScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADailyScheduleViewController.h; sourceTree = "<group>"; };
 		CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADailyScheduleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,19 +95,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2B1C281D0C91BC006ED92E /* MapKit.framework in Frameworks */,
+				51D7C0B636F2050980C12F7B /* Pods_iefa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EB403EC7C4873BC23B28684 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				866C4A0B9EF035DA26BB23C0 /* Pods_iefa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		78D44C3E1D05838000E14A7B = {
 			isa = PBXGroup;
 			children = (
+				CEDCBE981D13102F00440662 /* Podfile */,
 				CE2B1C271D0C91BC006ED92E /* MapKit.framework */,
 				78D44C491D05838000E14A7B /* iefa */,
 				78D44C481D05838000E14A7B /* Products */,
 				A0FB5EE31D12B345001AC691 /* dictionary.pdf */,
+				84F5AD775D2A7DD72C3103E4 /* Pods */,
+				0EB403EC7C4873BC23B28684 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +157,15 @@
 				78D44C4B1D05838000E14A7B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84F5AD775D2A7DD72C3103E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F81685EEB353ED5745D41B4 /* Pods-iefa.debug.xcconfig */,
+				4E820823359A9FE9123F12FD /* Pods-iefa.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CE01F77B1D07219300C61C6E /* ViewControllers */ = {
@@ -210,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78D44C611D05838000E14A7B /* Build configuration list for PBXNativeTarget "iefa" */;
 			buildPhases = (
+				68FCAF7A0BF611A022BF4DC4 /* [CP] Check Pods Manifest.lock */,
 				78D44C431D05838000E14A7B /* Sources */,
 				78D44C441D05838000E14A7B /* Frameworks */,
 				78D44C451D05838000E14A7B /* Resources */,
+				2132CCFF5A2366864836A436 /* [CP] Embed Pods Frameworks */,
+				8D3428E55C775B83DB3798E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDCBE991D13102F00440662 /* Podfile in Resources */,
 				A0FB5EE41D12B345001AC691 /* dictionary.pdf in Resources */,
 				78D44C5D1D05838000E14A7B /* LaunchScreen.storyboard in Resources */,
 				78D44C5A1D05838000E14A7B /* Assets.xcassets in Resources */,
@@ -270,6 +301,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2132CCFF5A2366864836A436 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iefa/Pods-iefa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68FCAF7A0BF611A022BF4DC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D3428E55C775B83DB3798E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iefa/Pods-iefa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		78D44C431D05838000E14A7B /* Sources */ = {
@@ -407,6 +486,7 @@
 		};
 		78D44C621D05838000E14A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F81685EEB353ED5745D41B4 /* Pods-iefa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -421,6 +501,7 @@
 		};
 		78D44C631D05838000E14A7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E820823359A9FE9123F12FD /* Pods-iefa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

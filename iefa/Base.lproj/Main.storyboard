@@ -244,22 +244,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXa-vJ-aII">
-                                <rect key="frame" x="103" y="20" width="115" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="tQY-Uz-wDY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="&lt; Back to Events"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="tQY-Uz-wDY"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="backToEventsButtonAction:" destination="goR-aC-5QL" eventType="touchUpInside" id="5cf-7V-qE2"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkb-K2-3QE">
                                 <rect key="frame" x="209" y="53" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -299,8 +283,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXa-vJ-aII">
+                                <rect key="frame" x="0.0" y="28" width="115" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tQY-Uz-wDY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="&lt; Back to Events"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tQY-Uz-wDY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="backToEventsButtonAction:" destination="goR-aC-5QL" eventType="touchUpInside" id="5cf-7V-qE2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IXa-vJ-aII" firstAttribute="leading" secondItem="reC-iE-0tn" secondAttribute="leading" id="1Sp-HB-lhk"/>
+                            <constraint firstItem="IXa-vJ-aII" firstAttribute="top" secondItem="bNN-at-UVO" secondAttribute="bottom" constant="8" id="KtB-If-55q"/>
+                            <constraint firstAttribute="trailing" secondItem="IXa-vJ-aII" secondAttribute="trailing" id="WFt-gB-hai"/>
+                        </constraints>
                     </scrollView>
                     <tabBarItem key="tabBarItem" title="Home" id="9ox-NP-hpu"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
