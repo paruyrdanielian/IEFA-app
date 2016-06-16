@@ -30,6 +30,7 @@
 		CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70A8651D075A5200BA6740 /* IEFASchedule.m */; };
 		CEDCBE8C1D11BE8F00440662 /* IEFAScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */; };
 		CEDCBE8F1D12BE0600440662 /* IEFARandomFactDB.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */; };
+		CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE931D12CD6500440662 /* IEFAWeatherAPIManager.m */; };
 		CEFCF3E21D074CEC0023D9BE /* IEFADailyScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAScheduleTableViewCell.m; sourceTree = "<group>"; };
 		CEDCBE8D1D12BE0600440662 /* IEFARandomFactDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFARandomFactDB.h; sourceTree = "<group>"; };
 		CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFARandomFactDB.m; sourceTree = "<group>"; };
+		CEDCBE921D12CD6500440662 /* IEFAWeatherAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAWeatherAPIManager.h; sourceTree = "<group>"; };
+		CEDCBE931D12CD6500440662 /* IEFAWeatherAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAWeatherAPIManager.m; sourceTree = "<group>"; };
 		CEFCF3E01D074CEC0023D9BE /* IEFADailyScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADailyScheduleViewController.h; sourceTree = "<group>"; };
 		CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADailyScheduleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +128,7 @@
 				CEDCBE901D12BE1F00440662 /* DB */,
 				78D44C4A1D05838000E14A7B /* Supporting Files */,
 				CE01F77B1D07219300C61C6E /* ViewControllers */,
+				CEDCBE951D12D9DD00440662 /* WeatherAPIManager */,
 			);
 			path = iefa;
 			sourceTree = "<group>";
@@ -188,6 +192,15 @@
 				CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		CEDCBE951D12D9DD00440662 /* WeatherAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEDCBE921D12CD6500440662 /* IEFAWeatherAPIManager.h */,
+				CEDCBE931D12CD6500440662 /* IEFAWeatherAPIManager.m */,
+			);
+			name = WeatherAPIManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +292,7 @@
 				78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */,
 				CE2B1C261D0C45FE006ED92E /* IEFAEvantDayViewController.m in Sources */,
 				78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */,
+				CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */,
 				CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */,
 				CE01F77E1D0721CB00C61C6E /* IEFAMainViewController.m in Sources */,
 				78D44C4C1D05838000E14A7B /* main.m in Sources */,
