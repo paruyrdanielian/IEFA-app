@@ -12,7 +12,6 @@
 		786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */; };
 		786D4ED41D0F110F00FB2ABF /* IEFAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED31D0F110F00FB2ABF /* IEFAHomeViewController.m */; };
 		786D4ED71D116CD900FB2ABF /* IEFATopicOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED61D116CD900FB2ABF /* IEFATopicOverviewViewController.m */; };
-		786D4ED91D1312B100FB2ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786D4ED81D1312B100FB2ABF /* Main.storyboard */; };
 		78D44C4C1D05838000E14A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4B1D05838000E14A7B /* main.m */; };
 		78D44C4F1D05838000E14A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4E1D05838000E14A7B /* AppDelegate.m */; };
 		78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C561D05838000E14A7B /* iefa.xcdatamodeld */; };
@@ -33,6 +32,7 @@
 		CEDCBE8F1D12BE0600440662 /* IEFARandomFactDB.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */; };
 		CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE931D12CD6500440662 /* IEFAWeatherAPIManager.m */; };
 		CEDCBE991D13102F00440662 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEDCBE981D13102F00440662 /* Podfile */; };
+		CEDCBE9C1D1313A300440662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDCBE9A1D1313A300440662 /* Main.storyboard */; };
 		CEFCF3E21D074CEC0023D9BE /* IEFADailyScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,6 @@
 		786D4ED31D0F110F00FB2ABF /* IEFAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAHomeViewController.m; sourceTree = "<group>"; };
 		786D4ED51D116CD900FB2ABF /* IEFATopicOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFATopicOverviewViewController.h; sourceTree = "<group>"; };
 		786D4ED61D116CD900FB2ABF /* IEFATopicOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFATopicOverviewViewController.m; sourceTree = "<group>"; };
-		786D4ED81D1312B100FB2ABF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/E6406140-1BD1-4548-98DC-218A403EFCD4/Main.storyboard"; sourceTree = "<group>"; };
 		78D44C471D05838000E14A7B /* iefa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iefa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D44C4B1D05838000E14A7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78D44C4D1D05838000E14A7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		CEDCBE921D12CD6500440662 /* IEFAWeatherAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAWeatherAPIManager.h; sourceTree = "<group>"; };
 		CEDCBE931D12CD6500440662 /* IEFAWeatherAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAWeatherAPIManager.m; sourceTree = "<group>"; };
 		CEDCBE981D13102F00440662 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CEDCBE9B1D1313A300440662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEFCF3E01D074CEC0023D9BE /* IEFADailyScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADailyScheduleViewController.h; sourceTree = "<group>"; };
 		CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADailyScheduleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,8 +136,8 @@
 			children = (
 				78D44C4D1D05838000E14A7B /* AppDelegate.h */,
 				78D44C4E1D05838000E14A7B /* AppDelegate.m */,
+				CEDCBE9A1D1313A300440662 /* Main.storyboard */,
 				78D44C691D05F16300E14A7B /* IEFAConstants.h */,
-				786D4ED81D1312B100FB2ABF /* Main.storyboard */,
 				78D44C591D05838000E14A7B /* Assets.xcassets */,
 				78D44C5B1D05838000E14A7B /* LaunchScreen.storyboard */,
 				78D44C5E1D05838000E14A7B /* Info.plist */,
@@ -293,10 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDCBE991D13102F00440662 /* Podfile in Resources */,
+				CEDCBE9C1D1313A300440662 /* Main.storyboard in Resources */,
 				A0FB5EE41D12B345001AC691 /* dictionary.pdf in Resources */,
 				78D44C5D1D05838000E14A7B /* LaunchScreen.storyboard in Resources */,
 				78D44C5A1D05838000E14A7B /* Assets.xcassets in Resources */,
-				786D4ED91D1312B100FB2ABF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +387,14 @@
 				78D44C5C1D05838000E14A7B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CEDCBE9A1D1313A300440662 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDCBE9B1D1313A300440662 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
