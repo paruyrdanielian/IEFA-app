@@ -75,7 +75,6 @@
     //cell.committeeNameLabel.text = [NSString stringWithFormat:@"%@", self.committeeNames[indexPath.row]];
     
     [[cell committeeCellBgImage]setImage:[UIImage imageNamed:[self.commmitteeCellBgImages objectAtIndex:indexPath.item]]];
-    [[cell committeeNameLabel]setText:[self.committeeNames objectAtIndex:indexPath.item]];
     return cell;
 }
 
