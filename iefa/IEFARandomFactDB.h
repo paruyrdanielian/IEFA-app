@@ -10,6 +10,6 @@
 
 @interface IEFARandomFactDB : NSObject
 
-- (NSArray *)randomFact;
++ (NSArray *)randomFacts;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation IEFARandomFactDB
 
-- (NSArray *)randomFacts {
++ (NSArray *)randomFacts {
     return @[ @{@"image" : @"",
                 @"title" : @"Swan Lake",
                 @"about" : @"Kanye West gave a free concert here and even swam in the actual lake last year, when he and Kim Kardashian visited Armenia within the framework of events dedicated to the centennial of Armenian Genocide.\nP.S. Rumors say he even smiled……a few times….. "},
@@ -26,9 +26,6 @@
               @{@"image" : @"",
                 @"title" : @"Lovers’ park",
                 @"about" : @"The park is a favorite rendezvous for many couples, hence the name. Its design combines Japanese landscaping principles with the spirit of Armenia."},
-              @{@"image" : @"",
-                @"title" : @"Tsitsernakaberd",
-                @"about" : @"(literally \"swallow's fortress\") - Armenian Genocide Memorial Complex is situated here ; over the years, a wide range of famous political  figures have visited the memorial ,including the presidents of Russia, France, Ukraine, Greece etc."},
               @{@"image" : @"",
                 @"title" : @"Victory Park",
                 @"about" : @" The park is named Victory Park in commemoration of Soviet Armenia's participation in the second World War. Mother Armenia Statue, which is situated here, is the female personification of Armenia ( Behave yourself around her , this lady comes alive to punish whomever she doesn’t like )))"},
@@ -70,7 +67,13 @@
                 @"about" : @"The CBA is an independent institution responsible for issuing all banknotes and coins in the country, overseeing and regulating the banking sector and keeping the government's currency reserves. We know what your first thought was. No. Robbing it is not a good idea."},
               @{@"image" : @"",
                 @"title" : @"Shahumyan Statue",
-                @"about" : @"Stepan Georgevich Shaumian was a Bolshevik revolutionary and politician active throughout the Caucasus. Tips on how not to use the statue: 1. You can't use it as a toilet unless you're a bird. 2. You can't play with its feelings. It's not stone hearted like you. 3. You can't play the \"not blinking\" game, cause believe us, it'll win. We tried. Maybe. 4. You can't use pickup lines, although you can buy it a drink if it wants you to."}];
+                @"about" : @"Stepan Georgevich Shaumian was a Bolshevik revolutionary and politician active throughout the Caucasus. Tips on how not to use the statue: 1. You can't use it as a toilet unless you're a bird. 2. You can't play with its feelings. It's not stone hearted like you. 3. You can't play the \"not blinking\" game, cause believe us, it'll win. We tried. Maybe. 4. You can't use pickup lines, although you can buy it a drink if it wants you to."},
+              @{@"image" : @"",
+                @"title" : @"Tsitsernakaberd",
+                @"about" : @"(literally \"swallow's fortress\") - Armenian Genocide Memorial Complex is situated here ; over the years, a wide range of famous political  figures have visited the memorial ,including the presidents of Russia, France, Ukraine, Greece etc."},
+              @{@"image" : @"",
+                @"title" : @"Karen Demirchyan Sports and Concerts Complex",
+                @"about" : @"where in 2014   legendary French-Armenian singer Charles Aznavour gave a concert dedicated to his 90th birthday"}];
 }
 
 @end
