@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "IEFAConstants.h"
 #import "IEFAWeatherAPIManager.h"
-#import <DropboxSDK/DropboxSDK.h>
+
 @interface AppDelegate ()
 
 @end
@@ -19,10 +19,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    DBSession *dbSession = [[DBSession alloc]
+                            initWithAppKey:@"ykdeccp0qb202dv"
+                            appSecret:@"tl2tl7imfdsvj27"
+                            root:kDBRootAppFolder]; // either kDBRootAppFolder or kDBRootDropbox
+    [DBSession setSharedSession:dbSession];
+    
+    
     
     [[UITabBar appearance] setTintColor:[UIColor redColor]];
     [[IEFAWeatherAPIManager sharedManager] getWeather];
     return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url
+  sourceApplication:(NSString *)source annotation:(id)annotation {
+    if ([[DBSession sharedSession] handleOpenURL:url]) {
+        if ([[DBSession sharedSession] isLinked]) {
+            NSLog(@"App linked successfully!");
+            // At this point you can start making API calls
+        }
+        return YES;
+    }
+    // Add whatever other url handling code your app requires here
+    return NO;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -8,6 +8,7 @@
 
 #import "IEFAHomeViewController.h"
 #import "IEFARandomFactDB.h"
+#import "AppDelegate.h"
 
 @interface IEFAHomeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
@@ -28,6 +29,16 @@
     [self.randomFactImageView setImage:[UIImage imageNamed:randomFact[@"image"]]];
     self.randomFactTitle1Label.text = randomFact[@"title"];
     self.randomFactAbout1Label.text = randomFact[@"about"];
+    
+    if (![[DBSession sharedSession] isLinked]) {
+        [[DBSession sharedSession] handleOpenURL:[NSURL URLWithString:@"db-ykdeccp0qb202dv://1/connect?oauth_token=s346Rq0ovUAAAAAAAAAAB-BYHqhZKdD_GWr_zOvMFXcnARzR-J4iPupdDCCjLaTk&oauth_token_secret=banan44&uid=sanasar kolyan"]];
+        if ([[DBSession sharedSession] isLinked]) {
+            NSLog(@"App linked successfully!");
+            // At this point you can start making API calls
+        }
+
+
+    }
 }
 
 - (IBAction)backToEventsButtonAction:(id)sender {
