@@ -28,6 +28,9 @@
 		CE2B1C261D0C45FE006ED92E /* IEFAEvantDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B1C251D0C45FE006ED92E /* IEFAEvantDayViewController.m */; };
 		CE2B1C281D0C91BC006ED92E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2B1C271D0C91BC006ED92E /* MapKit.framework */; };
 		CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70A8651D075A5200BA6740 /* IEFASchedule.m */; };
+		CEC014BD1D13D42300B8DB52 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */; };
+		CEC014BF1D13D43700B8DB52 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014BE1D13D43700B8DB52 /* Security.framework */; };
+		CEC014C11D13D43E00B8DB52 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014C01D13D43E00B8DB52 /* QuartzCore.framework */; };
 		CEDCBE8C1D11BE8F00440662 /* IEFAScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */; };
 		CEDCBE8F1D12BE0600440662 /* IEFARandomFactDB.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE8E1D12BE0600440662 /* IEFARandomFactDB.m */; };
 		CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCBE931D12CD6500440662 /* IEFAWeatherAPIManager.m */; };
@@ -73,6 +76,9 @@
 		CE2B1C271D0C91BC006ED92E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE70A8641D075A5200BA6740 /* IEFASchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFASchedule.h; sourceTree = "<group>"; };
 		CE70A8651D075A5200BA6740 /* IEFASchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASchedule.m; sourceTree = "<group>"; };
+		CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		CEC014BE1D13D43700B8DB52 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CEC014C01D13D43E00B8DB52 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEDCBE8A1D11BE8F00440662 /* IEFAScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAScheduleTableViewCell.h; sourceTree = "<group>"; };
 		CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAScheduleTableViewCell.m; sourceTree = "<group>"; };
 		CEDCBE8D1D12BE0600440662 /* IEFARandomFactDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFARandomFactDB.h; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC014C11D13D43E00B8DB52 /* QuartzCore.framework in Frameworks */,
+				CEC014BF1D13D43700B8DB52 /* Security.framework in Frameworks */,
+				CEC014BD1D13D42300B8DB52 /* DropboxSDK.framework in Frameworks */,
 				CE2B1C281D0C91BC006ED92E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,10 +107,13 @@
 		78D44C3E1D05838000E14A7B = {
 			isa = PBXGroup;
 			children = (
+				CEC014C01D13D43E00B8DB52 /* QuartzCore.framework */,
+				CEC014BE1D13D43700B8DB52 /* Security.framework */,
 				CE2B1C271D0C91BC006ED92E /* MapKit.framework */,
 				78D44C491D05838000E14A7B /* iefa */,
 				78D44C481D05838000E14A7B /* Products */,
 				A0FB5EE31D12B345001AC691 /* dictionary.pdf */,
+				CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -410,6 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iefa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -424,6 +440,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iefa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

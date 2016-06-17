@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "IEFAConstants.h"
 #import "IEFAWeatherAPIManager.h"
+#import <DropboxSDK/DropboxSDK.h>
 @interface AppDelegate ()
 
 @end
