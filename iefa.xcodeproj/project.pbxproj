@@ -26,6 +26,7 @@
 		CE01F7871D072DBE00C61C6E /* IEFAScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE01F7861D072DBE00C61C6E /* IEFAScheduleViewController.m */; };
 		CE2B1C261D0C45FE006ED92E /* IEFAEvantDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B1C251D0C45FE006ED92E /* IEFAEvantDayViewController.m */; };
 		CE2B1C281D0C91BC006ED92E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2B1C271D0C91BC006ED92E /* MapKit.framework */; };
+		CE35D4DE1D1572C900C742EF /* IEFADropBoxAccessTokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35D4DD1D1572C900C742EF /* IEFADropBoxAccessTokenManager.m */; };
 		CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70A8651D075A5200BA6740 /* IEFASchedule.m */; };
 		CEC014BD1D13D42300B8DB52 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */; };
 		CEC014BF1D13D43700B8DB52 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014BE1D13D43700B8DB52 /* Security.framework */; };
@@ -73,6 +74,8 @@
 		CE2B1C241D0C45FE006ED92E /* IEFAEvantDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAEvantDayViewController.h; sourceTree = "<group>"; };
 		CE2B1C251D0C45FE006ED92E /* IEFAEvantDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAEvantDayViewController.m; sourceTree = "<group>"; };
 		CE2B1C271D0C91BC006ED92E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CE35D4DC1D1572C900C742EF /* IEFADropBoxAccessTokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADropBoxAccessTokenManager.h; sourceTree = "<group>"; };
+		CE35D4DD1D1572C900C742EF /* IEFADropBoxAccessTokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADropBoxAccessTokenManager.m; sourceTree = "<group>"; };
 		CE70A8641D075A5200BA6740 /* IEFASchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFASchedule.h; sourceTree = "<group>"; };
 		CE70A8651D075A5200BA6740 /* IEFASchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASchedule.m; sourceTree = "<group>"; };
 		CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 				78D44C5B1D05838000E14A7B /* LaunchScreen.storyboard */,
 				78D44C5E1D05838000E14A7B /* Info.plist */,
 				78D44C561D05838000E14A7B /* iefa.xcdatamodeld */,
+				CE35D4DF1D1572DF00C742EF /* DropBoxToken */,
 				CEDCBE911D12BE3E00440662 /* Cells */,
 				CEDCBE901D12BE1F00440662 /* DB */,
 				78D44C4A1D05838000E14A7B /* Supporting Files */,
@@ -178,6 +182,15 @@
 				A0953DFC1D128FA70097C9A1 /* IEFAMoreViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE35D4DF1D1572DF00C742EF /* DropBoxToken */ = {
+			isa = PBXGroup;
+			children = (
+				CE35D4DC1D1572C900C742EF /* IEFADropBoxAccessTokenManager.h */,
+				CE35D4DD1D1572C900C742EF /* IEFADropBoxAccessTokenManager.m */,
+			);
+			name = DropBoxToken;
 			sourceTree = "<group>";
 		};
 		CEDCBE901D12BE1F00440662 /* DB */ = {
@@ -292,6 +305,7 @@
 				786D4ECE1D0AD4DC00FB2ABF /* IEFACommitteViewController.m in Sources */,
 				786D4ED71D116CD900FB2ABF /* IEFATopicOverviewViewController.m in Sources */,
 				786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */,
+				CE35D4DE1D1572C900C742EF /* IEFADropBoxAccessTokenManager.m in Sources */,
 				CEDCBE8C1D11BE8F00440662 /* IEFAScheduleTableViewCell.m in Sources */,
 				CE01F7871D072DBE00C61C6E /* IEFAScheduleViewController.m in Sources */,
 				78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */,

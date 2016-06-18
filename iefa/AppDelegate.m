@@ -18,14 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    DBSession *dbSession = [[DBSession alloc]
-                            initWithAppKey:@"ykdeccp0qb202dv"
-                            appSecret:@"tl2tl7imfdsvj27"
-                            root:kDBRootAppFolder]; // either kDBRootAppFolder or kDBRootDropbox
-    [DBSession setSharedSession:dbSession];
-    
-    
+    // Override point for customization after application launch.    
     
     [[UITabBar appearance] setTintColor:[UIColor redColor]];
     [[IEFAWeatherAPIManager sharedManager] getWeather];
