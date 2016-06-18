@@ -61,7 +61,10 @@
     annotation.coordinate = coordinats;
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(coordinats, 500,500);
+    CLLocationManager *locMan = [[CLLocationManager alloc] init];
+    [locMan requestWhenInUseAuthorization];
     
+    self.map.showsUserLocation = YES;
     
     [self.map setRegion:viewRegion];
     [self.map addAnnotation:annotation];
