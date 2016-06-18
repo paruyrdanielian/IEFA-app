@@ -20,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
    // self.title = ;
+    
+    self.title =  [self.committeeTopicTitle stringByAppendingString:@" Overview"];
 }
 
 

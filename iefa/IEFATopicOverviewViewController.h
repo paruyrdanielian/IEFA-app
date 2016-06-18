@@ -10,4 +10,6 @@
 
 @interface IEFATopicOverviewViewController : UIViewController
 
+@property (strong, nonatomic) NSString *committeeTopicTitle;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "IEFACommitteViewController.h"
 #import "IEFACommitteDB.h"
+#import "IEFATopicOverviewViewController.h"
 
 @interface IEFACommitteViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *committeTopicLabel;
@@ -76,7 +77,8 @@
     
     [self.view layoutIfNeeded];
     [self.committeScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.chairImage.frame.size.height + self.chairImage.frame.origin.y)];
- 
+    
+ self.title = [self.peopleInCommittee.text stringByReplacingOccurrencesOfString:@"People in " withString:@""];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -88,14 +90,17 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//     Get the new view controller using [segue destinationViewController].
+//     Pass the selected object to the new view controller.
+    
+    IEFATopicOverviewViewController *tpvc = [segue destinationViewController];
+    tpvc.committeeTopicTitle = self.title;
 }
-*/
+
 
 @end

@@ -107,7 +107,7 @@
 - (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     float width = collectionView.frame.size.width / 2.07;
-    float height = collectionView.frame.size.height / 4;
+    float height = width;
     return CGSizeMake(width, height);
 
 }

@@ -330,7 +330,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IJK-2I-Uwe" id="lZf-A6-oM1">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -807,7 +807,7 @@
                     </textView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="myTextView" destination="rdJ-V5-1Yl" id="aHU-ZH-vuf"/>
+                        <outlet property="textView" destination="rdJ-V5-1Yl" id="NkD-jn-ws6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHc-Zr-S62" userLabel="First Responder" sceneMemberID="firstResponder"/>

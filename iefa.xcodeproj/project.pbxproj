@@ -11,6 +11,7 @@
 		786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */; };
 		786D4ED41D0F110F00FB2ABF /* IEFAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED31D0F110F00FB2ABF /* IEFAHomeViewController.m */; };
 		786D4ED71D116CD900FB2ABF /* IEFATopicOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED61D116CD900FB2ABF /* IEFATopicOverviewViewController.m */; };
+		786D4EDF1D15994300FB2ABF /* IEFADropBoxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4EDE1D15994300FB2ABF /* IEFADropBoxManager.m */; };
 		78D44C4C1D05838000E14A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4B1D05838000E14A7B /* main.m */; };
 		78D44C4F1D05838000E14A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4E1D05838000E14A7B /* AppDelegate.m */; };
 		78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C561D05838000E14A7B /* iefa.xcdatamodeld */; };
@@ -47,6 +48,8 @@
 		786D4ED31D0F110F00FB2ABF /* IEFAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAHomeViewController.m; sourceTree = "<group>"; };
 		786D4ED51D116CD900FB2ABF /* IEFATopicOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFATopicOverviewViewController.h; sourceTree = "<group>"; };
 		786D4ED61D116CD900FB2ABF /* IEFATopicOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFATopicOverviewViewController.m; sourceTree = "<group>"; };
+		786D4EDD1D15994300FB2ABF /* IEFADropBoxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADropBoxManager.h; sourceTree = "<group>"; };
+		786D4EDE1D15994300FB2ABF /* IEFADropBoxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADropBoxManager.m; sourceTree = "<group>"; };
 		78D44C471D05838000E14A7B /* iefa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iefa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D44C4B1D05838000E14A7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78D44C4D1D05838000E14A7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 		78D44C491D05838000E14A7B /* iefa */ = {
 			isa = PBXGroup;
 			children = (
+				786D4EDD1D15994300FB2ABF /* IEFADropBoxManager.h */,
+				786D4EDE1D15994300FB2ABF /* IEFADropBoxManager.m */,
 				78D44C4D1D05838000E14A7B /* AppDelegate.h */,
 				78D44C4E1D05838000E14A7B /* AppDelegate.m */,
 				78D44C691D05F16300E14A7B /* IEFAConstants.h */,
@@ -320,6 +325,7 @@
 				78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */,
 				CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */,
 				CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */,
+				786D4EDF1D15994300FB2ABF /* IEFADropBoxManager.m in Sources */,
 				CE01F77E1D0721CB00C61C6E /* IEFAMainViewController.m in Sources */,
 				78D44C4C1D05838000E14A7B /* main.m in Sources */,
 			);
