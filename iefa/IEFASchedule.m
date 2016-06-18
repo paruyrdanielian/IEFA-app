@@ -15,59 +15,66 @@
     return @[ @{ @"startTime" : @"09:00",
                  @"endTime" : @"11:00",
                  @"evant" : @"Arrival of international delegates",
-                 @"aboutPlace" : @"I have a clone of a repo on Github in which I created a new feature for upstream. The problem is, I did that in my master branch which also contains other stuff I pulled in from other clones. That totally broke my ability to create a reasonable pull request.",
-                 @"dressCode" : @"formal",
-                 @"place" : @[@40.177353, @44.512671]
+                 @"aboutPlace" : @"",
+                 @"place" : @[],
+                 @"shaw" : @NO
                  },
                      
               @{ @"startTime" : @"11:00",
                  @"endTime" : @"13:00",
                  @"evant" : @"Teambuilding(1)",
-                 @"place" : @"",
+                 @"place" : @"TUMO",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"",
+                 @"show" : @NO},
                      
               @{ @"startTime" : @"13:00",
                  @"endTime" : @"14:00",
                  @"evant" : @"Lunch",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"",
+                 @"show" : @NO},
               
               @{ @"startTime" : @"14:00",
                  @"endTime" : @"16:00",
                  @"evant" : @"Teambuilding(2)",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"",
+                 @"show" : @NO},
                      
               @{ @"startTime" : @"16:00",
                  @"endTime" : @"16:30",
                  @"evant" : @"Coffee break",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"",
+                 @"show" : @NO},
                      
               @{ @"startTime" : @"16:30",
                  @"endTime" : @"18:00",
                  @"evant" : @"Teambuilding(3)",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"",
+                 @"show" : @NO},
               
               @{ @"startTime" : @"18:00",
                  @"endTime" : @"19:00",
                  @"evant" : @"Transfer to Eurovillage Venue",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"",
+                 @"show" : @NO},
             
               @{ @"startTime" : @"19:00",
                  @"endTime" : @"23:00",
                  @"evant" : @"Eurovillage and Vardavar Festival",
-                 @"place" : @"",
+                 @"place" : @[@40.176196, @44.514568],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""}
+                 @"aboutPlace" : @"Safran",
+                 @"show" : @YES}
               ];
     
 }
@@ -77,9 +84,9 @@
     return @[ @{ @"startTime" : @"09:00",
                  @"endTime" : @"10:30",
                  @"evant" : @"Opening Ceremony",
-                 @"place" : @"",
+                 @"place" : @[@40.177016, @44.515252],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"AGBU"},
               
               @{ @"startTime" : @"10:30",
                  @"endTime" : @"11:00",
@@ -135,7 +142,7 @@
                  @"evant" : @"Traditional Armenian Dinner",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""}
+                 @"aboutPlace" : @"Megerian carpet"}
               ];
     
 }
@@ -233,9 +240,9 @@
               @{ @"startTime" : @"18:00",
                  @"endTime" : @"20:00",
                  @"evant" : @"Euro Concert",
-                 @"place" : @"",
+                 @"place" : @[@40.179005, @44.513651],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Arno Babajanian Hall"},
               
               @{ @"startTime" : @"20:30",
                  @"endTime" : @"00:00",
@@ -251,9 +258,9 @@
     return @[ @{ @"startTime" : @"10:00",
                  @"endTime" : @"12:30",
                  @"evant" : @"Opening of the General Assembly, Committees 1, 2",
-                 @"place" : @"",
+                 @"place" : @[@40.173808, @44.504237],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Moscow House"},
               
               @{ @"startTime" : @"12:30",
                  @"endTime" : @"13:00",
