@@ -76,9 +76,15 @@
     [self.committeImage setImage:[UIImage imageNamed:[committeInfo objectForKey:@"CommitteImage"]]];
     
     [self.view layoutIfNeeded];
-    [self.committeScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.chairImage.frame.size.height + self.chairImage.frame.origin.y)];
     
- self.title = [self.peopleInCommittee.text stringByReplacingOccurrencesOfString:@"People in " withString:@""];
+    if (self.chairImage.frame.size.height > self.chairDiscription.frame.size.height) {
+        [self.committeScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.chairImage.frame.size.height + self.chairImage.frame.origin.y + 5)];
+    } else {
+        [self.committeScrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.chairDiscription.frame.size.height + self.chairDiscription.frame.origin.y + 5)];
+    }
+    
+    
+    self.title = [self.peopleInCommittee.text stringByReplacingOccurrencesOfString:@"People in " withString:@""];
 }
 
 - (void)viewDidLayoutSubviews {

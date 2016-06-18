@@ -18,8 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *randomFactImageView;
 @property (weak, nonatomic) IBOutlet UILabel *randomFactTitle1Label;
 @property (weak, nonatomic) IBOutlet UILabel *randomFactAbout1Label;
-@property (weak, nonatomic) IBOutlet UILabel *randomFactTitle2Label;
-@property (weak, nonatomic) IBOutlet UILabel *randomFactAbout2Label;
 @property (strong, nonatomic) IEFADropBoxAccessTokenManager *tokenManager;
 @property (strong, nonatomic) DBRestClient *restClient;
 

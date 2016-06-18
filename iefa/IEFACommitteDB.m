@@ -75,7 +75,7 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"sede6",
              @"NameSurname" : @"Lilit Gizhlaryan",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"I'll be chairing SEDE, trying not to get very emotional during the most serious and hot debates. I love working with people and sharing most beautiful stories. I can't help myself not to walk barefoot when there is wet grass around, and talk to strangers in the streets. I love ice-cream and can't wait to rediscover Yerevan and EYP with you all <3"
              };
 }
 
@@ -86,7 +86,7 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"juri7",
              @"NameSurname" : @"Riccardo Pagnan",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"I have two great qualities: a collection of pins for backpacks and a cute dog."
              };
 }
 
