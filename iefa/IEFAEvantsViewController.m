@@ -1,19 +1,18 @@
 //
-//  IEFAMainViewController.m
+//  IEFAEvantsViewController.m
 //  iefa
 //
-//  Created by User on 6/7/16.
+//  Created by User on 6/18/16.
 //  Copyright © 2016 Paruyr Danielian. All rights reserved.
 //
 
-#import "IEFAMainViewController.h"
+#import "IEFAEvantsViewController.h"
 
-
-@interface IEFAMainViewController ()
+@interface IEFAEvantsViewController ()
 
 @end
 
-@implementation IEFAMainViewController
+@implementation IEFAEvantsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +22,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)presentButton:(UIButton *)sender {
+    
+    
+    
+    
 }
 
 /*
