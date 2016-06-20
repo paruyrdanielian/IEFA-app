@@ -19,8 +19,9 @@
 @property (strong, nonatomic) UIImage *mediaImage;
 @property (nonatomic, strong) NSArray *data;
 @property (nonatomic, assign) NSInteger numberOfPhotos;
-//@property (nonatomic, strong) UIView *indicatorView;
 @property (strong, nonatomic) UIActivityIndicatorView *mediaActivityIndicator;
+@property (nonatomic, strong) NSMutableArray *infoOfPhotos;
+
 
 
 @end
@@ -29,19 +30,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.indicatorView = [[UIView alloc] initWithFrame:self.view.frame];
+    self.infoOfPhotos = [[NSMutableArray alloc] init];
     self.mediaActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
     [self.view addSubview:self.mediaActivityIndicator];
     self.mediaActivityIndicator.center =self.view.center;
     [self.mediaActivityIndicator startAnimating];
-    //[self.view addSubview:self.indicatorView];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     DBSession *dbSession = [[DBSession alloc] initWithAppKey:kKeyApp appSecret:kSecretApp root:kDBRootDropbox];
     
@@ -52,9 +46,7 @@
     self.restClient.delegate = self;
     [self.restClient loadMetadata:@"/Pictures/"];
     self.mediaActivityIndicator.center = self.view.center;
-    NSLog(@"%f  %f", self.view.center.x, self.view.center.y);
 
-    NSLog(@"%f\ ==================== %f", self.mediaActivityIndicator.center.x, self.mediaActivityIndicator.center.y);
 
     
 }
@@ -65,6 +57,30 @@
         [self.mediaActivityIndicator stopAnimating];
         for (DBMetadata *file in metadata.contents) {
             if([file.filename.stringByStandardizingPath hasSuffix:@".png"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpeg"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpg"]) {
+                
+                NSDateComponents *components = [[NSCalendar currentCalendar]components: NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay  fromDate:file.clientMtime];
+                
+                BOOL arrayIsFound = NO;
+                NSLog(@"%ld Components day", [components day]);
+                for (NSMutableArray *days in self.infoOfPhotos) {
+                    if ([days[0] integerValue] == [components day]) {
+                        [days insertObject:file.filename atIndex:[days count]];
+                        arrayIsFound = YES;
+                    }
+                }
+                
+                if (!arrayIsFound) {
+                    NSMutableArray *array = [[NSMutableArray alloc] init];
+                    [array insertObject:[NSNumber numberWithInteger:[components day]] atIndex:0];
+                    [array insertObject:file.filename atIndex:1];
+                    [self.infoOfPhotos insertObject:array atIndex:self.infoOfPhotos.count];
+                }
+                
+                
+                
+                
+                
+                
                 
                 NSLog(@"%@\n %lu",file.clientMtime, (unsigned long)[metadata.contents count]);
                 self.numberOfPhotos = [metadata.contents count];
@@ -78,6 +94,9 @@
             
             }
         }
+        NSLog(@"%ld",self.infoOfPhotos.count );
+        
+        [self.tableView reloadData];
     }
 }
 
@@ -88,7 +107,7 @@
     
     self.mediaImage =[UIImage imageWithContentsOfFile:localPath];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadData];
+       // [self.tableView reloadData];
     });
     NSLog(@"File loaded into path: %@", localPath);
 }
@@ -97,11 +116,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Incomplete implementation, return the number of sections
-    return 1;
+    return self.infoOfPhotos.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
+    NSLog(@"%ld +++++++++++", (long)section);
     return self.numberOfPhotos;
 }
 
@@ -111,18 +131,7 @@
     IEFAMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifierMedia forIndexPath:indexPath];
     [[cell imageView] setImage:self.mediaImage];
     //[[cell textLabel] setText:[NSString stringWithFormat:@"%d",[indexPath row]];
-    //cell.imageView.image = self.mediaImage;
-    
-//    if (self.mediaImage) {
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            IEFAMediaTableViewCell *updateCell = (id)[tableView cellForRowAtIndexPath:indexPath];
-//            if (updateCell) {
-//                updateCell.imageView.image = self.mediaImage;
-//            }
-//        
-//        });
-//    }
-//
+
     
     return cell;
 }
