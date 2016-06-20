@@ -29,7 +29,7 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"econ2",
              @"NameSurname" : @"Bella Vasilyan",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"I am a newly graduated economist, who is passionate about music, reading poetry and seeing beauty in each and every. Interested in women's rights and genuinely hope to establish a better educational environment for children in the future."
              };
 }
 
@@ -52,7 +52,7 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"pech4",
              @"NameSurname" : @"Mariam Kunchuliyan",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"I'm a strong independent Ukrainian woman, who is passionate about history, traveling and photoshopping people's faces in various objects. People say that I can be very nice and I can be very very nice. However, if delegates of PECH behave badly, I will not hesitate from photoshopping their faces into something and making it viral. Cheers and hugs from Ukraine!"
              };
 }
 
@@ -121,7 +121,7 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"envi10",
              @"NameSurname" : @"Fania Surname",
-             @"ChairDiscription" : @"Person Christodoulides"
+             @"ChairDiscription" : @"Hi everyone! I’m Fania, I come from the beautiful island of Cyprus and I’ve been a member of EYP since 2013. I currently study Chemical Engineering in the UK, and in true ChemEng fashion, I will be chairing ENVI. EYP for me is about opportunity, growth and chances. I am grateful to be given the opportunity to be a part of IEFA, looking forward to growing culturally and academically, and excited to be given the chance to meet you all! : )"
              };
 }
 

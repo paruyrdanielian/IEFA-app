@@ -306,19 +306,40 @@
         <!--Media-->
         <scene sceneID="p1m-ll-DLO">
             <objects>
-                <tableViewController id="JMg-tg-bFc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iAZ-b1-5vK">
+                <tableViewController id="JMg-tg-bFc" customClass="IEFAMediaTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" id="iAZ-b1-5vK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IJK-2I-Uwe">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaIdentifier" rowHeight="87" id="IJK-2I-Uwe" customClass="IEFAMediaTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="320" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IJK-2I-Uwe" id="lZf-A6-oM1">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="July 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZv-xf-c7N">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1t-kd-6dA">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="86.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="J1t-kd-6dA" secondAttribute="trailing" id="64R-bi-HmZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="J1t-kd-6dA" secondAttribute="bottom" id="LMj-0T-SHM"/>
+                                        <constraint firstItem="J1t-kd-6dA" firstAttribute="top" secondItem="lZf-A6-oM1" secondAttribute="top" id="jGd-YE-Wb9"/>
+                                        <constraint firstItem="J1t-kd-6dA" firstAttribute="leading" secondItem="lZf-A6-oM1" secondAttribute="leading" id="yDr-4b-c1v"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mediaImage" destination="lZf-A6-oM1" id="TaR-4j-OC3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

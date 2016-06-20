@@ -22,5 +22,7 @@ static NSString *const kTokenAccess = @"c30k0a7kihrf0i55";
 static NSString *const kSecretToken = @"wchutecki6gnd9q";
 static NSString *const kUserID = @"575444574";
 static NSString *const kCellIdentifierStats = @"StatsIdentifier";
+static NSString *const kCellIdentifierMedia = @"MediaIdentifier";
+
 
 #endif /* IEFAConstants_h */

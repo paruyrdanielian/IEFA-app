@@ -33,9 +33,13 @@
   //  [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    [self setNeedsStatusBarAppearanceUpdate];
+    [self preferredStatusBarStyle];
 }
 
-
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 
 #pragma mark - Navigation
