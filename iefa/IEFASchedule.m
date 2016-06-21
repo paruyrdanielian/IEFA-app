@@ -43,7 +43,7 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-              00   @"show" : [NSNumber numberWithInteger:DailySceduleStayle},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
                      
               @{ @"startTime" : @"16:00",
                  @"endTime" : @"16:30",
@@ -51,7 +51,8 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-          no       @"show" : @NO},
+      //    no
+                 @"show" : @NO},
                      
               @{ @"startTime" : @"16:30",
                  @"endTime" : @"18:00",
@@ -59,7 +60,8 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-         map        @"show" : @NO},
+     //    map
+                 @"show" : @NO},
               
               @{ @"startTime" : @"18:00",
                  @"endTime" : @"19:00",
@@ -67,7 +69,8 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-       no          @"show" : @NO},
+   //    no
+                 @"show" : @NO},
             
               @{ @"startTime" : @"19:00",
                  @"endTime" : @"23:00",
@@ -75,7 +78,8 @@
                  @"place" : @[@40.176196, @44.514568],
                  @"dressCode" : @"",
                  @"aboutPlace" : @"Safran",
-        map         @"show" : @YES}
+   //     map
+                 @"show" : @YES}
               ];
     
 }
@@ -87,21 +91,24 @@
                  @"evant" : @"Opening Ceremony",
                  @"place" : @[@40.177016, @44.515252],
                  @"dressCode" : @"",
-     map            @"aboutPlace" : @"AGBU"},
+   //  map
+                 @"aboutPlace" : @"AGBU"},
               
               @{ @"startTime" : @"10:30",
                  @"endTime" : @"11:00",
                  @"evant" : @"Reception",
                  @"place" : @"",
                  @"dressCode" : @"",
-       dress          @"aboutPlace" : @"AGBU"},
+     //  dress
+                 @"aboutPlace" : @"AGBU"},
               
               @{ @"startTime" : @"11:00",
                  @"endTime" : @"11:15",
                  @"evant" : @"Transfer to CW Venue",
                  @"place" : @"",
                  @"dressCode" : @"",
-       Avetisyan school          @"aboutPlace" : @""},
+     //  Avetisyan school
+                 @"aboutPlace" : @""},
               
               @{ @"startTime" : @"11:15",
                  @"endTime" : @"14:00",
@@ -115,7 +122,8 @@
                  @"evant" : @"Lunch break",
                  @"place" : @"",
                  @"dressCode" : @"",
-      no           @"aboutPlace" : @""},
+     // no
+                 @"aboutPlace" : @""},
               
               @{ @"startTime" : @"15:00",
                  @"endTime" : @"17:00",
@@ -143,7 +151,8 @@
                  @"evant" : @"Traditional Armenian Dinner",
                  @"place" : @"",
                  @"dressCode" : @"",
-       map          @"aboutPlace" : @"Megerian carpet"}
+     //  map
+                 @"aboutPlace" : @"Megerian carpet"}
               ];
     
 }
@@ -154,14 +163,16 @@
                  @"evant" : @"Committee Work(4)",
                  @"place" : @"",
                  @"dressCode" : @"",
-    map             @"aboutPlace" : @""},
+ //   map
+                 @"aboutPlace" : @""},
               
               @{ @"startTime" : @"11:30",
                  @"endTime" : @"12:00",
                  @"evant" : @"Coffee break",
                  @"place" : @"",
                  @"dressCode" : @"",
-     non            @"aboutPlace" : @""},
+    // non
+                 @"aboutPlace" : @""},
               
               @{ @"startTime" : @"12:00",
                  @"endTime" : @"14:00",
@@ -210,7 +221,8 @@
                  @"evant" : @"Thematic Party",
                  @"place" : @"",
                  @"dressCode" : @"",
-       map          @"aboutPlace" : @"The Venue"}
+      // map
+                 @"aboutPlace" : @"The Venue"}
 
               ];
     
@@ -222,14 +234,16 @@
                  @"evant" : @"Free time",
                  @"place" : @"",
                  @"dressCode" : @"",
-       non          @"aboutPlace" : @""},
+      // non
+                 @"aboutPlace" : @""},
               
               @{ @"startTime" : @"12:30",
                  @"endTime" : @"16:00",
                  @"evant" : @"Treasure Hunt",
                  @"place" : @"",
                  @"dressCode" : @"",
-       non          @"aboutPlace" : @""},
+      // non
+                 @"aboutPlace" : @""},
               
               @{ @"startTime" : @"16:30",
                  @"endTime" : @"17:30",
