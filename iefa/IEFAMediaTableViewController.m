@@ -229,18 +229,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIView *imageView = [[UIView alloc]initWithFrame:self.view.superview.frame];
-    imageView.backgroundColor = [UIColor blackColor];
-    imageView.alpha = 0;
-    imageView.userInteractionEnabled = YES;
-    
-    
+    UIViewController *imageViewController = [[UIViewController alloc]init];
+
     
     
     IEFAMediaTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     UIImageView *mediaImageView = [[UIImageView alloc] initWithImage:cell.mediaImage.image] ;
-    mediaImageView.bounds = cell.mediaImage.bounds;
-    NSLog(@"%f  %f", mediaImageView.frame.origin.x, mediaImageView.frame.origin.y);
+    mediaImageView.frame = cell.mediaImage.bounds;
     mediaImageView.contentMode = UIViewContentModeScaleToFill;
     mediaImageView.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
     
@@ -250,24 +245,17 @@
     
     
     imageScrlView.tag = 7;
-    imageScrlView.backgroundColor = [UIColor whiteColor];
+    imageScrlView.backgroundColor = [UIColor blackColor];
     
-    imageScrlView.maximumZoomScale = 10.0;
+    imageScrlView.maximumZoomScale = 5.0;
     imageScrlView.minimumZoomScale = 1;
     imageScrlView.clipsToBounds = YES;
     imageScrlView.userInteractionEnabled = YES;
     imageScrlView.delegate = self;
     
-    [[self.view superview] addSubview:imageView];
-    [imageView addSubview: imageScrlView];
+    [imageViewController.view addSubview: imageScrlView];
     [imageScrlView addSubview:mediaImageView];
-    
-    [UIView animateWithDuration:0.3
-                     animations:^{imageView.alpha = 1.0;}
-                     completion:^(BOOL finished){
-                     }];
-    
-    
+    [self.navigationController pushViewController:imageViewController animated:YES];
    // imageScrlView.contentSize = CGSizeMake(imageView.frame.size.width , imageView.frame.size.height + 5);
     
 }
@@ -275,15 +263,6 @@
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
 
     return scrollView.subviews[0];
-}
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    NSLog(@"pic moved");
-    if ((scrollView.contentOffset.y <= -50 || scrollView.contentOffset.y >= 50) && scrollView.tag == 7) {
-        NSLog(@"%f",scrollView.contentOffset.y);
-        [UIView animateWithDuration:0.2
-                         animations:^{scrollView.superview.alpha = 0.0;}
-                         completion:^(BOOL finished){ [scrollView.superview removeFromSuperview]; }];
-    }
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
