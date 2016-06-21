@@ -232,19 +232,31 @@
     UIView *imageView = [[UIView alloc]initWithFrame:self.view.superview.frame];
     imageView.backgroundColor = [UIColor blackColor];
     imageView.alpha = 0;
-    UIScrollView *imageScrlView = [[UIScrollView alloc]initWithFrame:self.view.superview.frame];
-    imageScrlView.tag = 7;
+    imageView.userInteractionEnabled = YES;
+    
+    
+    
+    
     IEFAMediaTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     UIImageView *mediaImageView = [[UIImageView alloc] initWithImage:cell.mediaImage.image] ;
     mediaImageView.bounds = cell.mediaImage.bounds;
+    NSLog(@"%f  %f", mediaImageView.frame.origin.x, mediaImageView.frame.origin.y);
     mediaImageView.contentMode = UIViewContentModeScaleToFill;
-    mediaImageView.center = self.view.superview.center;
-    imageScrlView.maximumZoomScale = 3.0;
+    mediaImageView.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
+    
+    
+    
+    UIScrollView *imageScrlView = [[UIScrollView alloc]initWithFrame:self.view.frame];
+    
+    
+    imageScrlView.tag = 7;
+    imageScrlView.backgroundColor = [UIColor whiteColor];
+    
+    imageScrlView.maximumZoomScale = 10.0;
     imageScrlView.minimumZoomScale = 1;
     imageScrlView.clipsToBounds = YES;
     imageScrlView.userInteractionEnabled = YES;
     imageScrlView.delegate = self;
-    imageView.userInteractionEnabled = YES;
     
     [[self.view superview] addSubview:imageView];
     [imageView addSubview: imageScrlView];
@@ -256,20 +268,38 @@
                      }];
     
     
-    imageScrlView.contentSize = CGSizeMake(imageView.frame.size.width , imageView.frame.size.height + 5);
+   // imageScrlView.contentSize = CGSizeMake(imageView.frame.size.width , imageView.frame.size.height + 5);
     
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+
     return scrollView.subviews[0];
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     NSLog(@"pic moved");
     if ((scrollView.contentOffset.y <= -50 || scrollView.contentOffset.y >= 50) && scrollView.tag == 7) {
+        NSLog(@"%f",scrollView.contentOffset.y);
         [UIView animateWithDuration:0.2
                          animations:^{scrollView.superview.alpha = 0.0;}
                          completion:^(BOOL finished){ [scrollView.superview removeFromSuperview]; }];
     }
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+    
+    UIView *subView = [scrollView.subviews objectAtIndex:0];
+    
+    CGFloat offsetX = MAX((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0);
+    CGFloat offsetY = MAX((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0);
+    
+    if (offsetY == 0) {
+        [scrollView setContentSize:CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height + 10)];
+    }
+    
+    subView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX,
+                                 scrollView.contentSize.height * 0.5 + offsetY);
 }
 
 

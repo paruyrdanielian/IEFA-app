@@ -21,13 +21,14 @@
  
     // Override point for customization after application launch.
     // [[IEFAWeatherAPIManager sharedManager] getWeather];
-    
+ /*
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+  
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:230.0/255.0 green:32.0/255.0 blue:28.0/255.0 alpha:1.0]];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor blackColor]];
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
-    
+    */
     return YES;
 }
 
