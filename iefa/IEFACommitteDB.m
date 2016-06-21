@@ -17,7 +17,9 @@
               @"ChairImage" : @"",
              @"CommitteImage": @"afco1",
              @"NameSurname" : @"Vardges Shahmenendyan",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"Person Description",
+             @"PrepKit" : @""
+             
             };
 }
 
@@ -29,7 +31,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"econ2",
              @"NameSurname" : @"Bella Vasilyan",
-             @"ChairDiscription" : @"I am a newly graduated economist, who is passionate about music, reading poetry and seeing beauty in each and every. Interested in women's rights and genuinely hope to establish a better educational environment for children in the future."
+             @"ChairDiscription" : @"I am a newly graduated economist, who is passionate about music, reading poetry and seeing beauty in each and every. Interested in women's rights and genuinely hope to establish a better educational environment for children in the future.",
+             @"PrepKit" : @""
              };
 }
 
@@ -40,7 +43,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"afet3",
              @"NameSurname" : @"Gregor Bauer",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"Person Description",
+             @"PrepKit" : @""
              };
 }
 
@@ -52,7 +56,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"pech4",
              @"NameSurname" : @"Mariam Kunchuliyan",
-             @"ChairDiscription" : @"I'm a strong independent Ukrainian woman, who is passionate about history, traveling and photoshopping people's faces in various objects. People say that I can be very nice and I can be very very nice. However, if delegates of PECH behave badly, I will not hesitate from photoshopping their faces into something and making it viral. Cheers and hugs from Ukraine!"
+             @"ChairDiscription" : @"I'm a strong independent Ukrainian woman, who is passionate about history, traveling and photoshopping people's faces in various objects. People say that I can be very nice and I can be very very nice. However, if delegates of PECH behave badly, I will not hesitate from photoshopping their faces into something and making it viral. Cheers and hugs from Ukraine!",
+             @"PrepKit" : @""
              };
 }
 
@@ -63,7 +68,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"droi5",
              @"NameSurname" : @"Svetlana Zakaryan",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"Person Description",
+             @"PrepKit" : @""
              };
 }
 
@@ -75,7 +81,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"sede6",
              @"NameSurname" : @"Lilit Gizhlaryan",
-             @"ChairDiscription" : @"I'll be chairing SEDE, trying not to get very emotional during the most serious and hot debates. I love working with people and sharing most beautiful stories. I can't help myself not to walk barefoot when there is wet grass around, and talk to strangers in the streets. I love ice-cream and can't wait to rediscover Yerevan and EYP with you all <3"
+             @"ChairDiscription" : @"I'll be chairing SEDE, trying not to get very emotional during the most serious and hot debates. I love working with people and sharing most beautiful stories. I can't help myself not to walk barefoot when there is wet grass around, and talk to strangers in the streets. I love ice-cream and can't wait to rediscover Yerevan and EYP with you all <3",
+             @"PrepKit" : @""
              };
 }
 
@@ -86,7 +93,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"juri7",
              @"NameSurname" : @"Riccardo Pagnan",
-             @"ChairDiscription" : @"I have two great qualities: a collection of pins for backpacks and a cute dog."
+             @"ChairDiscription" : @"I have two great qualities: a collection of pins for backpacks and a cute dog.",
+             @"PrepKit" : @""
              };
 }
 
@@ -98,7 +106,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"deve8",
              @"NameSurname" : @"Margarita Christodoulidou",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"Person Description",
+             @"PrepKit" : @""
              };
 }
 
@@ -109,7 +118,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"libe9",
              @"NameSurname" : @"Rozalina Monjian",
-             @"ChairDiscription" : @"Person Description"
+             @"ChairDiscription" : @"Person Description",
+             @"PrepKit" : @""
              };
 }
 
@@ -121,7 +131,8 @@
              @"ChairImage" : @"",
              @"CommitteImage": @"envi10",
              @"NameSurname" : @"Fania Surname",
-             @"ChairDiscription" : @"Hi everyone! I’m Fania, I come from the beautiful island of Cyprus and I’ve been a member of EYP since 2013. I currently study Chemical Engineering in the UK, and in true ChemEng fashion, I will be chairing ENVI. EYP for me is about opportunity, growth and chances. I am grateful to be given the opportunity to be a part of IEFA, looking forward to growing culturally and academically, and excited to be given the chance to meet you all! : )"
+             @"ChairDiscription" : @"Hi everyone! I’m Fania, I come from the beautiful island of Cyprus and I’ve been a member of EYP since 2013. I currently study Chemical Engineering in the UK, and in true ChemEng fashion, I will be chairing ENVI. EYP for me is about opportunity, growth and chances. I am grateful to be given the opportunity to be a part of IEFA, looking forward to growing culturally and academically, and excited to be given the chance to meet you all! : )",
+             @"PrepKit" : @""
              };
 }
 

@@ -11,5 +11,8 @@
 @interface IEFATopicOverviewViewController : UIViewController
 
 @property (strong, nonatomic) NSString *committeeTopicTitle;
+@property (strong, nonatomic) NSString *prepKitText;
+
+
 
 @end

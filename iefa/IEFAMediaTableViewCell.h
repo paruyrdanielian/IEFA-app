@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface IEFAMediaTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIView *mediaImage;
+@property (weak, nonatomic) IBOutlet UIImageView *mediaImage;
 
 @end

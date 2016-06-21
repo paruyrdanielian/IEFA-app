@@ -13,7 +13,7 @@
 #import "IEFADropBoxAccessTokenManager.h"
 #import <DropboxSDK/DropboxSDK.h>
 
-@interface IEFAMediaTableViewController () <DBRestClientDelegate>
+@interface IEFAMediaTableViewController () <DBRestClientDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (strong, nonatomic) IEFADropBoxAccessTokenManager *tokenManager;
 @property (strong, nonatomic) DBRestClient *restClient;
 @property (strong, nonatomic) UIImage *mediaImage;
@@ -21,6 +21,8 @@
 @property (nonatomic, assign) NSInteger numberOfPhotos;
 @property (strong, nonatomic) UIActivityIndicatorView *mediaActivityIndicator;
 @property (nonatomic, strong) NSMutableArray *infoOfPhotos;
+@property (assign, nonatomic) BOOL imageDismiss;
+
 
 
 
@@ -29,6 +31,10 @@
 @implementation IEFAMediaTableViewController
 
 - (void)viewDidLoad {
+    
+    
+    
+    
     [super viewDidLoad];
     self.infoOfPhotos = [[NSMutableArray alloc] init];
     self.mediaActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -50,6 +56,14 @@
 
     
 }
+
+
+
+- (NSArray *)loadSectionDate {
+    return @[@"July 3",@"July 4",@"July 5",@"July 6",@"July 7",@"July 8", @"July 9"];
+}
+
+
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
     if (metadata.isDirectory) {
@@ -90,26 +104,49 @@
                 path = [path stringByAppendingPathComponent:file.filename];
                 
                 
-                [self.restClient loadFile:[NSString stringWithFormat:@"%@/%@",metadata.path,file.filename] intoPath:path];
+                //[self.restClient loadFile:[NSString stringWithFormat:@"%@/%@",metadata.path,file.filename] intoPath:path];
             
             }
         }
         NSLog(@"%ld",self.infoOfPhotos.count );
+        [self.infoOfPhotos sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+            if ([[obj1 objectAtIndex:0] integerValue] < [[obj2 objectAtIndex:0] integerValue]) {
+                return NSOrderedDescending;
+            } else {
+                return NSOrderedAscending;
+            }
+        }];
+        
         
         [self.tableView reloadData];
     }
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *path;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"/"];
+    path = [path stringByAppendingPathComponent:[self.infoOfPhotos[indexPath.section] objectAtIndex:(indexPath.row+1)]];
+    
+    
+    UIImage *image = [UIImage imageWithContentsOfFile:path];
+    CGFloat ratio =  image.size.width / image.size.height;
+    return self.view.frame.size.width / ratio + 5;
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    return [[self loadSectionDate] objectAtIndex:([self.infoOfPhotos count] - section-1)];
+    return [NSString stringWithFormat :@"July %ld", [[self.infoOfPhotos[section] objectAtIndex:0] integerValue]];
+}
+
 - (void)restClient:(DBRestClient *)client loadedFile:(NSString *)localPath
        contentType:(NSString *)contentType metadata:(DBMetadata *)metadata {
     
-    
-    self.mediaImage =[UIImage imageWithContentsOfFile:localPath];
     dispatch_async(dispatch_get_main_queue(), ^{
-       // [self.tableView reloadData];
+       [self.tableView reloadData];
     });
-    NSLog(@"File loaded into path: %@", localPath);
 }
 
 #pragma mark - Table view data source
@@ -122,14 +159,21 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
     NSLog(@"%ld +++++++++++", (long)section);
-    return self.numberOfPhotos;
+    return [self.infoOfPhotos[section] count]-1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     IEFAMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifierMedia forIndexPath:indexPath];
-    [[cell imageView] setImage:self.mediaImage];
+    
+    NSString *path;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"/"];
+    path = [path stringByAppendingPathComponent:[self.infoOfPhotos[indexPath.section] objectAtIndex:(indexPath.row+1)]];
+    
+    
+    [[cell mediaImage] setImage:[UIImage imageWithContentsOfFile:path]];
     //[[cell textLabel] setText:[NSString stringWithFormat:@"%d",[indexPath row]];
 
     
@@ -180,5 +224,61 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.imageDismiss = NO;
+    
+    UIView *imageView = [[UIView alloc]initWithFrame:self.view.superview.frame];
+    imageView.backgroundColor = [UIColor blackColor];
+    UIScrollView *imageScrlView = [[UIScrollView alloc]initWithFrame:self.view.superview.frame];
+    imageScrlView.tag = 7;
+    IEFAMediaTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    UIImageView *mediaImageView = cell.mediaImage;
+    mediaImageView.center = self.view.superview.center;
+    imageScrlView.maximumZoomScale = 3.0;
+    imageScrlView.minimumZoomScale = 1;
+    imageScrlView.clipsToBounds = YES;
+    imageScrlView.userInteractionEnabled = YES;
+    imageScrlView.delegate = self;
+    imageView.userInteractionEnabled = YES;
+    [[self.view superview] addSubview:imageView];
+    [imageView addSubview: imageScrlView];
+    [imageScrlView addSubview:mediaImageView];
+    
+    imageScrlView.contentSize = CGSizeMake(imageView.frame.size.width , imageView.frame.size.height + 5);
+    
+    //[self.view removeFromSuperview];
+    
+    NSLog(@"Touched");
+    
+}
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return scrollView.subviews[0];
+}
+
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (scrollView.tag == 7 && self.imageDismiss) {
+        [scrollView.superview removeFromSuperview];
+        
+    }
+    
+//    if (![stackTableViewController isEmpty] && fingerLiftedAtOffset <= -73) {
+//        
+//        if (![stackTableViewController isEmpty]) {
+//            self.currentScrollImage.image = self.vMarkIcn.image;
+//        }
+//    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    NSLog(@"pic moved");
+    if (scrollView.contentOffset.y <= -73 && scrollView.tag == 7) {
+        self.imageDismiss = YES;
+        NSLog(@"pic moved");
+    }
+}
+
 
 @end

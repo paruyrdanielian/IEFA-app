@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *chairImage;
 @property (weak, nonatomic) IBOutlet UILabel *chairDiscription;
 @property (weak, nonatomic) IBOutlet UIImageView *committeImage;
+@property (strong, nonatomic) NSString *prepKit;
 
 @end
 
@@ -74,6 +75,7 @@
     self.chairDiscription.text = [committeInfo objectForKey:@"ChairDiscription"];
     [self.chairImage setImage:[UIImage imageNamed:[committeInfo objectForKey:@"ChairImage"]]];
     [self.committeImage setImage:[UIImage imageNamed:[committeInfo objectForKey:@"CommitteImage"]]];
+    self.prepKit = [committeInfo objectForKey:@"PrepKit"];
     
     [self.view layoutIfNeeded];
     
@@ -105,6 +107,7 @@
 //     Pass the selected object to the new view controller.
     
     IEFATopicOverviewViewController *tpvc = [segue destinationViewController];
+    tpvc.prepKitText = self.prepKit;
     tpvc.committeeTopicTitle = self.title;
 }
 
