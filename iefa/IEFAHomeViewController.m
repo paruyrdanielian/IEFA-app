@@ -29,11 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tabBarItem.selectedImage = [[UIImage imageNamed:@"Home"]
-                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    self.tabBarItem.image = [[UIImage imageNamed:@"Home"]
-                             imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     NSDictionary *randomFact = [[IEFARandomFactDB randomFacts] objectAtIndex:arc4random_uniform(5)];
     [self.randomFactImageView setImage:[UIImage imageNamed:randomFact[@"image"]]];

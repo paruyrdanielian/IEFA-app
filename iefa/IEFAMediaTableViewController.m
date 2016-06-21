@@ -72,7 +72,9 @@
         for (DBMetadata *file in metadata.contents) {
             if([file.filename.stringByStandardizingPath hasSuffix:@".png"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpeg"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpg"]) {
                 
-                NSDateComponents *components = [[NSCalendar currentCalendar]components: NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay  fromDate:file.clientMtime];
+                NSCalendar *calendar = [NSCalendar currentCalendar];
+                [calendar setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+                NSDateComponents *components = [calendar components: NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour |NSCalendarUnitMinute | NSCalendarUnitSecond  fromDate:file.clientMtime];
                 
                 BOOL arrayIsFound = NO;
                 NSLog(@"%ld Components day", [components day]);
