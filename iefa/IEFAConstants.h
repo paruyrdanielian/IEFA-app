@@ -25,4 +25,13 @@ static NSString *const kCellIdentifierStats = @"StatsIdentifier";
 static NSString *const kCellIdentifierMedia = @"MediaIdentifier";
 
 
+
+
+typedef enum : NSUInteger {
+    DailySceduleStayleNone,
+    DailySceduleStayleDressCode,
+    DailySceduleStayleDressCodeAndMap,
+} DailySceduleStayle;
+
+
 #endif /* IEFAConstants_h */

@@ -7,6 +7,7 @@
 //
 
 #import "IEFASchedule.h"
+#import "IEFAConstants.h"
 
 @implementation IEFASchedule
 
@@ -17,7 +18,7 @@
                  @"evant" : @"Arrival of international delegates",
                  @"aboutPlace" : @"",
                  @"place" : @[],
-                 @"shaw" : @NO
+                 @"show" :[NSNumber numberWithInteger:DailySceduleStayleNone]
                  },
                      
               @{ @"startTime" : @"11:00",
@@ -26,7 +27,7 @@
                  @"place" : @"TUMO",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-                 @"show" : @NO},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
                      
               @{ @"startTime" : @"13:00",
                  @"endTime" : @"14:00",
@@ -34,7 +35,7 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-                 @"show" : @NO},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"14:00",
                  @"endTime" : @"16:00",
@@ -42,7 +43,7 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-                 @"show" : @NO},
+              00   @"show" : [NSNumber numberWithInteger:DailySceduleStayle},
                      
               @{ @"startTime" : @"16:00",
                  @"endTime" : @"16:30",
@@ -50,7 +51,7 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-                 @"show" : @NO},
+          no       @"show" : @NO},
                      
               @{ @"startTime" : @"16:30",
                  @"endTime" : @"18:00",
@@ -58,7 +59,7 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-                 @"show" : @NO},
+         map        @"show" : @NO},
               
               @{ @"startTime" : @"18:00",
                  @"endTime" : @"19:00",
@@ -66,7 +67,7 @@
                  @"place" : @"",
                  @"dressCode" : @"",
                  @"aboutPlace" : @"",
-                 @"show" : @NO},
+       no          @"show" : @NO},
             
               @{ @"startTime" : @"19:00",
                  @"endTime" : @"23:00",
@@ -74,7 +75,7 @@
                  @"place" : @[@40.176196, @44.514568],
                  @"dressCode" : @"",
                  @"aboutPlace" : @"Safran",
-                 @"show" : @YES}
+        map         @"show" : @YES}
               ];
     
 }
@@ -86,21 +87,21 @@
                  @"evant" : @"Opening Ceremony",
                  @"place" : @[@40.177016, @44.515252],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @"AGBU"},
+     map            @"aboutPlace" : @"AGBU"},
               
               @{ @"startTime" : @"10:30",
                  @"endTime" : @"11:00",
                  @"evant" : @"Reception",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+       dress          @"aboutPlace" : @"AGBU"},
               
               @{ @"startTime" : @"11:00",
                  @"endTime" : @"11:15",
                  @"evant" : @"Transfer to CW Venue",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+       Avetisyan school          @"aboutPlace" : @""},
               
               @{ @"startTime" : @"11:15",
                  @"endTime" : @"14:00",
@@ -114,7 +115,7 @@
                  @"evant" : @"Lunch break",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+      no           @"aboutPlace" : @""},
               
               @{ @"startTime" : @"15:00",
                  @"endTime" : @"17:00",
@@ -142,7 +143,7 @@
                  @"evant" : @"Traditional Armenian Dinner",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @"Megerian carpet"}
+       map          @"aboutPlace" : @"Megerian carpet"}
               ];
     
 }
@@ -153,14 +154,14 @@
                  @"evant" : @"Committee Work(4)",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+    map             @"aboutPlace" : @""},
               
               @{ @"startTime" : @"11:30",
                  @"endTime" : @"12:00",
                  @"evant" : @"Coffee break",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+     non            @"aboutPlace" : @""},
               
               @{ @"startTime" : @"12:00",
                  @"endTime" : @"14:00",
@@ -206,10 +207,10 @@
               
               @{ @"startTime" : @"21:00",
                  @"endTime" : @"00:00",
-                 @"evant" : @"Game of Thrones Thematic Party",
+                 @"evant" : @"Thematic Party",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""}
+       map          @"aboutPlace" : @"The Venue"}
 
               ];
     
@@ -221,14 +222,14 @@
                  @"evant" : @"Free time",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+       non          @"aboutPlace" : @""},
               
               @{ @"startTime" : @"12:30",
                  @"endTime" : @"16:00",
                  @"evant" : @"Treasure Hunt",
                  @"place" : @"",
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+       non          @"aboutPlace" : @""},
               
               @{ @"startTime" : @"16:30",
                  @"endTime" : @"17:30",
