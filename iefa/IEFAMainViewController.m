@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //[[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setAlpha:1.0];
 
 }
 

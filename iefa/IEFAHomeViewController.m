@@ -28,15 +28,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tabBarItem.selectedImage = [[UIImage imageNamed:@"Home"]
+                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.tabBarItem.image = [[UIImage imageNamed:@"Home"]
+                             imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     NSDictionary *randomFact = [[IEFARandomFactDB randomFacts] objectAtIndex:arc4random_uniform(5)];
     [self.randomFactImageView setImage:[UIImage imageNamed:randomFact[@"image"]]];
     self.randomFactTitle1Label.text = randomFact[@"title"];
     self.randomFactAbout1Label.text = randomFact[@"about"];
     
-//    self.tokenManager = [[IEFADropBoxAccessTokenManager alloc] init];
-//    [self.tokenManager AccessTokenForAppKey:kKeyApp appSecret:kSecretApp userID:kUserID onVC:self complitionHandler:^(NSString *accessToken, NSString *tokenSecret) {
-//        NSLog(@"%@ %@", accessToken, tokenSecret );
-//    }];
+
     DBSession *dbSession = [[DBSession alloc] initWithAppKey:kKeyApp appSecret:kSecretApp root:kDBRootDropbox];
     
     [DBSession setSharedSession:dbSession];
@@ -53,7 +57,7 @@
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
     if (metadata.isDirectory) {
-        NSLog(@"Folder '%@' contains:", metadata.path);
+       // NSLog(@"Folder '%@' contains:", metadata.path);
         for (DBMetadata *file in metadata.contents) {
             if([file.filename.stringByStandardizingPath hasSuffix:@".png"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpeg"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpg"]) {
                 
@@ -74,8 +78,7 @@
 - (void)restClient:(DBRestClient *)client loadedFile:(NSString *)localPath
        contentType:(NSString *)contentType metadata:(DBMetadata *)metadata {
     
-    [self.randomFactImageView setImage:[UIImage imageWithContentsOfFile:localPath]];
-    NSLog(@"File loaded into path: %@", localPath);
+   // [self.randomFactImageView setImage:[UIImage imageWithContentsOfFile:localPath]];
 }
 
 
@@ -85,10 +88,6 @@ loadMetadataFailedWithError:(NSError *)error {
 }
 
 
-- (IBAction)backToEventsButtonAction:(id)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 
 /*
