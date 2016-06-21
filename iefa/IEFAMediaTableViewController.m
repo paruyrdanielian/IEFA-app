@@ -21,7 +21,7 @@
 @property (nonatomic, assign) NSInteger numberOfPhotos;
 @property (strong, nonatomic) UIActivityIndicatorView *mediaActivityIndicator;
 @property (nonatomic, strong) NSMutableArray *infoOfPhotos;
-@property (assign, nonatomic) BOOL imageDismiss;
+//@property (assign, nonatomic) BOOL imageDismiss;
 
 
 
@@ -226,14 +226,16 @@
 */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.imageDismiss = NO;
     
     UIView *imageView = [[UIView alloc]initWithFrame:self.view.superview.frame];
     imageView.backgroundColor = [UIColor blackColor];
+    imageView.alpha = 0;
     UIScrollView *imageScrlView = [[UIScrollView alloc]initWithFrame:self.view.superview.frame];
     imageScrlView.tag = 7;
     IEFAMediaTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    UIImageView *mediaImageView = cell.mediaImage;
+    UIImageView *mediaImageView = [[UIImageView alloc] initWithImage:cell.mediaImage.image] ;
+    mediaImageView.bounds = cell.mediaImage.bounds;
+    mediaImageView.contentMode = UIViewContentModeScaleToFill;
     mediaImageView.center = self.view.superview.center;
     imageScrlView.maximumZoomScale = 3.0;
     imageScrlView.minimumZoomScale = 1;
@@ -241,42 +243,30 @@
     imageScrlView.userInteractionEnabled = YES;
     imageScrlView.delegate = self;
     imageView.userInteractionEnabled = YES;
+    
     [[self.view superview] addSubview:imageView];
     [imageView addSubview: imageScrlView];
     [imageScrlView addSubview:mediaImageView];
     
+    [UIView animateWithDuration:0.3
+                     animations:^{imageView.alpha = 1.0;}
+                     completion:^(BOOL finished){
+                     }];
+    
+    
     imageScrlView.contentSize = CGSizeMake(imageView.frame.size.width , imageView.frame.size.height + 5);
-    
-    //[self.view removeFromSuperview];
-    
-    NSLog(@"Touched");
     
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return scrollView.subviews[0];
 }
-
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    if (scrollView.tag == 7 && self.imageDismiss) {
-        [scrollView.superview removeFromSuperview];
-        
-    }
-    
-//    if (![stackTableViewController isEmpty] && fingerLiftedAtOffset <= -73) {
-//        
-//        if (![stackTableViewController isEmpty]) {
-//            self.currentScrollImage.image = self.vMarkIcn.image;
-//        }
-//    }
-}
-
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     NSLog(@"pic moved");
-    if (scrollView.contentOffset.y <= -73 && scrollView.tag == 7) {
-        self.imageDismiss = YES;
-        NSLog(@"pic moved");
+    if ((scrollView.contentOffset.y <= -50 || scrollView.contentOffset.y >= 50) && scrollView.tag == 7) {
+        [UIView animateWithDuration:0.2
+                         animations:^{scrollView.superview.alpha = 0.0;}
+                         completion:^(BOOL finished){ [scrollView.superview removeFromSuperview]; }];
     }
 }
 
