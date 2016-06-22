@@ -13,7 +13,7 @@
 #import "IEFADropBoxAccessTokenManager.h"
 #import <DropboxSDK/DropboxSDK.h>
 
-@interface IEFAMediaTableViewController () <DBRestClientDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface IEFAMediaTableViewController () <DBRestClientDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UIGestureRecognizerDelegate>
 @property (strong, nonatomic) IEFADropBoxAccessTokenManager *tokenManager;
 @property (strong, nonatomic) DBRestClient *restClient;
 @property (strong, nonatomic) UIImage *mediaImage;
@@ -302,9 +302,27 @@
         [self.navigationController pushViewController:imageViewController animated:YES];
         // imageScrlView.contentSize = CGSizeMake(imageView.frame.size.width , imageView.frame.size.height + 5);
         
+        UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+        
+        [doubleTap setNumberOfTapsRequired:2];
+        
+        [imageScrlView addGestureRecognizer:doubleTap];
+        
+        
     }
     
     
+}
+
+- (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
+    
+//    if((UIScrollView)self.view.zoomScale > self.scrollView.minimumZoomScale)
+//        [self.scrollView setZoomScale:self.scrollView.minimumZoomScale animated:YES];
+//    else
+//        [self.scrollView setZoomScale:self.scrollView.maximumZoomScale animated:YES];
+//
+    NSLog(@"%ld", self.view.superview.superview.superview.superview.superview.superview.superview.superview.superview.superview.
+          superview.superview.superview.superview.superview.superview.superview.superview.superview.superview.tag);
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
