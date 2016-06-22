@@ -10,5 +10,6 @@
 
 @interface IEFAMediaTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *mediaImage;
-
+@property (nonatomic, assign) BOOL isPDF;
+@property (nonatomic, strong) NSString *PDFpath;
 @end
