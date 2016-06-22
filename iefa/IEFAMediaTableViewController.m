@@ -21,6 +21,7 @@
 @property (nonatomic, assign) NSInteger numberOfPhotos;
 @property (strong, nonatomic) UIActivityIndicatorView *mediaActivityIndicator;
 @property (nonatomic, strong) NSMutableArray *infoOfPhotos;
+
 //@property (assign, nonatomic) BOOL imageDismiss;
 
 
@@ -50,7 +51,7 @@
     
     self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
     self.restClient.delegate = self;
-    [self.restClient loadMetadata:@"/Pictures/"];
+    [self.restClient loadMetadata:@"/"];
     self.mediaActivityIndicator.center = self.view.center;
 
 
@@ -70,12 +71,12 @@
         NSLog(@"Folder '%@' contains:", metadata.path);
         [self.mediaActivityIndicator stopAnimating];
         for (DBMetadata *file in metadata.contents) {
-            if([file.filename.stringByStandardizingPath hasSuffix:@".png"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpeg"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpg"]) {
+            if([file.filename.stringByStandardizingPath hasSuffix:@".png"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpeg"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpg"] || [file.filename.stringByStandardizingPath isEqualToString:@"journal1.pdf"] || [file.filename.stringByStandardizingPath isEqualToString:@"journal2.pdf"]) {
                 
                 NSCalendar *calendar = [NSCalendar currentCalendar];
                 [calendar setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
                 NSDateComponents *components = [calendar components: NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour |NSCalendarUnitMinute | NSCalendarUnitSecond  fromDate:file.clientMtime];
-                
+                NSLog(@"%@",file.clientMtime);
                 BOOL arrayIsFound = NO;
                 NSLog(@"%ld Components day", [components day]);
                 for (NSMutableArray *days in self.infoOfPhotos) {
@@ -119,21 +120,28 @@
             }
         }];
         
-        
         [self.tableView reloadData];
     }
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *path;
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"/"];
-    path = [path stringByAppendingPathComponent:[self.infoOfPhotos[indexPath.section] objectAtIndex:(indexPath.row+1)]];
     
+    CGFloat ratio;
+    if ([[self.infoOfPhotos[indexPath.section] objectAtIndex:(indexPath.row+1)] hasSuffix:@".pdf"]) {
+        ratio = 2;
+    } else {
+        NSString *path;
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"/"];
+        path = [path stringByAppendingPathComponent:[self.infoOfPhotos[indexPath.section] objectAtIndex:(indexPath.row+1)]];
+        
+        
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        ratio =  image.size.width / image.size.height;
+        
+    }
     
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
-    CGFloat ratio =  image.size.width / image.size.height;
     return self.view.frame.size.width / ratio + 5;
 }
 
@@ -160,22 +168,35 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
-    NSLog(@"%ld +++++++++++", (long)section);
+    NSLog(@"%ld +++++++++++", (long)
+          [self.infoOfPhotos[section] count]-1);
     return [self.infoOfPhotos[section] count]-1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    IEFAMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifierMedia forIndexPath:indexPath];
-    
     NSString *path;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"/"];
     path = [path stringByAppendingPathComponent:[self.infoOfPhotos[indexPath.section] objectAtIndex:(indexPath.row+1)]];
+    IEFAMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifierMedia forIndexPath:indexPath];
     
-    
-    [[cell mediaImage] setImage:[UIImage imageWithContentsOfFile:path]];
+    if ( [[self.infoOfPhotos[indexPath.section] objectAtIndex:(indexPath.row+1)] isEqualToString:@"journal1.pdf"] ) {
+        cell.isPDF = YES;
+        [[cell mediaImage] setImage:[UIImage imageNamed:@"journal1"]];
+        cell.PDFpath = path;
+    } else if ([[self.infoOfPhotos[indexPath.section] objectAtIndex:(indexPath.row+1)] isEqualToString:@"journal2.pdf"]) {
+        cell.isPDF = YES;
+        cell.PDFpath = path;
+        [[cell mediaImage] setImage:[UIImage imageNamed:@"journal2"]];
+    } else {
+        
+        cell.isPDF = NO;
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        [[cell mediaImage] setImage:image];
+        
+    }
     //[[cell textLabel] setText:[NSString stringWithFormat:@"%d",[indexPath row]];
 
     
@@ -229,34 +250,60 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIViewController *imageViewController = [[UIViewController alloc]init];
-
-    
-    
     IEFAMediaTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    UIImageView *mediaImageView = [[UIImageView alloc] initWithImage:cell.mediaImage.image] ;
-    mediaImageView.frame = cell.mediaImage.bounds;
-    mediaImageView.contentMode = UIViewContentModeScaleToFill;
-    mediaImageView.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
     
+    if ( cell.isPDF) {
+        UIViewController *pdfViewController = [[UIViewController alloc]init];
+        UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+        
+       // NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL fileURLWithPath:cell.PDFpath]];
+        
+        NSString *filePath = cell.PDFpath;
+        NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
+        NSURLRequest *request = [NSURLRequest requestWithURL:fileUrl];
+        [webView loadRequest:request];
+
+        [pdfViewController.view addSubview:webView];
+//        [webView loadRequest:request];
+        
+        
+        
+        [self.navigationController pushViewController:pdfViewController animated:YES];
+        
+        
+        
+
+        
+    } else {
+        UIViewController *imageViewController = [[UIViewController alloc]init];
+        
+        
+        
+        UIImageView *mediaImageView = [[UIImageView alloc] initWithImage:cell.mediaImage.image] ;
+        mediaImageView.frame = cell.mediaImage.bounds;
+        mediaImageView.contentMode = UIViewContentModeScaleToFill;
+        mediaImageView.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
+        
+        
+        
+        UIScrollView *imageScrlView = [[UIScrollView alloc]initWithFrame:self.view.frame];
+        
+        
+        imageScrlView.tag = 7;
+        imageScrlView.backgroundColor = [UIColor blackColor];
+        
+        imageScrlView.maximumZoomScale = 5.0;
+        imageScrlView.minimumZoomScale = 1;
+        imageScrlView.clipsToBounds = YES;
+        imageScrlView.userInteractionEnabled = YES;
+        imageScrlView.delegate = self;
+        [imageViewController.view addSubview: imageScrlView];
+        [imageScrlView addSubview:mediaImageView];
+        [self.navigationController pushViewController:imageViewController animated:YES];
+        // imageScrlView.contentSize = CGSizeMake(imageView.frame.size.width , imageView.frame.size.height + 5);
+        
+    }
     
-    
-    UIScrollView *imageScrlView = [[UIScrollView alloc]initWithFrame:self.view.frame];
-    
-    
-    imageScrlView.tag = 7;
-    imageScrlView.backgroundColor = [UIColor blackColor];
-    
-    imageScrlView.maximumZoomScale = 5.0;
-    imageScrlView.minimumZoomScale = 1;
-    imageScrlView.clipsToBounds = YES;
-    imageScrlView.userInteractionEnabled = YES;
-    imageScrlView.delegate = self;
-    
-    [imageViewController.view addSubview: imageScrlView];
-    [imageScrlView addSubview:mediaImageView];
-    [self.navigationController pushViewController:imageViewController animated:YES];
-   // imageScrlView.contentSize = CGSizeMake(imageView.frame.size.width , imageView.frame.size.height + 5);
     
 }
 
@@ -267,18 +314,19 @@
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
-    
-    UIView *subView = [scrollView.subviews objectAtIndex:0];
-    
-    CGFloat offsetX = MAX((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0);
-    CGFloat offsetY = MAX((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0);
-    
-    if (offsetY == 0) {
-        [scrollView setContentSize:CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height + 10)];
+    if (scrollView.tag == 7) {
+        UIView *subView = [scrollView.subviews objectAtIndex:0];
+        
+        CGFloat offsetX = MAX((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0);
+        CGFloat offsetY = MAX((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0);
+        
+        if (offsetY == 0) {
+            [scrollView setContentSize:CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height + 10)];
+        }
+        
+        subView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX,
+                                     scrollView.contentSize.height * 0.5 + offsetY);
     }
-    
-    subView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX,
-                                 scrollView.contentSize.height * 0.5 + offsetY);
 }
 
 
