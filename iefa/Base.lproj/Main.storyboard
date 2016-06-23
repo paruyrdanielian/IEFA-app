@@ -372,6 +372,27 @@
                                     <outlet property="mediaImage" destination="J1t-kd-6dA" id="YlQ-u4-qpt"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaActivityIndicatorIdentifier" rowHeight="84" id="8t6-b7-oOW" customClass="IEFAMediaActivityIndicatorTableViewCell">
+                                <rect key="frame" x="0.0" y="176" width="320" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8t6-b7-oOW" id="Q6f-44-VHd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3gb-Qx-Xed">
+                                            <rect key="frame" x="150" y="32" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3gb-Qx-Xed" firstAttribute="centerX" secondItem="Q6f-44-VHd" secondAttribute="centerX" id="dQz-wT-IvR"/>
+                                        <constraint firstItem="3gb-Qx-Xed" firstAttribute="centerY" secondItem="Q6f-44-VHd" secondAttribute="centerY" id="h8g-Lo-oEu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="3gb-Qx-Xed" id="90L-05-AFz"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="JMg-tg-bFc" id="ama-rJ-L1Y"/>

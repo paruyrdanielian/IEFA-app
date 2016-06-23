@@ -51,6 +51,7 @@
 		CE35D4E41D15994200C742EF /* IEFAMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35D4E31D15994200C742EF /* IEFAMoreTableViewController.m */; };
 		CE35D4ED1D15A59400C742EF /* IEFAEvantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35D4EC1D15A59400C742EF /* IEFAEvantsViewController.m */; };
 		CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70A8651D075A5200BA6740 /* IEFASchedule.m */; };
+		CEBC33691D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBC33681D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m */; };
 		CEC014BD1D13D42300B8DB52 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */; };
 		CEC014BF1D13D43700B8DB52 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014BE1D13D43700B8DB52 /* Security.framework */; };
 		CEC014C11D13D43E00B8DB52 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014C01D13D43E00B8DB52 /* QuartzCore.framework */; };
@@ -153,6 +154,8 @@
 		CE35D4EC1D15A59400C742EF /* IEFAEvantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAEvantsViewController.m; sourceTree = "<group>"; };
 		CE70A8641D075A5200BA6740 /* IEFASchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFASchedule.h; sourceTree = "<group>"; };
 		CE70A8651D075A5200BA6740 /* IEFASchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASchedule.m; sourceTree = "<group>"; };
+		CEBC33671D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMediaActivityIndicatorTableViewCell.h; sourceTree = "<group>"; };
+		CEBC33681D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMediaActivityIndicatorTableViewCell.m; sourceTree = "<group>"; };
 		CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		CEC014BE1D13D43700B8DB52 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CEC014C01D13D43E00B8DB52 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -398,6 +401,8 @@
 				CEDCBE8B1D11BE8F00440662 /* IEFAScheduleTableViewCell.m */,
 				786D4EE31D17ECE400FB2ABF /* IEFAMediaTableViewCell.h */,
 				786D4EE41D17ECE400FB2ABF /* IEFAMediaTableViewCell.m */,
+				CEBC33671D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.h */,
+				CEBC33681D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -501,6 +506,7 @@
 				A09F9E0C1D16D89400202086 /* UIImage+RZTransitionsSnapshotHelpers.m in Sources */,
 				78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */,
 				786D4EE51D17ECE400FB2ABF /* IEFAMediaTableViewCell.m in Sources */,
+				CEBC33691D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m in Sources */,
 				A0FEF1C91D08ACFB00710597 /* IEFADictionaryViewController.m in Sources */,
 				A09F9E021D16D89400202086 /* RZCardSlideAnimationController.m in Sources */,
 				A09F9E071D16D89400202086 /* RZZoomAlphaAnimationController.m in Sources */,
