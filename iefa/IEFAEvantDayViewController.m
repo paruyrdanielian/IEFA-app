@@ -10,7 +10,7 @@
 #import "IEFAConstants.h"
 #import <MapKit/MapKit.h>
 
-@interface IEFAEvantDayViewController () <MKAnnotation>
+@interface IEFAEvantDayViewController () <MKAnnotation,MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *dressCodeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *aboutPlaceLabel;
@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIView *secondView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (nonatomic, assign) BOOL initalLoad;
+@property (nonatomic, strong) MKPointAnnotation *annotation;
+@property (nonatomic, strong) CLLocationManager *locMan;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+@property (nonatomic, assign) BOOL initalRegion;
 
 @end
 
@@ -25,7 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height)];
     self.navigationItem.title = self.time;
     [self setup];
@@ -39,6 +43,8 @@
     self.dressCodeLabel.text = self.dressCode;
     
     if (self.map) {
+        self.initalLoad = YES;
+        self.initalRegion = NO;
         self.aboutPlaceLabel.numberOfLines = 0;
         
         self.aboutPlaceLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -46,7 +52,7 @@
         self.aboutPlaceLabel.textAlignment = NSTextAlignmentJustified;
         
         self.aboutPlaceLabel.text = self.aboutPlace;
-        
+
         [self setupMap];
     } else {
         self.aboutPlaceLabel.hidden = YES;
@@ -64,18 +70,51 @@
     coordinats.latitude = [self.place[0] floatValue];
     coordinats.longitude = [self.place[1] floatValue];
     
-    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-    annotation.coordinate = coordinats;
+    self.annotation = [[MKPointAnnotation alloc] init];
+    self.annotation.coordinate = coordinats;
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(coordinats, 500,500);
-    CLLocationManager *locMan = [[CLLocationManager alloc] init];
-    [locMan requestWhenInUseAuthorization];
+    self.locMan = [[CLLocationManager alloc] init];
+    self.locMan.delegate = self;
     
-    self.mapView.showsUserLocation = YES;
+    [self.locMan requestWhenInUseAuthorization];
     
-    [self.mapView setRegion:viewRegion];
-    [self.mapView addAnnotation:annotation];
+    [self.mapView setShowsUserLocation:YES];
+    [self.mapView addAnnotation:self.annotation];
+    
+    
 
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    
+    if (self.initalLoad) {
+        CLLocationDistance distanceBetweenAnnotationAndUserLocation = MKMetersBetweenMapPoints(MKMapPointForCoordinate(self.annotation.coordinate), MKMapPointForCoordinate(userLocation.location.coordinate));
+        if (distanceBetweenAnnotationAndUserLocation > 5000000) {
+            distanceBetweenAnnotationAndUserLocation = 5000000;
+        }
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 2*distanceBetweenAnnotationAndUserLocation,2*distanceBetweenAnnotationAndUserLocation);
+        self.initalRegion = YES;
+        [self.mapView setRegion:viewRegion animated:YES];
+    } else {
+        [self.mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
+    }
+    
+}
+
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    if (self.initalRegion) {
+        self.initalLoad = NO;
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
 }
 
 - (void)didReceiveMemoryWarning {
