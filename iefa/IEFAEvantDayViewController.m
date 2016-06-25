@@ -77,7 +77,8 @@
     self.locMan.delegate = self;
     
     [self.locMan requestWhenInUseAuthorization];
-    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.annotation.coordinate,500 ,500);
+    [self.mapView setRegion:viewRegion];
     [self.mapView setShowsUserLocation:YES];
     [self.mapView addAnnotation:self.annotation];
     
