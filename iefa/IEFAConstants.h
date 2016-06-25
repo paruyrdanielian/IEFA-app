@@ -24,7 +24,7 @@ static NSString *const kUserID = @"575444574";
 static NSString *const kCellIdentifierStats = @"StatsIdentifier";
 static NSString *const kCellIdentifierMedia = @"MediaIdentifier";
 static NSString *const kCellIdentifierMediaActivityIndicator = @"MediaActivityIndicatorIdentifier";
-
+static NSString *const kFileNameResolutionBooklet = @"ResolutionBooklet.pdf";
 
 
 

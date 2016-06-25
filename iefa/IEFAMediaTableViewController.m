@@ -69,7 +69,6 @@
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
     if (metadata.isDirectory) {
-        NSLog(@"Folder '%@' contains:", metadata.path);
         [self.mediaActivityIndicator stopAnimating];
         for (DBMetadata *file in metadata.contents) {
             if([file.filename.stringByStandardizingPath hasSuffix:@".png"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpeg"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpg"] || [file.filename.stringByStandardizingPath isEqualToString:@"journal1.pdf"] || [file.filename.stringByStandardizingPath isEqualToString:@"journal2.pdf"]) {

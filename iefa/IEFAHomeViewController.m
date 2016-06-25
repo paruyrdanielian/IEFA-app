@@ -20,14 +20,21 @@
 @property (weak, nonatomic) IBOutlet UILabel *randomFactAbout1Label;
 @property (strong, nonatomic) IEFADropBoxAccessTokenManager *tokenManager;
 @property (strong, nonatomic) DBRestClient *restClient;
-
+@property (weak, nonatomic) IBOutlet UIButton *resolutionBookletButton;
+@property (nonatomic, strong) NSString *downloadPath;
+@property (nonatomic, assign) BOOL download;
+@property (strong, nonatomic) UIActivityIndicatorView *resolutionBookletActivityIndicator;
 
 @end
 
 @implementation IEFAHomeViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kFileNameResolutionBooklet];
     
     
     
@@ -35,16 +42,73 @@
     [self.randomFactImageView setImage:[UIImage imageNamed:randomFact[@"image"]]];
     self.randomFactTitle1Label.text = randomFact[@"title"];
     self.randomFactAbout1Label.text = randomFact[@"about"];
+    [self.resolutionBookletButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [self.resolutionBookletButton.titleLabel setNumberOfLines:0];
     
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:kFileNameResolutionBooklet]) {
+        [self resolutionBooklet];
+    } else {
+        DBSession *dbSession = [[DBSession alloc] initWithAppKey:kKeyApp appSecret:kSecretApp root:kDBRootDropbox];
+        
+        [DBSession setSharedSession:dbSession];
+        [[DBSession sharedSession] updateAccessToken:kTokenAccess accessTokenSecret:kSecretToken forUserId:kUserID];
+        
+        self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+        self.restClient.delegate = self;
+        [self.restClient loadMetadata:@"/"];
+    }
+    
+    
+    
+    
+    
+    
+    
+}
 
-    DBSession *dbSession = [[DBSession alloc] initWithAppKey:kKeyApp appSecret:kSecretApp root:kDBRootDropbox];
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES];
+    [super viewWillAppear:animated];
+}
+
+- (IBAction)resolutionBookletAction:(id)sender {
     
-    [DBSession setSharedSession:dbSession];
-    [[DBSession sharedSession] updateAccessToken:kTokenAccess accessTokenSecret:kSecretToken forUserId:kUserID];
+    if (self.download) {
+        self.download = NO;
+        self.resolutionBookletButton.enabled = NO;
+        self.resolutionBookletActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        self.resolutionBookletActivityIndicator.center =self.resolutionBookletButton.titleLabel.center;
+        [self.resolutionBookletActivityIndicator startAnimating];
+        [self.resolutionBookletButton addSubview:self.resolutionBookletActivityIndicator];
+        
+        NSString *path;
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"/"];
+        path = [path stringByAppendingPathComponent:kFileNameResolutionBooklet];
+        [self.restClient loadFile:self.downloadPath intoPath:path];
+
+        
+        
+    } else {
+        NSString *filePath;
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"/"];
+        filePath = [filePath stringByAppendingPathComponent:kFileNameResolutionBooklet];
+        
+        UIViewController *pdfViewController = [[UIViewController alloc]init];
+        UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+        NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
+        NSString *urlString = [fileUrl absoluteString];
+        NSString *encodedString=[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSURL *webViewURL = [NSURL URLWithString:encodedString];
+        webView.scalesPageToFit = YES;
+        NSURLRequest *request = [NSURLRequest requestWithURL:webViewURL];
+        [webView loadRequest:request];
+        [pdfViewController.view addSubview:webView];
+        [self.navigationController pushViewController:pdfViewController animated:YES ];
+        [self.navigationController setNavigationBarHidden:NO];
+    }
     
-    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
-    self.restClient.delegate = self;
-    [self.restClient loadMetadata:@"/Pictures/"];
     
     
     
@@ -55,16 +119,18 @@
     if (metadata.isDirectory) {
        // NSLog(@"Folder '%@' contains:", metadata.path);
         for (DBMetadata *file in metadata.contents) {
-            if([file.filename.stringByStandardizingPath hasSuffix:@".png"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpeg"] || [file.filename.stringByStandardizingPath hasSuffix:@".jpg"]) {
+            if([file.filename.stringByStandardizingPath hasSuffix:kFileNameResolutionBooklet]) {
                 
                 
-                NSString *path;
-                NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-                path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"/"];
-                path = [path stringByAppendingPathComponent:file.filename];
+                
+                self.downloadPath = [NSString stringWithFormat:@"%@/%@",metadata.path,file.filename];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [self downloadIsReady];
+                });
                 
                 
-                [self.restClient loadFile:[NSString stringWithFormat:@"%@/%@",metadata.path,file.filename] intoPath:path];
             }
         }
     }
@@ -74,7 +140,31 @@
 - (void)restClient:(DBRestClient *)client loadedFile:(NSString *)localPath
        contentType:(NSString *)contentType metadata:(DBMetadata *)metadata {
     
-   // [self.randomFactImageView setImage:[UIImage imageWithContentsOfFile:localPath]];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kFileNameResolutionBooklet];
+        dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self resolutionBooklet];
+        [self.resolutionBookletActivityIndicator stopAnimating];
+    });
+}
+
+
+- (void)downloadIsReady {
+    
+    self.resolutionBookletButton.enabled = YES;
+    [self.resolutionBookletButton setTitle:@"Download\nResolution\nBooklet" forState:UIControlStateNormal];
+    [self.resolutionBookletButton setTitle:@"Download\nResolution\nBooklet" forState:UIControlStateDisabled];
+    [self.view layoutIfNeeded];
+    self.download = YES;
+
+}
+
+- (void)resolutionBooklet {
+    self.resolutionBookletButton.enabled = YES;
+    [self.resolutionBookletButton setTitle:@"Resolution\nBooklet" forState:UIControlStateNormal];
+    [self.view layoutIfNeeded];
+
+    
 }
 
 

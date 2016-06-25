@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Peo-W2-Jyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="604"/>
+            <point key="canvasLocation" x="1856" y="604"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="o3i-Um-loH">
@@ -233,10 +233,9 @@
             </objects>
             <point key="canvasLocation" x="260" y="2090"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="x6h-cN-ECz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zAk-Sf-cet" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tOl-3q-QaD" customClass="IEFAHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YUh-1j-HVs"/>
@@ -263,7 +262,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdR-e4-dzz">
                                         <rect key="frame" x="16" y="319" width="288" height="21"/>
-                                        <mutableString key="text">Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel </mutableString>
+                                        <string key="text">Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel Label LabelLabelLabelLabelLabelLabel </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -278,21 +277,27 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yerevan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-6e-ili">
-                                                <rect key="frame" x="78" y="40" width="61" height="21"/>
+                                                <rect key="frame" x="139" y="40" width="61" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-Ns-poI">
-                                                <rect key="frame" x="16" y="16" width="46" height="68"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-Ns-poI">
+                                                <rect key="frame" x="16" y="16" width="90" height="68"/>
                                                 <color key="backgroundColor" red="0.67527191669999997" green="0.65242847140000004" blue="0.80163555809999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <state key="disabled" title="Resolution  Booklet  Not Available"/>
+                                                <connections>
+                                                    <action selector="resolutionBookletAction:" destination="tOl-3q-QaD" eventType="touchUpInside" id="KhM-iK-Pmb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="eMP-Ns-poI" firstAttribute="top" secondItem="Mfu-1B-Gch" secondAttribute="top" constant="16" id="AUc-3W-zQ1"/>
+                                            <constraint firstItem="2UY-6e-ili" firstAttribute="leading" secondItem="eMP-Ns-poI" secondAttribute="trailing" constant="16" id="DfN-Px-xdZ"/>
                                             <constraint firstItem="bZF-9r-649" firstAttribute="centerY" secondItem="Mfu-1B-Gch" secondAttribute="centerY" id="FXg-hK-muT"/>
+                                            <constraint firstItem="bZF-9r-649" firstAttribute="leading" secondItem="2UY-6e-ili" secondAttribute="trailing" constant="16" id="Lpl-SJ-pf5"/>
                                             <constraint firstItem="eMP-Ns-poI" firstAttribute="centerY" secondItem="Mfu-1B-Gch" secondAttribute="centerY" id="cRX-iu-TGA"/>
                                             <constraint firstItem="2UY-6e-ili" firstAttribute="leading" secondItem="eMP-Ns-poI" secondAttribute="trailing" constant="16" id="gqm-2T-gCw"/>
                                             <constraint firstItem="eMP-Ns-poI" firstAttribute="leading" secondItem="Mfu-1B-Gch" secondAttribute="leading" constant="16" id="hA7-rq-vWR"/>
@@ -300,6 +305,12 @@
                                             <constraint firstAttribute="trailing" secondItem="bZF-9r-649" secondAttribute="trailing" constant="16" id="vO8-Bu-aDp"/>
                                             <constraint firstAttribute="height" constant="100" id="z6m-Yw-i4W"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="DfN-Px-xdZ"/>
+                                                <exclude reference="gqm-2T-gCw"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -328,17 +339,19 @@
                             <constraint firstItem="RdO-Fv-Pxb" firstAttribute="leading" secondItem="Hlo-yM-4JH" secondAttribute="leading" id="rNg-p5-Kh2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="3oK-4G-b9k"/>
+                    <navigationItem key="navigationItem" id="sof-3R-FGK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="randomFactAbout1Label" destination="FdR-e4-dzz" id="tPP-01-gp0"/>
                         <outlet property="randomFactImageView" destination="UGs-qu-FIw" id="gWn-40-hXR"/>
                         <outlet property="randomFactTitle1Label" destination="JP8-sc-Edd" id="j82-lX-bbf"/>
+                        <outlet property="resolutionBookletButton" destination="eMP-Ns-poI" id="kDk-k0-gZf"/>
                         <outlet property="weatherLabel" destination="bZF-9r-649" id="6rk-Pq-Zeh"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAk-Sf-cet" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-558" y="604"/>
+            <point key="canvasLocation" x="-26" y="604"/>
         </scene>
         <!--Media-->
         <scene sceneID="p1m-ll-DLO">
@@ -405,7 +418,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2F-nI-zTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344" y="10"/>
+            <point key="canvasLocation" x="2876" y="10"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="Jlf-ro-waR">
@@ -760,7 +773,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="tOl-3q-QaD" kind="relationship" relationship="viewControllers" id="G4X-Xi-1lK"/>
+                        <segue destination="nQv-nX-DCD" kind="relationship" relationship="viewControllers" id="G4X-Xi-1lK"/>
                         <segue destination="Rnr-VQ-vDo" kind="relationship" relationship="viewControllers" id="6Jd-Uh-z7N"/>
                         <segue destination="GSI-IL-Hqx" kind="relationship" relationship="viewControllers" id="ZaL-Gi-NFH"/>
                         <segue destination="9AN-5V-eFk" kind="relationship" relationship="viewControllers" id="cOj-BK-3Co"/>
@@ -824,7 +837,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3Q-aW-srG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="604"/>
+            <point key="canvasLocation" x="906" y="604"/>
         </scene>
         <!--More-->
         <scene sceneID="RYW-j7-1Hv">
@@ -862,7 +875,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76u-rS-YrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158" y="604"/>
+            <point key="canvasLocation" x="374" y="604"/>
         </scene>
         <!--Committe View Controller-->
         <scene sceneID="LQR-2B-s8N">
@@ -1032,7 +1045,7 @@ https://www.google.com/
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuI-l8-d6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="604"/>
+            <point key="canvasLocation" x="1324" y="604"/>
         </scene>
         <!--Media-->
         <scene sceneID="afY-tr-tYl">
@@ -1051,7 +1064,26 @@ https://www.google.com/
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd4-Nq-BJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="10"/>
+            <point key="canvasLocation" x="2344" y="10"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="qgH-vI-q2s">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nQv-nX-DCD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="3oK-4G-b9k"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MaN-gt-0ed">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tOl-3q-QaD" kind="relationship" relationship="rootViewController" id="uS1-4m-7Ct"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhJ-Rs-8T1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="604"/>
         </scene>
     </scenes>
     <resources>
