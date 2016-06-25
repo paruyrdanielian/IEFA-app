@@ -94,6 +94,12 @@
         cell.timeLabel.backgroundColor = self.kColorLightRed;
         cell.arroyLabel.backgroundColor = self.kColorLightRed;
     }
+    
+    
+    if ([[[self.evants objectAtIndex:indexPath.row] objectForKey:@"show"] integerValue] == DailySceduleStayleNone) {
+        cell.arroyLabel.hidden = YES;
+    }
+    
     cell.timeLabel.text = [NSString stringWithFormat:@"%@ - %@",
                            [[self.evants objectAtIndex:indexPath.row] objectForKey:@"startTime"],
                            [[self.evants objectAtIndex:indexPath.row] objectForKey:@"endTime"]];
@@ -112,7 +118,9 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:kSegueIdentifierDay sender:indexPath];
+    if ([[[self.evants objectAtIndex:indexPath.row] objectForKey:@"show"] integerValue] != DailySceduleStayleNone) {
+        [self performSegueWithIdentifier:kSegueIdentifierDay sender:indexPath];
+    }
     return NO;
 }
 
@@ -160,14 +168,19 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath *)sender {
-    
     IEFAEvantDayViewController *vc = [segue destinationViewController];
-    vc.aboutPlace = [self.evants[sender.row] objectForKey:@"aboutPlace"];
     vc.dressCode = [self.evants[sender.row] objectForKey:@"dressCode"];
-    vc.place = [self.evants[sender.row] objectForKey:@"place"];
     vc.time = [NSString stringWithFormat:@"%@ - %@",
                [[self.evants objectAtIndex:sender.row] objectForKey:@"startTime"],
                [[self.evants objectAtIndex:sender.row] objectForKey:@"endTime"]];
+    
+    if ([[[self.evants objectAtIndex:sender.row] objectForKey:@"show"] integerValue] == DailySceduleStayleDressCode) {
+        vc.map = NO;
+    } else {
+        vc.map = YES;
+        vc.aboutPlace = [self.evants[sender.row] objectForKey:@"aboutPlace"];
+        vc.place = [self.evants[sender.row] objectForKey:@"place"];
+    }
     // Pass the selected object to the new view controller.
 }
 

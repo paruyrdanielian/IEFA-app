@@ -177,8 +177,8 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fk-mT-bdu">
-                                        <rect key="frame" x="16" y="160" width="288" height="285"/>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fk-mT-bdu">
+                                        <rect key="frame" x="16" y="160" width="288" height="260"/>
                                     </mapView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNo-Lh-bc0">
                                         <rect key="frame" x="10" y="119" width="310" height="21"/>
@@ -223,7 +223,8 @@
                     <connections>
                         <outlet property="aboutPlaceLabel" destination="sNo-Lh-bc0" id="r88-Aq-geX"/>
                         <outlet property="dressCodeLabel" destination="pyv-bP-ebi" id="bTI-Rn-yQM"/>
-                        <outlet property="map" destination="1fk-mT-bdu" id="03V-Dt-x58"/>
+                        <outlet property="locationLabel" destination="DAh-Rh-5n1" id="ijS-I0-ilA"/>
+                        <outlet property="mapView" destination="1fk-mT-bdu" id="RML-Jt-LRR"/>
                         <outlet property="scrollView" destination="aNB-ml-9Ly" id="xaC-vk-4YE"/>
                         <outlet property="secondView" destination="8A4-SL-JOh" id="Pil-XS-jaR"/>
                     </connections>

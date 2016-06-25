@@ -16,7 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *aboutPlaceLabel;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *secondView;
-@property (weak, nonatomic) IBOutlet MKMapView *map;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
 @end
 
@@ -27,25 +28,31 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height)];
     self.navigationItem.title = self.time;
-    [self setupLabels];
-    [self setupMap];
+    [self setup];
 }
 
 
-- (void)setupLabels {
-    
-    self.aboutPlaceLabel.numberOfLines = 0;
+- (void)setup {
     self.dressCodeLabel.numberOfLines = 0;
-    
-    self.aboutPlaceLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.dressCodeLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    
-    self.aboutPlaceLabel.textAlignment = NSTextAlignmentJustified;
     self.dressCodeLabel.textAlignment = NSTextAlignmentJustified;
-    
-    self.aboutPlaceLabel.text = self.aboutPlace;
     self.dressCodeLabel.text = self.dressCode;
     
+    if (self.map) {
+        self.aboutPlaceLabel.numberOfLines = 0;
+        
+        self.aboutPlaceLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        
+        self.aboutPlaceLabel.textAlignment = NSTextAlignmentJustified;
+        
+        self.aboutPlaceLabel.text = self.aboutPlace;
+        
+        [self setupMap];
+    } else {
+        self.aboutPlaceLabel.hidden = YES;
+        self.mapView.hidden = YES;
+        self.locationLabel.hidden = YES;
+    }
 
 }
 
@@ -64,10 +71,10 @@
     CLLocationManager *locMan = [[CLLocationManager alloc] init];
     [locMan requestWhenInUseAuthorization];
     
-    self.map.showsUserLocation = YES;
+    self.mapView.showsUserLocation = YES;
     
-    [self.map setRegion:viewRegion];
-    [self.map addAnnotation:annotation];
+    [self.mapView setRegion:viewRegion];
+    [self.mapView addAnnotation:annotation];
 
 }
 

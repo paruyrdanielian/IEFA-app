@@ -16,61 +16,48 @@
     return @[ @{ @"startTime" : @"09:00",
                  @"endTime" : @"11:00",
                  @"evant" : @"Arrival of international delegates",
-                 @"aboutPlace" : @"",
-                 @"place" : @[],
                  @"show" :[NSNumber numberWithInteger:DailySceduleStayleNone]
                  },
                      
               @{ @"startTime" : @"11:00",
                  @"endTime" : @"13:00",
                  @"evant" : @"Teambuilding(1)",
-                 @"place" : @"TUMO",
+                 @"place" : @[@40.196411, @44.480097],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @"",
+                 @"aboutPlace" : @"TUMO",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
                      
               @{ @"startTime" : @"13:00",
                  @"endTime" : @"14:00",
                  @"evant" : @"Lunch",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @"",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"14:00",
                  @"endTime" : @"16:00",
                  @"evant" : @"Teambuilding(2)",
-                 @"place" : @"",
+                 @"place" : @[@40.196411, @44.480097],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @"",
+                 @"aboutPlace" : @"TUMO",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
+
                      
               @{ @"startTime" : @"16:00",
                  @"endTime" : @"16:30",
                  @"evant" : @"Coffee break",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @"",
-      //    no
-                 @"show" : @NO},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
                      
               @{ @"startTime" : @"16:30",
                  @"endTime" : @"18:00",
                  @"evant" : @"Teambuilding(3)",
-                 @"place" : @"",
+                 @"place" : @[@40.196411, @44.480097],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @"",
-     //    map
-                 @"show" : @NO},
+                 @"aboutPlace" : @"TUMO",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"18:00",
                  @"endTime" : @"19:00",
                  @"evant" : @"Transfer to Eurovillage Venue",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @"",
-   //    no
-                 @"show" : @NO},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
             
               @{ @"startTime" : @"19:00",
                  @"endTime" : @"23:00",
@@ -78,8 +65,7 @@
                  @"place" : @[@40.176196, @44.514568],
                  @"dressCode" : @"",
                  @"aboutPlace" : @"Safran",
-   //     map
-                 @"show" : @YES}
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]}
               ];
     
 }
@@ -91,73 +77,105 @@
                  @"evant" : @"Opening Ceremony",
                  @"place" : @[@40.177016, @44.515252],
                  @"dressCode" : @"",
-   //  map
-                 @"aboutPlace" : @"AGBU"},
+                 @"aboutPlace" : @"AGBU",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"10:30",
                  @"endTime" : @"11:00",
                  @"evant" : @"Reception",
-                 @"place" : @"",
+                 @"place" : @[@40.177016, @44.515252],
                  @"dressCode" : @"",
-     //  dress
-                 @"aboutPlace" : @"AGBU"},
+                 @"aboutPlace" : @"AGBU",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"11:00",
                  @"endTime" : @"11:15",
                  @"evant" : @"Transfer to CW Venue",
-                 @"place" : @"",
+                 @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"",
-     //  Avetisyan school
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Avedisian School"},
               
               @{ @"startTime" : @"11:15",
                  @"endTime" : @"14:00",
                  @"evant" : @"Committee Work(1)",
-                 @"place" : @"",
+                 @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Avedisian School",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"14:00",
                  @"endTime" : @"15:00",
                  @"evant" : @"Lunch break",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-     // no
-                 @"aboutPlace" : @""},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"15:00",
                  @"endTime" : @"17:00",
                  @"evant" : @"Committee Work(2)",
-                 @"place" : @"",
+                 @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Avedisian School",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"17:00",
                  @"endTime" : @"17:30",
                  @"evant" : @"Coffee break",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"17:30",
                  @"endTime" : @"19:00",
                  @"evant" : @"Committee Work(3)",
-                 @"place" : @"",
+                 @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Avedisian School",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"19:30",
                  @"endTime" : @"00:00",
                  @"evant" : @"Traditional Armenian Dinner",
-                 @"place" : @"",
+                 @"place" : @[@40.179993, @44.514848],
                  @"dressCode" : @"",
-     //  map
-                 @"aboutPlace" : @"Megerian carpet"}
+                 @"aboutPlace" : @"Megerian carpet",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]}
               ];
     
 }
 
 + (NSArray *)scheduleForFifthDay {
+    return @[ @{ @"startTime" : @"10:00",
+                 @"endTime" : @"12:00",
+                 @"evant" : @"Free time",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
+              
+              @{ @"startTime" : @"12:30",
+                 @"endTime" : @"16:00",
+                 @"evant" : @"Treasure Hunt",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
+              
+              @{ @"startTime" : @"16:30",
+                 @"endTime" : @"17:30",
+                 @"evant" : @"Committee Lunch",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
+              
+              @{ @"startTime" : @"18:00",
+                 @"endTime" : @"20:00",
+                 @"evant" : @"Euro Concert",
+                 @"place" : @[@40.179005, @44.513651],
+                 @"dressCode" : @"",
+                 @"aboutPlace" : @"Arno Babajanian Hall",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
+              
+              @{ @"startTime" : @"20:30",
+                 @"endTime" : @"00:00",
+                 @"evant" : @"Dinner at Megerian Carpets",
+                 @"place" : @[@40.179993, @44.514848],
+                 @"dressCode" : @"",
+                 @"aboutPlace" : @"Megerian carpet",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]}
+              ];
+    
+}
+
++ (NSArray *)scheduleForSixthDay {
     return @[ @{ @"startTime" : @"09:00",
                  @"endTime" : @"11:30",
                  @"evant" : @"Committee Work(4)",
@@ -228,46 +246,6 @@
     
 }
 
-+ (NSArray *)scheduleForSixthDay {
-    return @[ @{ @"startTime" : @"10:00",
-                 @"endTime" : @"12:00",
-                 @"evant" : @"Free time",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-      // non
-                 @"aboutPlace" : @""},
-              
-              @{ @"startTime" : @"12:30",
-                 @"endTime" : @"16:00",
-                 @"evant" : @"Treasure Hunt",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-      // non
-                 @"aboutPlace" : @""},
-              
-              @{ @"startTime" : @"16:30",
-                 @"endTime" : @"17:30",
-                 @"evant" : @"Committee Lunch",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""},
-              
-              @{ @"startTime" : @"18:00",
-                 @"endTime" : @"20:00",
-                 @"evant" : @"Euro Concert",
-                 @"place" : @[@40.179005, @44.513651],
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @"Arno Babajanian Hall"},
-              
-              @{ @"startTime" : @"20:30",
-                 @"endTime" : @"00:00",
-                 @"evant" : @"Dinner at Megerian Carpets",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""}
-              ];
-    
-}
 
 + (NSArray *)scheduleForSeventhDay {
     return @[ @{ @"startTime" : @"10:00",
