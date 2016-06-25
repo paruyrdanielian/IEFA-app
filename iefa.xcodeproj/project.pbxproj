@@ -11,7 +11,6 @@
 		786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED01D0C167200FB2ABF /* IEFACommitteDB.m */; };
 		786D4ED41D0F110F00FB2ABF /* IEFAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED31D0F110F00FB2ABF /* IEFAHomeViewController.m */; };
 		786D4ED71D116CD900FB2ABF /* IEFATopicOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED61D116CD900FB2ABF /* IEFATopicOverviewViewController.m */; };
-		786D4EDF1D15994300FB2ABF /* IEFADropBoxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4EDE1D15994300FB2ABF /* IEFADropBoxManager.m */; };
 		786D4EE21D17EA1D00FB2ABF /* IEFAMediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4EE11D17EA1D00FB2ABF /* IEFAMediaTableViewController.m */; };
 		786D4EE51D17ECE400FB2ABF /* IEFAMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4EE41D17ECE400FB2ABF /* IEFAMediaTableViewCell.m */; };
 		78D44C4C1D05838000E14A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4B1D05838000E14A7B /* main.m */; };
@@ -71,8 +70,6 @@
 		786D4ED31D0F110F00FB2ABF /* IEFAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAHomeViewController.m; sourceTree = "<group>"; };
 		786D4ED51D116CD900FB2ABF /* IEFATopicOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFATopicOverviewViewController.h; sourceTree = "<group>"; };
 		786D4ED61D116CD900FB2ABF /* IEFATopicOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFATopicOverviewViewController.m; sourceTree = "<group>"; };
-		786D4EDD1D15994300FB2ABF /* IEFADropBoxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFADropBoxManager.h; sourceTree = "<group>"; };
-		786D4EDE1D15994300FB2ABF /* IEFADropBoxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFADropBoxManager.m; sourceTree = "<group>"; };
 		786D4EE01D17EA1D00FB2ABF /* IEFAMediaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMediaTableViewController.h; sourceTree = "<group>"; };
 		786D4EE11D17EA1D00FB2ABF /* IEFAMediaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMediaTableViewController.m; sourceTree = "<group>"; };
 		786D4EE31D17ECE400FB2ABF /* IEFAMediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMediaTableViewCell.h; sourceTree = "<group>"; };
@@ -194,6 +191,7 @@
 				A09F9DC71D16D89400202086 /* RZTransitions */,
 				78D44C491D05838000E14A7B /* iefa */,
 				78D44C481D05838000E14A7B /* Products */,
+				78D44C4A1D05838000E14A7B /* Supporting Files */,
 				CE35D4E01D1594CE00C742EF /* dictionary.pdf */,
 				CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */,
 			);
@@ -210,10 +208,7 @@
 		78D44C491D05838000E14A7B /* iefa */ = {
 			isa = PBXGroup;
 			children = (
-				786D4EDD1D15994300FB2ABF /* IEFADropBoxManager.h */,
-				786D4EDE1D15994300FB2ABF /* IEFADropBoxManager.m */,
 				78D44C4D1D05838000E14A7B /* AppDelegate.h */,
-				78D44C4A1D05838000E14A7B /* Supporting Files */,
 				78D44C4E1D05838000E14A7B /* AppDelegate.m */,
 				78D44C691D05F16300E14A7B /* IEFAConstants.h */,
 				CEC014C21D13DC1800B8DB52 /* Main.storyboard */,
@@ -236,6 +231,7 @@
 				78D44C4B1D05838000E14A7B /* main.m */,
 			);
 			name = "Supporting Files";
+			path = iefa;
 			sourceTree = "<group>";
 		};
 		A09F9DC71D16D89400202086 /* RZTransitions */ = {
@@ -529,7 +525,6 @@
 				A09F9DFC1D16D89400202086 /* RZBaseSwipeInteractionController.m in Sources */,
 				CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */,
 				A09F9DFA1D16D89400202086 /* RZTransitionsNavigationController.m in Sources */,
-				786D4EDF1D15994300FB2ABF /* IEFADropBoxManager.m in Sources */,
 				A09F9E031D16D89400202086 /* RZCirclePushAnimationController.m in Sources */,
 				CE01F77E1D0721CB00C61C6E /* IEFAMainViewController.m in Sources */,
 				A09F9DFF1D16D89400202086 /* RZPinchInteractionController.m in Sources */,

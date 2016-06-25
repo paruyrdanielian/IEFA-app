@@ -7,7 +7,8 @@
 //
 
 #import "IEFAWeatherAPIManager.h"
-#import "IEFAConstants.h"
+#import <UIKit/UIKit.h>
+
 
 @interface IEFAWeatherAPIManager ()
 
@@ -37,8 +38,8 @@
     return self;
 }
 
-- (void)getWeather {
-    NSString *URLString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast?id=%@&appid=%@",kIDYerevan,kKeyWeatherAPI];
+- (void)getWeatherComplitionHandler:(weatherComplitionHandler)handler {
+    NSString *URLString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?id=%@&appid=%@&units=metric",kIDYerevan,kKeyWeatherAPI];
     NSURL *URL = [NSURL URLWithString:URLString];
     NSURLSessionDataTask *task = [self.session dataTaskWithURL:URL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
@@ -51,6 +52,16 @@
                 case 200: {
                     
                     dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                   // NSLog(@"%ld",[[dict objectForKey:@"weather"] objectForKey:@"main"]);
+                    NSString *weather = [[[dict objectForKey:@"weather"] objectAtIndex:0] objectForKey:@"main"] ;
+                    NSString *temp = [NSString stringWithFormat:@"%0.1f",[[[dict objectForKey:@"main"] objectForKey:@"temp"] floatValue] ];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        handler(temp,weather);
+                        
+                    }) ;
+                    
+                    
+                    
                     break;
                 }
                 default:
@@ -59,7 +70,6 @@
         }
         
         
-        NSLog(@"%@",dict);
         
     }];
     [task resume];

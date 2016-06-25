@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SafariServices/SafariServices.h>
 #import <DropboxSDK/DropboxSDK.h>
+#import "IEFAConstants.h"
 
 
 
@@ -34,7 +35,7 @@
  self.restClient.delegate = self;
 */
 
-typedef void(^complitionHandler)(NSString *accessToken, NSString *tokenSecret);
+
 
 @interface IEFADropBoxAccessTokenManager : NSObject
 

@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IEFAConstants.h"
 
 @interface IEFAWeatherAPIManager : NSObject
 
 + (IEFAWeatherAPIManager *)sharedManager;
-- (void)getWeather;
+- (void)getWeatherComplitionHandler:(weatherComplitionHandler)handler;
 
 @end

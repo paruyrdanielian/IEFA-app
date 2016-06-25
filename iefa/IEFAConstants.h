@@ -9,6 +9,8 @@
 #ifndef IEFAConstants_h
 #define IEFAConstants_h
 
+
+
 static NSString *const kCellIdentifierCommittees = @"CommitteeIdentifier";
 static NSString *const kSegueIdentifierDailySceduleSegue = @"DailySceduleSegue";
 static NSString *const kCellIdentifierDailySchedule = @"DailyScheduleCellIdentifier";
@@ -27,6 +29,9 @@ static NSString *const kCellIdentifierMediaActivityIndicator = @"MediaActivityIn
 static NSString *const kFileNameResolutionBooklet = @"ResolutionBooklet.pdf";
 
 
+
+typedef void(^complitionHandler)(NSString *accessToken, NSString *tokenSecret);
+typedef void(^weatherComplitionHandler)(NSString *temp,NSString *weather);
 
 typedef enum : NSUInteger {
     DailySceduleStayleNone,

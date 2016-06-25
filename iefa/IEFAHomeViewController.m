@@ -11,6 +11,7 @@
 #import "IEFAConstants.h"
 #import "AppDelegate.h"
 #import "IEFADropBoxAccessTokenManager.h"
+#import "IEFAWeatherAPIManager.h"
 #import <DropboxSDK/DropboxSDK.h>
 
 @interface IEFAHomeViewController () <DBRestClientDelegate>
@@ -32,9 +33,11 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kFileNameResolutionBooklet];
+
+    [[IEFAWeatherAPIManager sharedManager] getWeatherComplitionHandler:^(NSString *temp, NSString *weather) {
+        self.weatherLabel.text = [NSString stringWithFormat:@"%@° C\n%@",temp,weather];
+    }];
+//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kFileNameResolutionBooklet];
     
     
     
