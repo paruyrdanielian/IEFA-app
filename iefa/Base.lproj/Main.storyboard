@@ -428,6 +428,38 @@
                                     <outlet property="activityIndicator" destination="3gb-Qx-Xed" id="90L-05-AFz"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaVideoIdentifier" rowHeight="84" id="V5m-sM-wYu" customClass="IEFAMediaVideoTableViewCell">
+                                <rect key="frame" x="0.0" y="260" width="320" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V5m-sM-wYu" id="qPw-0s-7TK">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lI9-R0-bld">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play-icon" translatesAutoresizingMaskIntoConstraints="NO" id="p0o-P6-isU">
+                                            <rect key="frame" x="128" y="10" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="p0o-P6-isU" secondAttribute="height" multiplier="1:1" id="UBa-5N-QRQ"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lI9-R0-bld" firstAttribute="leading" secondItem="qPw-0s-7TK" secondAttribute="leading" id="Lqt-52-zen"/>
+                                        <constraint firstAttribute="bottom" secondItem="lI9-R0-bld" secondAttribute="bottom" id="O2l-Oi-f6Z"/>
+                                        <constraint firstItem="lI9-R0-bld" firstAttribute="top" secondItem="qPw-0s-7TK" secondAttribute="top" id="afS-Sv-k00"/>
+                                        <constraint firstItem="p0o-P6-isU" firstAttribute="centerX" secondItem="lI9-R0-bld" secondAttribute="centerX" id="dDj-Qr-cnZ"/>
+                                        <constraint firstItem="p0o-P6-isU" firstAttribute="width" secondItem="lI9-R0-bld" secondAttribute="width" multiplier="0.2" id="nuS-KS-O0q"/>
+                                        <constraint firstAttribute="trailing" secondItem="lI9-R0-bld" secondAttribute="trailing" id="vto-HC-uoA"/>
+                                        <constraint firstItem="p0o-P6-isU" firstAttribute="centerY" secondItem="lI9-R0-bld" secondAttribute="centerY" id="wOa-b1-o8P"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="mediaImage" destination="lI9-R0-bld" id="mPq-Ml-llB"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="JMg-tg-bFc" id="ama-rJ-L1Y"/>
@@ -442,12 +474,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2F-nI-zTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876" y="10"/>
+            <point key="canvasLocation" x="2846" y="52"/>
         </scene>
         <!--Youtube View Controller-->
         <scene sceneID="4cT-p3-fPr">
             <objects>
-                <viewController id="Y0c-h3-mGl" customClass="IEFAYoutubeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="youtubeVC" id="Y0c-h3-mGl" customClass="IEFAYoutubeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gX8-iJ-Ay7"/>
                         <viewControllerLayoutGuide type="bottom" id="unt-mh-FYn"/>
@@ -457,11 +489,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQY-8E-BcR" customClass="YTPlayerView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="187"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" red="0.88753460312176291" green="0.9537882233831475" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="playerView" destination="QQY-8E-BcR" id="5sX-Ay-nvu"/>
@@ -469,7 +501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44z-fc-gZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3469" y="5"/>
+            <point key="canvasLocation" x="3921" y="-41"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="Jlf-ro-waR">
@@ -753,7 +785,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRf-ty-LN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2924" y="-274"/>
+            <point key="canvasLocation" x="2830" y="-617"/>
         </scene>
         <!--Evants View Controller-->
         <scene sceneID="Lv4-uh-NxI">
@@ -1150,6 +1182,7 @@ https://www.google.com/
         <image name="Media" width="30" height="30"/>
         <image name="More" width="30" height="30"/>
         <image name="Schedule" width="30" height="30"/>
+        <image name="play-icon" width="100" height="100"/>
         <image name="sponser1" width="1823" height="1019"/>
         <image name="sponser2" width="594" height="404"/>
         <image name="sponser3" width="616" height="424"/>

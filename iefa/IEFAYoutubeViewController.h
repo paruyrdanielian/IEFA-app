@@ -10,4 +10,6 @@
 
 @interface IEFAYoutubeViewController : UIViewController
 
+@property (nonatomic, strong) NSString *videoID;
+
 @end

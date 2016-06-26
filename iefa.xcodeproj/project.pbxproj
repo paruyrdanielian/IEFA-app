@@ -50,6 +50,8 @@
 		CE35D4E11D1594CE00C742EF /* dictionary.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE35D4E01D1594CE00C742EF /* dictionary.pdf */; };
 		CE35D4E41D15994200C742EF /* IEFAMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35D4E31D15994200C742EF /* IEFAMoreTableViewController.m */; };
 		CE35D4ED1D15A59400C742EF /* IEFAEvantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35D4EC1D15A59400C742EF /* IEFAEvantsViewController.m */; };
+		CE4387291D1FE9140006790F /* IEFAYoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4387281D1FE9140006790F /* IEFAYoutubeViewController.m */; };
+		CE43872C1D1FED240006790F /* IEFAMediaVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43872B1D1FED240006790F /* IEFAMediaVideoTableViewCell.m */; };
 		CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70A8651D075A5200BA6740 /* IEFASchedule.m */; };
 		CEBC33691D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBC33681D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m */; };
 		CEC014BD1D13D42300B8DB52 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */; };
@@ -152,6 +154,10 @@
 		CE35D4E31D15994200C742EF /* IEFAMoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMoreTableViewController.m; sourceTree = "<group>"; };
 		CE35D4EB1D15A59400C742EF /* IEFAEvantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAEvantsViewController.h; sourceTree = "<group>"; };
 		CE35D4EC1D15A59400C742EF /* IEFAEvantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAEvantsViewController.m; sourceTree = "<group>"; };
+		CE4387271D1FE9140006790F /* IEFAYoutubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAYoutubeViewController.h; sourceTree = "<group>"; };
+		CE4387281D1FE9140006790F /* IEFAYoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAYoutubeViewController.m; sourceTree = "<group>"; };
+		CE43872A1D1FED240006790F /* IEFAMediaVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMediaVideoTableViewCell.h; sourceTree = "<group>"; };
+		CE43872B1D1FED240006790F /* IEFAMediaVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMediaVideoTableViewCell.m; sourceTree = "<group>"; };
 		CE70A8641D075A5200BA6740 /* IEFASchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFASchedule.h; sourceTree = "<group>"; };
 		CE70A8651D075A5200BA6740 /* IEFASchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASchedule.m; sourceTree = "<group>"; };
 		CEBC33671D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMediaActivityIndicatorTableViewCell.h; sourceTree = "<group>"; };
@@ -384,6 +390,8 @@
 				A0FEF1C81D08ACFB00710597 /* IEFADictionaryViewController.m */,
 				CE35D4E21D15994200C742EF /* IEFAMoreTableViewController.h */,
 				CE35D4E31D15994200C742EF /* IEFAMoreTableViewController.m */,
+				CE4387271D1FE9140006790F /* IEFAYoutubeViewController.h */,
+				CE4387281D1FE9140006790F /* IEFAYoutubeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -423,6 +431,8 @@
 				786D4EE41D17ECE400FB2ABF /* IEFAMediaTableViewCell.m */,
 				CEBC33671D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.h */,
 				CEBC33681D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m */,
+				CE43872A1D1FED240006790F /* IEFAMediaVideoTableViewCell.h */,
+				CE43872B1D1FED240006790F /* IEFAMediaVideoTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -575,6 +585,7 @@
 				CE35D4ED1D15A59400C742EF /* IEFAEvantsViewController.m in Sources */,
 				CE01F7871D072DBE00C61C6E /* IEFAScheduleViewController.m in Sources */,
 				A09F9E0C1D16D89400202086 /* UIImage+RZTransitionsSnapshotHelpers.m in Sources */,
+				CE4387291D1FE9140006790F /* IEFAYoutubeViewController.m in Sources */,
 				78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */,
 				786D4EE51D17ECE400FB2ABF /* IEFAMediaTableViewCell.m in Sources */,
 				CEBC33691D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m in Sources */,
@@ -592,6 +603,7 @@
 				A09F9E011D16D89400202086 /* RZTransitionsManager.m in Sources */,
 				A09F9DFD1D16D89400202086 /* RZHorizontalInteractionController.m in Sources */,
 				78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */,
+				CE43872C1D1FED240006790F /* IEFAMediaVideoTableViewCell.m in Sources */,
 				CE2B1C261D0C45FE006ED92E /* IEFAEvantDayViewController.m in Sources */,
 				78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */,
 				CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */,

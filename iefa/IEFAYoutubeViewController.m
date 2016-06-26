@@ -19,7 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.playerView loadWithVideoId:@"-M-GVXMeOM0"];
+    [self.playerView loadWithVideoId:self.videoID];
+    self.playerView.bounds = CGRectMake(0, 0, self.view.superview.frame.size.width, self.view.superview.frame.size.width);
+    self.playerView.superview.center = self.view.superview.center;
 }
 
 - (void)didReceiveMemoryWarning {
