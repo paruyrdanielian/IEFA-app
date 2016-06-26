@@ -379,13 +379,13 @@
             <objects>
                 <tableViewController id="JMg-tg-bFc" customClass="IEFAMediaTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" id="iAZ-b1-5vK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaIdentifier" rowHeight="84" id="IJK-2I-Uwe" customClass="IEFAMediaTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="320" height="84"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IJK-2I-Uwe" id="lZf-A6-oM1">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
@@ -408,7 +408,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaActivityIndicatorIdentifier" rowHeight="84" id="8t6-b7-oOW" customClass="IEFAMediaActivityIndicatorTableViewCell">
-                                <rect key="frame" x="0.0" y="176" width="320" height="84"/>
+                                <rect key="frame" x="0.0" y="112" width="320" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8t6-b7-oOW" id="Q6f-44-VHd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
@@ -429,7 +429,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaVideoIdentifier" rowHeight="84" id="V5m-sM-wYu" customClass="IEFAMediaVideoTableViewCell">
-                                <rect key="frame" x="0.0" y="260" width="320" height="84"/>
+                                <rect key="frame" x="0.0" y="196" width="320" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V5m-sM-wYu" id="qPw-0s-7TK">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
@@ -485,15 +485,35 @@
                         <viewControllerLayoutGuide type="bottom" id="unt-mh-FYn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zYZ-al-awl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQY-8E-BcR" customClass="YTPlayerView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <color key="backgroundColor" red="0.88753460312176291" green="0.9537882233831475" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGB-LV-N3u">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQY-8E-BcR" customClass="YTPlayerView">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="240"/>
+                                        <color key="backgroundColor" red="0.88753460312176291" green="0.9537882233831475" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="QQY-8E-BcR" secondAttribute="height" multiplier="4:3" id="9ks-2S-qT5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="QQY-8E-BcR" firstAttribute="centerX" secondItem="AGB-LV-N3u" secondAttribute="centerX" id="7Rl-D8-71F"/>
+                                    <constraint firstItem="QQY-8E-BcR" firstAttribute="width" secondItem="AGB-LV-N3u" secondAttribute="width" id="MDb-n3-hBx"/>
+                                    <constraint firstItem="QQY-8E-BcR" firstAttribute="centerY" secondItem="AGB-LV-N3u" secondAttribute="centerY" id="XnS-Iw-z6I"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AGB-LV-N3u" firstAttribute="top" secondItem="zYZ-al-awl" secondAttribute="top" id="E4T-e1-6EP"/>
+                            <constraint firstAttribute="trailing" secondItem="AGB-LV-N3u" secondAttribute="trailing" id="FfG-WC-gnu"/>
+                            <constraint firstItem="unt-mh-FYn" firstAttribute="top" secondItem="AGB-LV-N3u" secondAttribute="bottom" id="dms-FV-muq"/>
+                            <constraint firstItem="AGB-LV-N3u" firstAttribute="leading" secondItem="zYZ-al-awl" secondAttribute="leading" id="ycI-5r-tKW"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="playerView" destination="QQY-8E-BcR" id="5sX-Ay-nvu"/>
@@ -1136,7 +1156,7 @@ https://www.google.com/
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9AN-5V-eFk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Media" image="Media" id="U8s-fn-5a1"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RXi-T2-dTn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RXi-T2-dTn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
