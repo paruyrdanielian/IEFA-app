@@ -436,10 +436,40 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Media" id="sDZ-Ax-mRI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="Y0c-h3-mGl" kind="show" identifier="YoutubeIdentifier" id="6iQ-yw-IBK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2F-nI-zTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2876" y="10"/>
+        </scene>
+        <!--Youtube View Controller-->
+        <scene sceneID="4cT-p3-fPr">
+            <objects>
+                <viewController id="Y0c-h3-mGl" customClass="IEFAYoutubeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gX8-iJ-Ay7"/>
+                        <viewControllerLayoutGuide type="bottom" id="unt-mh-FYn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zYZ-al-awl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQY-8E-BcR" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="187"/>
+                                <color key="backgroundColor" red="0.88753460312176291" green="0.9537882233831475" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="QQY-8E-BcR" id="5sX-Ay-nvu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44z-fc-gZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3469" y="5"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="Jlf-ro-waR">

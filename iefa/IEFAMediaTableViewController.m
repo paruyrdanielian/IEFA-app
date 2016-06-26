@@ -370,4 +370,13 @@
 }
 
 
+- (void)getYoutubeVideoImageWithID:(NSString *)ID {
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://img.youtube.com/vi/%@/0.jpg",ID]];
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+    }];
+    [task resume];
+}
+
 @end
