@@ -97,7 +97,7 @@
         self.initalRegion = YES;
         [self.mapView setRegion:viewRegion animated:YES];
     } else {
-        [self.mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
+       // [self.mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
     }
     
 }

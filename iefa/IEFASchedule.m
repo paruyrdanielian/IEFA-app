@@ -129,8 +129,21 @@
                  @"aboutPlace" : @"Avedisian School",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
-              @{ @"startTime" : @"19:30",
-                 @"endTime" : @"00:00",
+              @{ @"startTime" : @"19:00",
+                 @"endTime" : @"20:00",
+                 @"evant" : @"transfer to EuroConcert Venue/ Rehearsal",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
+
+              @{ @"startTime" : @"20:00",
+                 @"endTime" : @"21:00",
+                 @"evant" : @"Euro Concert",
+                 @"place" : @[@40.179005, @44.513651],
+                 @"dressCode" : @"",
+                 @"aboutPlace" : @"Arno Babajanian Hall",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
+              
+              @{ @"startTime" : @"21:30",
+                 @"endTime" : @"23:00",
                  @"evant" : @"Traditional Armenian Dinner",
                  @"place" : @[@40.179993, @44.514848],
                  @"dressCode" : @"",
@@ -141,32 +154,34 @@
 }
 
 + (NSArray *)scheduleForFifthDay {
-    return @[ @{ @"startTime" : @"10:00",
+    return @[ @{ @"startTime" : @"10:30",
                  @"endTime" : @"12:00",
-                 @"evant" : @"Free time",
+                 @"evant" : @"World Cafe",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
-              @{ @"startTime" : @"12:30",
+              @{ @"startTime" : @"12:00",
                  @"endTime" : @"16:00",
                  @"evant" : @"Treasure Hunt",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"16:30",
-                 @"endTime" : @"17:30",
+                 @"endTime" : @"17:00",
                  @"evant" : @"Committee Lunch",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
-              @{ @"startTime" : @"18:00",
-                 @"endTime" : @"20:00",
-                 @"evant" : @"Euro Concert",
-                 @"place" : @[@40.179005, @44.513651],
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @"Arno Babajanian Hall",
-                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
+              @{ @"startTime" : @"17:00",
+                 @"endTime" : @"19:00",
+                 @"evant" : @"Free time",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
-              @{ @"startTime" : @"20:30",
+              @{ @"startTime" : @"19:00",
+                 @"endTime" : @"19:30",
+                 @"evant" : @"Transfer to Dinner Venue",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
+              
+              @{ @"startTime" : @"19:30",
                  @"endTime" : @"00:00",
-                 @"evant" : @"Dinner at Megerian Carpets",
+                 @"evant" : @"Dinner at Megerian Carpets/ Watching football in a pub",
                  @"place" : @[@40.179993, @44.514848],
                  @"dressCode" : @"",
                  @"aboutPlace" : @"Megerian carpet",
@@ -179,53 +194,49 @@
     return @[ @{ @"startTime" : @"09:00",
                  @"endTime" : @"11:30",
                  @"evant" : @"Committee Work(4)",
-                 @"place" : @"",
+                 @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"",
- //   map
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Avedisian School",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"11:30",
                  @"endTime" : @"12:00",
                  @"evant" : @"Coffee break",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-    // non
-                 @"aboutPlace" : @""},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"12:00",
                  @"endTime" : @"14:00",
                  @"evant" : @"Committee Work(5)",
-                 @"place" : @"",
+                 @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Avedisian School",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"14:00",
                  @"endTime" : @"15:00",
-                 @"evant" : @"Lunch break",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"evant" : @"Coffee break",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"15:00",
                  @"endTime" : @"16:30",
                  @"evant" : @"Committee Work(6)",
-                 @"place" : @"",
+                 @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Avedisian School",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"16:30",
                  @"endTime" : @"17:00",
                  @"evant" : @"Coffee break",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"17:00",
                  @"endTime" : @"19:00",
                  @"evant" : @"Committee Work(7)",
-                 @"place" : @"",
+                 @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"aboutPlace" : @"Avedisian School",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"19:30",
                  @"endTime" : @"21:00",
@@ -234,13 +245,20 @@
                  @"dressCode" : @"",
                  @"aboutPlace" : @""},
               
+              @{ @"startTime" : @"21:30",
+                 @"endTime" : @"",
+                 @"evant" : @"(Only for chairs) Resotyping/ Chairs' Dinner",
+                 @"place" : @"",
+                 @"dressCode" : @"",
+                 @"aboutPlace" : @""},
+              
               @{ @"startTime" : @"21:00",
                  @"endTime" : @"00:00",
                  @"evant" : @"Thematic Party",
-                 @"place" : @"",
+                 @"place" : @[@40.188124, @44.514081],
                  @"dressCode" : @"",
-      // map
-                 @"aboutPlace" : @"The Venue"}
+                 @"aboutPlace" : @"The Venue",
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]}
 
               ];
     
@@ -258,9 +276,7 @@
               @{ @"startTime" : @"12:30",
                  @"endTime" : @"13:00",
                  @"evant" : @"Coffee Break",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"13:00",
                  @"endTime" : @"14:00",
@@ -272,9 +288,7 @@
               @{ @"startTime" : @"14:00",
                  @"endTime" : @"15:00",
                  @"evant" : @"Lunch Break",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""},
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]},
               
               @{ @"startTime" : @"15:00",
                  @"endTime" : @"17:30",
@@ -293,9 +307,7 @@
               @{ @"startTime" : @"21:00",
                  @"endTime" : @"00:00",
                  @"evant" : @"Free time",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @""}
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]}
               ];
     
 }
@@ -358,9 +370,7 @@
     return @[ @{ @"startTime" : @"ALL day",
                  @"endTime" : @"",
                  @"evant" : @"Seeing off International Delegates",
-                 @"place" : @"",
-                 @"dressCode" : @"",
-                 @"aboutPlace" : @"" }
+                 @"show" : [NSNumber numberWithInteger:DailySceduleStayleNone]}
               
               ];
     
