@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,24 +16,42 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IefaAppLogo3" translatesAutoresizingMaskIntoConstraints="NO" id="aUh-cy-HNG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="16" y="178" width="288" height="212"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="aUh-cy-HNG" secondAttribute="height" multiplier="2000: 1476" id="FJz-Qa-3L4"/>
                                     <constraint firstAttribute="width" secondItem="aUh-cy-HNG" secondAttribute="height" multiplier="1:1" id="yAL-S0-Q0N"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yAL-S0-Q0N"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="aUh-cy-HNG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bCC-Vh-wgU"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="aUh-cy-HNG" secondAttribute="bottom" id="bxW-2f-J4X"/>
                             <constraint firstItem="aUh-cy-HNG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="e1P-Sn-QZ8"/>
+                            <constraint firstItem="aUh-cy-HNG" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.9" id="hwH-vq-ggB"/>
+                            <constraint firstItem="aUh-cy-HNG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="nn1-Rr-SoV"/>
                             <constraint firstAttribute="trailing" secondItem="aUh-cy-HNG" secondAttribute="trailing" id="riJ-cx-DP0"/>
                             <constraint firstItem="aUh-cy-HNG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="vOH-yk-a1d"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="e1P-Sn-QZ8"/>
+                                <exclude reference="riJ-cx-DP0"/>
+                                <exclude reference="vOH-yk-a1d"/>
+                                <exclude reference="bxW-2f-J4X"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
