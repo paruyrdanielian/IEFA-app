@@ -177,6 +177,7 @@
     if ([[[self.evants objectAtIndex:sender.row] objectForKey:@"show"] integerValue] == DailySceduleStayleDressCode) {
         vc.map = NO;
     } else {
+        vc.address = [self.evants[sender.row] objectForKey:@"address"];
         vc.map = YES;
         vc.aboutPlace = [self.evants[sender.row] objectForKey:@"aboutPlace"];
         vc.place = [self.evants[sender.row] objectForKey:@"place"];

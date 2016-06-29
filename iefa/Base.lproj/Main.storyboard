@@ -161,7 +161,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8A4-SL-JOh">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="498"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="580"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyv-bP-ebi">
                                                 <rect key="frame" x="20" y="64" width="42" height="21"/>
@@ -196,14 +196,30 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLs-7B-BU7">
+                                                <rect key="frame" x="20" y="498" width="63" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEg-fi-IUX">
+                                                <rect key="frame" x="20" y="539" width="280" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="1fk-mT-bdu" secondAttribute="bottom" constant="20" id="8Dh-5g-q0x"/>
                                             <constraint firstItem="DAh-Rh-5n1" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="20" id="A5S-hJ-xRS"/>
+                                            <constraint firstItem="FEg-fi-IUX" firstAttribute="top" secondItem="1fk-mT-bdu" secondAttribute="bottom" constant="20" id="AU7-N3-uHR"/>
+                                            <constraint firstItem="FEg-fi-IUX" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="20" id="AZe-rB-2Mf"/>
                                             <constraint firstItem="1fk-mT-bdu" firstAttribute="width" secondItem="8A4-SL-JOh" secondAttribute="width" multiplier="0.9" id="Cvc-wx-O3F"/>
                                             <constraint firstAttribute="trailing" secondItem="sNo-Lh-bc0" secondAttribute="trailing" constant="20" id="K9x-x2-Xy3"/>
+                                            <constraint firstItem="FEg-fi-IUX" firstAttribute="top" secondItem="OLs-7B-BU7" secondAttribute="bottom" constant="20" id="Luc-8O-Iix"/>
                                             <constraint firstItem="1fk-mT-bdu" firstAttribute="centerX" secondItem="8A4-SL-JOh" secondAttribute="centerX" id="Rhe-Y7-XP2"/>
+                                            <constraint firstItem="OLs-7B-BU7" firstAttribute="top" secondItem="1fk-mT-bdu" secondAttribute="bottom" constant="20" id="ScY-fB-yrO"/>
                                             <constraint firstItem="1fk-mT-bdu" firstAttribute="width" secondItem="8A4-SL-JOh" secondAttribute="width" multiplier="0.9" id="Ut8-3H-qkM"/>
                                             <constraint firstItem="1fk-mT-bdu" firstAttribute="centerX" secondItem="8A4-SL-JOh" secondAttribute="centerX" id="VCf-E3-dWb"/>
                                             <constraint firstItem="1fk-mT-bdu" firstAttribute="top" secondItem="sNo-Lh-bc0" secondAttribute="bottom" constant="20" id="ZB7-Z2-iEC"/>
@@ -211,6 +227,9 @@
                                             <constraint firstItem="apI-ov-UyB" firstAttribute="top" secondItem="8A4-SL-JOh" secondAttribute="top" constant="20" id="esk-zr-YKj"/>
                                             <constraint firstItem="pyv-bP-ebi" firstAttribute="top" secondItem="apI-ov-UyB" secondAttribute="bottom" constant="20" id="fJZ-YF-LXo"/>
                                             <constraint firstItem="pyv-bP-ebi" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="20" id="hYY-67-k6R"/>
+                                            <constraint firstItem="OLs-7B-BU7" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="20" id="mWy-cH-ZEp"/>
+                                            <constraint firstAttribute="bottom" secondItem="FEg-fi-IUX" secondAttribute="bottom" constant="20" id="maE-2m-Owq"/>
+                                            <constraint firstAttribute="trailing" secondItem="FEg-fi-IUX" secondAttribute="trailing" constant="20" id="otg-Nd-C3O"/>
                                             <constraint firstItem="1fk-mT-bdu" firstAttribute="height" secondItem="8A4-SL-JOh" secondAttribute="height" multiplier="0.5" id="u4Y-pV-gDI"/>
                                             <constraint firstItem="sNo-Lh-bc0" firstAttribute="leading" secondItem="8A4-SL-JOh" secondAttribute="leading" constant="20" id="vEQ-IC-YHI"/>
                                             <constraint firstItem="DAh-Rh-5n1" firstAttribute="top" secondItem="pyv-bP-ebi" secondAttribute="bottom" constant="20" id="vRF-pl-Ckg"/>
@@ -218,9 +237,11 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="8Dh-5g-q0x"/>
                                                 <exclude reference="Cvc-wx-O3F"/>
                                                 <exclude reference="VCf-E3-dWb"/>
                                                 <exclude reference="u4Y-pV-gDI"/>
+                                                <exclude reference="AU7-N3-uHR"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -244,6 +265,7 @@
                     </view>
                     <connections>
                         <outlet property="aboutPlaceLabel" destination="sNo-Lh-bc0" id="MWI-fu-kuk"/>
+                        <outlet property="addressLabel" destination="FEg-fi-IUX" id="aKm-nY-ncp"/>
                         <outlet property="dressCodeLabel" destination="pyv-bP-ebi" id="Wk9-up-mbL"/>
                         <outlet property="locationLabel" destination="DAh-Rh-5n1" id="zml-aW-Qju"/>
                         <outlet property="mapView" destination="1fk-mT-bdu" id="LzW-hb-aPR"/>

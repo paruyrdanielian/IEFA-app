@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *dressCode;
 @property (nonatomic, strong) NSArray *place;
 @property (nonatomic, strong) NSString *time;
+@property (nonatomic, strong) NSString *address;
 @property (nonatomic, assign) BOOL map;
 
 @end
