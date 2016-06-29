@@ -1,20 +1,18 @@
 //
-//  IEFAMoreTableViewController.m
+//  IEFASponsorsTableViewController.m
 //  iefa
 //
-//  Created by User on 6/18/16.
+//  Created by Khoren Markosyan on 29.06.16.
 //  Copyright © 2016 Paruyr Danielian. All rights reserved.
 //
 
-#import "IEFAMoreTableViewController.h"
-#import "IEFAConstants.h"
-#import <SafariServices/SafariServices.h>
+#import "IEFASponsorsTableViewController.h"
 
-@interface IEFAMoreTableViewController ()
+@interface IEFASponsorsTableViewController ()
 
 @end
 
-@implementation IEFAMoreTableViewController
+@implementation IEFASponsorsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,41 +31,15 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return self.view.frame.size.width/1140*349;
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    if (indexPath.row == 4) {
-        
-        NSURL *URL = [NSURL URLWithString:@"https://stats.eyp.org"];
-        
-        if ([SFSafariViewController class] != nil) {
-            SFSafariViewController *sfvc = [[SFSafariViewController alloc] initWithURL:URL];
-            [self presentViewController:sfvc animated:YES completion:nil];
-        } else {
-            if (![[UIApplication sharedApplication] openURL:URL]) {
-                NSLog(@"%@%@",@"Failed to open url:",[URL description]);
-            }
-        }
-        
-    }
+    // Configure the cell...
     
+    return cell;
 }
-
-
-
-
-
+*/
 
 /*
 // Override to support conditional editing of the table view.

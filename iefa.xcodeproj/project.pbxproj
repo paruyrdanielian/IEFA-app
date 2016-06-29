@@ -21,6 +21,8 @@
 		78D44C5D1D05838000E14A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D44C5B1D05838000E14A7B /* LaunchScreen.storyboard */; };
 		78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C651D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m */; };
 		78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */; };
+		A049F8321D245A9700A8F249 /* IEFAAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A049F8311D245A9700A8F249 /* IEFAAboutViewController.m */; };
+		A049F8351D2468F100A8F249 /* IEFASponsorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A049F8341D2468F100A8F249 /* IEFASponsorsTableViewController.m */; };
 		A0877BEF1D22FFA60035C3D8 /* IEFAContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0877BEE1D22FFA60035C3D8 /* IEFAContactsTableViewController.m */; };
 		A09F9DFA1D16D89400202086 /* RZTransitionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09F9DCA1D16D89400202086 /* RZTransitionsNavigationController.m */; };
 		A09F9DFB1D16D89400202086 /* RZUniqueTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A09F9DCE1D16D89400202086 /* RZUniqueTransition.m */; };
@@ -95,6 +97,10 @@
 		78D44C691D05F16300E14A7B /* IEFAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEFAConstants.h; sourceTree = "<group>"; };
 		78D44C6A1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteeCollectionViewCell.h; sourceTree = "<group>"; };
 		78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteeCollectionViewCell.m; sourceTree = "<group>"; };
+		A049F8301D245A9700A8F249 /* IEFAAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAAboutViewController.h; sourceTree = "<group>"; };
+		A049F8311D245A9700A8F249 /* IEFAAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAAboutViewController.m; sourceTree = "<group>"; };
+		A049F8331D2468F100A8F249 /* IEFASponsorsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFASponsorsTableViewController.h; sourceTree = "<group>"; };
+		A049F8341D2468F100A8F249 /* IEFASponsorsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASponsorsTableViewController.m; sourceTree = "<group>"; };
 		A0877BED1D22FFA60035C3D8 /* IEFAContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAContactsTableViewController.h; sourceTree = "<group>"; };
 		A0877BEE1D22FFA60035C3D8 /* IEFAContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAContactsTableViewController.m; sourceTree = "<group>"; };
 		A09F9DC91D16D89400202086 /* RZTransitionsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTransitionsNavigationController.h; sourceTree = "<group>"; };
@@ -402,6 +408,10 @@
 				CE35D4E31D15994200C742EF /* IEFAMoreTableViewController.m */,
 				CE4387271D1FE9140006790F /* IEFAYoutubeViewController.h */,
 				CE4387281D1FE9140006790F /* IEFAYoutubeViewController.m */,
+				A049F8301D245A9700A8F249 /* IEFAAboutViewController.h */,
+				A049F8311D245A9700A8F249 /* IEFAAboutViewController.m */,
+				A049F8331D2468F100A8F249 /* IEFASponsorsTableViewController.h */,
+				A049F8341D2468F100A8F249 /* IEFASponsorsTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -617,11 +627,13 @@
 				A0877BEF1D22FFA60035C3D8 /* IEFAContactsTableViewController.m in Sources */,
 				CE2B1C261D0C45FE006ED92E /* IEFAEvantDayViewController.m in Sources */,
 				78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */,
+				A049F8351D2468F100A8F249 /* IEFASponsorsTableViewController.m in Sources */,
 				CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */,
 				A09F9E0B1D16D89400202086 /* UIImage+RZTransitionsFastImageBlur.m in Sources */,
 				A09F9DFB1D16D89400202086 /* RZUniqueTransition.m in Sources */,
 				A09F9DFC1D16D89400202086 /* RZBaseSwipeInteractionController.m in Sources */,
 				CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */,
+				A049F8321D245A9700A8F249 /* IEFAAboutViewController.m in Sources */,
 				A09F9DFA1D16D89400202086 /* RZTransitionsNavigationController.m in Sources */,
 				78721F061D2428F7009CC57E /* buttonWithCornerRadius.m in Sources */,
 				A09F9E031D16D89400202086 /* RZCirclePushAnimationController.m in Sources */,

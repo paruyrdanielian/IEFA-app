@@ -30,7 +30,7 @@ static NSString *const kCellIdentifierMediaVideo = @"MediaVideoIdentifier";
 static NSString *const kCellIdentifierMediaActivityIndicator = @"MediaActivityIndicatorIdentifier";
 static NSString *const kFileNameResolutionBooklet = @"ResolutionBooklet.pdf";
 static NSString *const kStoryBoardIDYoutube = @"youtubeVC";
-static NSString *const kCellIdentifierContacts = @"ContactesIdentifier";
+static NSString *const kCellIdentifierContacts = @"ContactsIdentifier";
 
 
 
