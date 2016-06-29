@@ -26,6 +26,7 @@
 @property (strong, nonatomic) UIActivityIndicatorView *mediaActivityIndicator;
 @property (nonatomic, strong) NSMutableArray *infoOfPhotos;
 @property (nonatomic, strong) UILabel *label;
+@property (nonatomic, assign) BOOL metadata;
 
 //@property (assign, nonatomic) BOOL imageDismiss;
 
@@ -42,9 +43,26 @@
     
     
     [super viewDidLoad];
+    self.metadata = YES;
+    
+
+    
+
     
     
-    if ([self isInternetConnectionAvailable]) {
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+    
+    
+    if ([self isInternetConnectionAvailable] && self.metadata) {
+        
+        self.metadata = NO;
+        self.label.hidden = YES;
         self.infoOfPhotos = [[NSMutableArray alloc] init];
         self.mediaActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         
@@ -75,11 +93,8 @@
         
     }
     
-
-    
     
 }
-
 
 
 - (NSArray *)loadSectionDate {
