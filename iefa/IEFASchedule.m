@@ -93,14 +93,14 @@
                  @"evant" : @"Transfer to CW Venue",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"Avedisian School"},
+                 @"aboutPlace" : @"Avetissian School"},
               
               @{ @"startTime" : @"11:15",
                  @"endTime" : @"14:00",
                  @"evant" : @"Committee Work(1)",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"Avedisian School",
+                 @"aboutPlace" : @"Avetissian School",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"14:00",
@@ -113,7 +113,7 @@
                  @"evant" : @"Committee Work(2)",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"Avedisian School",
+                 @"aboutPlace" : @"Avetissian School",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"17:00",
@@ -126,7 +126,7 @@
                  @"evant" : @"Committee Work(3)",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"Avedisian School",
+                 @"aboutPlace" : @"Avetissian School",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"19:00",
@@ -196,7 +196,7 @@
                  @"evant" : @"Committee Work(4)",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"Avedisian School",
+                 @"aboutPlace" : @"Avetissian School",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"11:30",
@@ -209,7 +209,7 @@
                  @"evant" : @"Committee Work(5)",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"Avedisian School",
+                 @"aboutPlace" : @"Avetissian School",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"14:00",
@@ -222,7 +222,7 @@
                  @"evant" : @"Committee Work(6)",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"Avedisian School",
+                 @"aboutPlace" : @"Avetissian School",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"16:30",
@@ -235,7 +235,7 @@
                  @"evant" : @"Committee Work(7)",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"Avedisian School",
+                 @"aboutPlace" : @"Avetissian School",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"19:30",

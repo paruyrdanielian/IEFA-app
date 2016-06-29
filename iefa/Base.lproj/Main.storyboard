@@ -303,11 +303,21 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-Ns-poI">
-                                                <rect key="frame" x="16" y="16" width="90" height="68"/>
-                                                <color key="backgroundColor" red="0.67527191669999997" green="0.65242847140000004" blue="0.80163555809999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-Ns-poI" customClass="buttonWithCornerRadius">
+                                                <rect key="frame" x="16" y="16" width="191" height="68"/>
                                                 <state key="normal" title="Button"/>
                                                 <state key="disabled" title="Resolution  Booklet  Not Available"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.27843138579999999" green="0.039215687659999998" blue="0.062745101750000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="resolutionBookletAction:" destination="tOl-3q-QaD" eventType="touchUpInside" id="KhM-iK-Pmb"/>
                                                 </connections>
@@ -315,6 +325,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="2UY-6e-ili" firstAttribute="leading" secondItem="eMP-Ns-poI" secondAttribute="trailing" constant="12" id="9Cj-S3-cTi"/>
                                             <constraint firstItem="eMP-Ns-poI" firstAttribute="top" secondItem="Mfu-1B-Gch" secondAttribute="top" constant="16" id="AUc-3W-zQ1"/>
                                             <constraint firstItem="2UY-6e-ili" firstAttribute="leading" secondItem="eMP-Ns-poI" secondAttribute="trailing" constant="16" id="DfN-Px-xdZ"/>
                                             <constraint firstItem="bZF-9r-649" firstAttribute="centerY" secondItem="Mfu-1B-Gch" secondAttribute="centerY" id="FXg-hK-muT"/>
@@ -826,7 +837,7 @@ TnVuZSBIYXlyYXBldHlhbgPigKggQXJtYW4gR2FzcGFyaWFuA
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sponser4" translatesAutoresizingMaskIntoConstraints="NO" id="17X-rU-qNV">
                                 <rect key="frame" x="0.0" y="405" width="320" height="114"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sponser3" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-HO-t6A">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sponser3" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-HO-t6A">
                                 <rect key="frame" x="0.0" y="292" width="320" height="113"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ihs-HO-t6A" secondAttribute="height" multiplier="320:113" id="cQP-7q-pBg"/>
