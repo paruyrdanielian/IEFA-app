@@ -31,22 +31,7 @@
 @implementation IEFAHomeViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
-
-    [[IEFAWeatherAPIManager sharedManager] getWeatherComplitionHandler:^(NSString *temp, NSString *weather) {
-        self.weatherLabel.text = [NSString stringWithFormat:@"%@° C\n%@",temp,weather];
-    }];
-//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kFileNameResolutionBooklet];
-    
-    
-    
-    NSDictionary *randomFact = [[IEFARandomFactDB randomFacts] objectAtIndex:arc4random_uniform(5)];
-    [self.randomFactImageView setImage:[UIImage imageNamed:randomFact[@"image"]]];
-    self.randomFactTitle1Label.text = randomFact[@"title"];
-    self.randomFactAbout1Label.text = randomFact[@"about"];
-    [self.resolutionBookletButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [self.resolutionBookletButton.titleLabel setNumberOfLines:0];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:kFileNameResolutionBooklet]) {
         [self resolutionBooklet];
@@ -61,17 +46,25 @@
         [self.restClient loadMetadata:@"/"];
     }
     
-    
-    
-    
-    
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES];
     [super viewWillAppear:animated];
+    
+    [[IEFAWeatherAPIManager sharedManager] getWeatherComplitionHandler:^(NSString *temp, NSString *weather) {
+        self.weatherLabel.text = [NSString stringWithFormat:@"%@° C\n%@",temp,weather];
+    }];
+    //    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kFileNameResolutionBooklet];
+    
+    
+    
+    NSDictionary *randomFact = [[IEFARandomFactDB randomFacts] objectAtIndex:arc4random_uniform(5)];
+    [self.randomFactImageView setImage:[UIImage imageNamed:randomFact[@"image"]]];
+    self.randomFactTitle1Label.text = randomFact[@"title"];
+    self.randomFactAbout1Label.text = randomFact[@"about"];
+    [self.resolutionBookletButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [self.resolutionBookletButton.titleLabel setNumberOfLines:0];
 }
 
 - (IBAction)resolutionBookletAction:(id)sender {
