@@ -13,7 +13,6 @@
 		786D4ED71D116CD900FB2ABF /* IEFATopicOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4ED61D116CD900FB2ABF /* IEFATopicOverviewViewController.m */; };
 		786D4EE21D17EA1D00FB2ABF /* IEFAMediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4EE11D17EA1D00FB2ABF /* IEFAMediaTableViewController.m */; };
 		786D4EE51D17ECE400FB2ABF /* IEFAMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D4EE41D17ECE400FB2ABF /* IEFAMediaTableViewCell.m */; };
-		78721F031D2420A8009CC57E /* buttonWithCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 78721F021D2420A8009CC57E /* buttonWithCornerRadius.m */; };
 		78D44C4C1D05838000E14A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4B1D05838000E14A7B /* main.m */; };
 		78D44C4F1D05838000E14A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C4E1D05838000E14A7B /* AppDelegate.m */; };
 		78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C561D05838000E14A7B /* iefa.xcdatamodeld */; };
@@ -79,8 +78,6 @@
 		786D4EE11D17EA1D00FB2ABF /* IEFAMediaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMediaTableViewController.m; sourceTree = "<group>"; };
 		786D4EE31D17ECE400FB2ABF /* IEFAMediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMediaTableViewCell.h; sourceTree = "<group>"; };
 		786D4EE41D17ECE400FB2ABF /* IEFAMediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMediaTableViewCell.m; sourceTree = "<group>"; };
-		78721F011D2420A8009CC57E /* buttonWithCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonWithCornerRadius.h; sourceTree = "<group>"; };
-		78721F021D2420A8009CC57E /* buttonWithCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonWithCornerRadius.m; sourceTree = "<group>"; };
 		78D44C471D05838000E14A7B /* iefa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iefa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D44C4B1D05838000E14A7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78D44C4D1D05838000E14A7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -253,8 +250,6 @@
 		78D44C4A1D05838000E14A7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				78721F011D2420A8009CC57E /* buttonWithCornerRadius.h */,
-				78721F021D2420A8009CC57E /* buttonWithCornerRadius.m */,
 				78D44C4B1D05838000E14A7B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -617,7 +612,6 @@
 				A09F9DFC1D16D89400202086 /* RZBaseSwipeInteractionController.m in Sources */,
 				CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */,
 				A09F9DFA1D16D89400202086 /* RZTransitionsNavigationController.m in Sources */,
-				78721F031D2420A8009CC57E /* buttonWithCornerRadius.m in Sources */,
 				A09F9E031D16D89400202086 /* RZCirclePushAnimationController.m in Sources */,
 				CE01F77E1D0721CB00C61C6E /* IEFAMainViewController.m in Sources */,
 				A09F9DFF1D16D89400202086 /* RZPinchInteractionController.m in Sources */,
