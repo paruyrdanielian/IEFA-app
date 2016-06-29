@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *secondView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (nonatomic, assign) BOOL initalLoad;
 @property (nonatomic, strong) MKPointAnnotation *annotation;
 @property (nonatomic, strong) CLLocationManager *locMan;
@@ -46,18 +47,20 @@
         self.initalLoad = YES;
         self.initalRegion = NO;
         self.aboutPlaceLabel.numberOfLines = 0;
-        
+        self.addressLabel.numberOfLines = 0;
         self.aboutPlaceLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        
+        self.addressLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.aboutPlaceLabel.textAlignment = NSTextAlignmentJustified;
-        
+        self.addressLabel.textAlignment = NSTextAlignmentJustified;
         self.aboutPlaceLabel.text = self.aboutPlace;
+        self.addressLabel.text = self.address;
 
         [self setupMap];
     } else {
         self.aboutPlaceLabel.hidden = YES;
         self.mapView.hidden = YES;
         self.locationLabel.hidden = YES;
+        self.addressLabel.hidden = YES;
     }
 
 }

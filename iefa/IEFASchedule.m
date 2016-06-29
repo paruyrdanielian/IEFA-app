@@ -25,6 +25,7 @@
                  @"place" : @[@40.196411, @44.480097],
                  @"dressCode" : @"Casual",
                  @"aboutPlace" : @"TUMO",
+                 @"address" : @"16 Halabyan St, Yerevan 0038, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
                      
               @{ @"startTime" : @"13:00",
@@ -38,6 +39,7 @@
                  @"place" : @[@40.196411, @44.480097],
                  @"dressCode" : @"Casual",
                  @"aboutPlace" : @"TUMO",
+                 @"address" : @"16 Halabyan St, Yerevan 0038, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
 
                      
@@ -52,6 +54,7 @@
                  @"place" : @[@40.196411, @44.480097],
                  @"dressCode" : @"Casual",
                  @"aboutPlace" : @"TUMO",
+                 @"address" : @"16 Halabyan St, Yerevan 0038, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"18:00",
@@ -65,6 +68,7 @@
                  @"place" : @[@40.176196, @44.514568],
                  @"dressCode" : @"Smart/Casual",
                  @"aboutPlace" : @"Safran",
+                 @"address" : @"Hanrapetutyan 39/1, Yerevan",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]}
               ];
     
@@ -78,6 +82,7 @@
                  @"place" : @[@40.177016, @44.515252],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"AGBU",
+                 @"address" : @"2/1 Melik Adamyan St, Yerevan 0010, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"10:30",
@@ -86,6 +91,7 @@
                  @"place" : @[@40.177016, @44.515252],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"AGBU",
+                 @"address" : @"2/1 Melik Adamyan St, Yerevan 0010, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"11:00",
@@ -93,6 +99,7 @@
                  @"evant" : @"Transfer to CW Venue",
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
+                 @"address" : @"42/7 Arno Babajanyan St, Yerevan 0064, Armenia",
                  @"aboutPlace" : @"Avetissian School"},
               
               @{ @"startTime" : @"11:15",
@@ -101,6 +108,7 @@
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
                  @"aboutPlace" : @"Avetissian School",
+                 @"address" : @"42/7 Arno Babajanyan St, Yerevan 0064, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"14:00",
@@ -114,6 +122,7 @@
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
                  @"aboutPlace" : @"Avetissian School",
+                 @"address" : @"42/7 Arno Babajanyan St, Yerevan 0064, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"17:00",
@@ -127,6 +136,7 @@
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
                  @"aboutPlace" : @"Avetissian School",
+                 @"address" : @"42/7 Arno Babajanyan St, Yerevan 0064, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"19:00",
@@ -140,6 +150,7 @@
                  @"place" : @[@40.179005, @44.513651],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"Arno Babajanian Hall",
+                 @"address" : @"2 Abovyan St, Yerevan 0010, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"21:30",
@@ -148,6 +159,7 @@
                  @"place" : @[@40.179993, @44.514848],
                  @"dressCode" : @"Smart",
                  @"aboutPlace" : @"Megerian carpet",
+                 @"address" : @"2/5 Abovyan St, Yerevan 0002, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]}
               ];
     
@@ -185,6 +197,7 @@
                  @"place" : @[@40.179993, @44.514848],
                  @"dressCode" : @"Smart/Casual",
                  @"aboutPlace" : @"Megerian carpet",
+                 @"address" : @"2/5 Abovyan St, Yerevan 0002, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]}
               ];
     
@@ -197,6 +210,7 @@
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
                  @"aboutPlace" : @"Avetissian School",
+                 @"address" : @"42/7 Arno Babajanyan St, Yerevan 0064, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"11:30",
@@ -210,6 +224,7 @@
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
                  @"aboutPlace" : @"Avetissian School",
+                 @"address" : @"42/7 Arno Babajanyan St, Yerevan 0064, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"14:00",
@@ -223,6 +238,7 @@
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
                  @"aboutPlace" : @"Avetissian School",
+                 @"address" : @"42/7 Arno Babajanyan St, Yerevan 0064, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"16:30",
@@ -236,6 +252,7 @@
                  @"place" : @[@40.168638, @44.435778],
                  @"dressCode" : @"Smart",
                  @"aboutPlace" : @"Avetissian School",
+                 @"address" : @"42/7 Arno Babajanyan St, Yerevan 0064, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"19:30",
@@ -257,7 +274,8 @@
                  @"evant" : @"Thematic Party",
                  @"place" : @[@40.188124, @44.514081],
                  @"dressCode" : @"Smart",
-                 @"aboutPlace" : @"The Venue",
+                 @"aboutPlace" : @"     ",
+                 @"address" : @"1/1 Marshal Baghramyan Ave. Yerevan",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]}
 
               ];
@@ -272,6 +290,7 @@
                  @"place" : @[@40.173808, @44.504237],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"Moscow House",
+                 @"address" : @"7 Argishti St, Yerevan, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"12:30",
@@ -285,6 +304,7 @@
                  @"place" :  @[@40.173808, @44.504237],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"Moscow House",
+                 @"address" : @"7 Argishti St, Yerevan, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"14:00",
@@ -298,6 +318,7 @@
                  @"place" :  @[@40.173808, @44.504237],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"Moscow House",
+                 @"address" : @"7 Argishti St, Yerevan, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"19:00",
@@ -322,6 +343,7 @@
                  @"place" :  @[@40.173808, @44.504237],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"Moscow House",
+                 @"address" : @"7 Argishti St, Yerevan, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"12:30",
@@ -335,6 +357,7 @@
                  @"place" :  @[@40.173808, @44.504237],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"Moscow House",
+                 @"address" : @"7 Argishti St, Yerevan, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"14:00",
@@ -348,6 +371,7 @@
                  @"place" :  @[@40.173808, @44.504237],
                  @"dressCode" : @"Formal",
                  @"aboutPlace" : @"Moscow House",
+                 @"address" : @"7 Argishti St, Yerevan, Armenia",
                  @"show" : [NSNumber numberWithInteger:DailySceduleStayleDressCodeAndMap]},
               
               @{ @"startTime" : @"17:30",
