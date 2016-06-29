@@ -14,6 +14,7 @@
 #import "IEFAMediaActivityIndicatorTableViewCell.h"
 #import "IEFAYoutubeViewController.h"
 #import "IEFAMediaVideoTableViewCell.h"
+#import "Reachability.h"
 #import <DropboxSDK/DropboxSDK.h>
 
 @interface IEFAMediaTableViewController () <DBRestClientDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UIGestureRecognizerDelegate>
@@ -24,6 +25,7 @@
 @property (nonatomic, assign) NSInteger numberOfPhotos;
 @property (strong, nonatomic) UIActivityIndicatorView *mediaActivityIndicator;
 @property (nonatomic, strong) NSMutableArray *infoOfPhotos;
+@property (nonatomic, strong) UILabel *label;
 
 //@property (assign, nonatomic) BOOL imageDismiss;
 
@@ -40,22 +42,39 @@
     
     
     [super viewDidLoad];
-    self.infoOfPhotos = [[NSMutableArray alloc] init];
-    self.mediaActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
-    [self.view addSubview:self.mediaActivityIndicator];
-    self.mediaActivityIndicator.center =self.view.center;
-    [self.mediaActivityIndicator startAnimating];
     
-    DBSession *dbSession = [[DBSession alloc] initWithAppKey:kKeyApp appSecret:kSecretApp root:kDBRootDropbox];
+    if ([self isInternetConnectionAvailable]) {
+        self.infoOfPhotos = [[NSMutableArray alloc] init];
+        self.mediaActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        
+        [self.view addSubview:self.mediaActivityIndicator];
+        self.mediaActivityIndicator.center =self.view.center;
+        [self.mediaActivityIndicator startAnimating];
+        
+        DBSession *dbSession = [[DBSession alloc] initWithAppKey:kKeyApp appSecret:kSecretApp root:kDBRootDropbox];
+        
+        [DBSession setSharedSession:dbSession];
+        [[DBSession sharedSession] updateAccessToken:kTokenAccess accessTokenSecret:kSecretToken forUserId:kUserID];
+        
+        self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+        self.restClient.delegate = self;
+        [self.restClient loadMetadata:@"/"];
+        self.mediaActivityIndicator.center = self.view.center;
+        
+    } else {
+        
+        
+        self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+        [self.label setText:@"No internet connection"];
+        [self.label sizeToFit];
+        self.label.center = self.view.center;
+        [self.view addSubview:self.label];
+        [self.view layoutIfNeeded];
+        
+        
+    }
     
-    [DBSession setSharedSession:dbSession];
-    [[DBSession sharedSession] updateAccessToken:kTokenAccess accessTokenSecret:kSecretToken forUserId:kUserID];
-    
-    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
-    self.restClient.delegate = self;
-    [self.restClient loadMetadata:@"/"];
-    self.mediaActivityIndicator.center = self.view.center;
 
     
     
@@ -427,6 +446,34 @@
         
     }];
     [task resume];
+}
+
+
+
+- (BOOL) isInternetConnectionAvailable {
+    Reachability *internet = [Reachability reachabilityWithHostName: @"www.dropbox.com"];
+    NetworkStatus netStatus = [internet currentReachabilityStatus];
+    bool netConnection = false;
+    switch (netStatus)
+    {
+        case NotReachable:
+        {
+            NSLog(@"Access Not Available");
+            netConnection = false;
+            break;
+        }
+        case ReachableViaWWAN:
+        {
+            netConnection = true;
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            netConnection = true;
+            break;
+        }
+    }
+    return netConnection;
 }
 
 @end

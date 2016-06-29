@@ -53,6 +53,7 @@
 		CE35D4ED1D15A59400C742EF /* IEFAEvantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35D4EC1D15A59400C742EF /* IEFAEvantsViewController.m */; };
 		CE4387291D1FE9140006790F /* IEFAYoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4387281D1FE9140006790F /* IEFAYoutubeViewController.m */; };
 		CE43872C1D1FED240006790F /* IEFAMediaVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43872B1D1FED240006790F /* IEFAMediaVideoTableViewCell.m */; };
+		CE6D43BA1D2441330001EB51 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D43B91D2441330001EB51 /* Reachability.m */; };
 		CE70A8661D075A5200BA6740 /* IEFASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70A8651D075A5200BA6740 /* IEFASchedule.m */; };
 		CEBC33691D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBC33681D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m */; };
 		CEC014BD1D13D42300B8DB52 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC014BC1D13D42300B8DB52 /* DropboxSDK.framework */; };
@@ -161,6 +162,8 @@
 		CE4387281D1FE9140006790F /* IEFAYoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAYoutubeViewController.m; sourceTree = "<group>"; };
 		CE43872A1D1FED240006790F /* IEFAMediaVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMediaVideoTableViewCell.h; sourceTree = "<group>"; };
 		CE43872B1D1FED240006790F /* IEFAMediaVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAMediaVideoTableViewCell.m; sourceTree = "<group>"; };
+		CE6D43B81D2441330001EB51 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CE6D43B91D2441330001EB51 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CE70A8641D075A5200BA6740 /* IEFASchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFASchedule.h; sourceTree = "<group>"; };
 		CE70A8651D075A5200BA6740 /* IEFASchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASchedule.m; sourceTree = "<group>"; };
 		CEBC33671D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAMediaActivityIndicatorTableViewCell.h; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 		78D44C4A1D05838000E14A7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE6D43B81D2441330001EB51 /* Reachability.h */,
+				CE6D43B91D2441330001EB51 /* Reachability.m */,
 				78721F041D2428F7009CC57E /* buttonWithCornerRadius.h */,
 				78721F051D2428F7009CC57E /* buttonWithCornerRadius.m */,
 				78D44C4B1D05838000E14A7B /* main.m */,
@@ -585,6 +590,7 @@
 				786D4ED71D116CD900FB2ABF /* IEFATopicOverviewViewController.m in Sources */,
 				786D4ED11D0C167200FB2ABF /* IEFACommitteDB.m in Sources */,
 				CE35D4DE1D1572C900C742EF /* IEFADropBoxAccessTokenManager.m in Sources */,
+				CE6D43BA1D2441330001EB51 /* Reachability.m in Sources */,
 				CEDCBE8C1D11BE8F00440662 /* IEFAScheduleTableViewCell.m in Sources */,
 				A09F9E081D16D89400202086 /* RZZoomBlurAnimationController.m in Sources */,
 				CE35D4ED1D15A59400C742EF /* IEFAEvantsViewController.m in Sources */,
