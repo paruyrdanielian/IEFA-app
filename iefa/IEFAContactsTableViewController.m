@@ -102,8 +102,51 @@
                            [IEFAContactModel contactWithFullName:@"Davit Kocharyan" phoneNumber:@"+374 93 714664"],
                            [IEFAContactModel contactWithFullName:@"Elen Simonyan" phoneNumber:@"+374 77 533035"]] mutableCopy];
     
+    IEFAContactSectionModel *section3 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Food and Inventory"];
+    section3.contacts = [@[[IEFAContactModel contactWithFullName:@"Aram Khanlari" phoneNumber:@"+374 55 258533"]] mutableCopy];
     
-    self.dataSource = [@[section0, section1, section2] mutableCopy];
+    IEFAContactSectionModel *section4 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Economic and Monetary Affairs (ECON)"];
+    section4.contacts = [@[[IEFAContactModel contactWithFullName:@"Levon Hayrapetyan" phoneNumber:@"+374 99 966615"]] mutableCopy];
+    
+    IEFAContactSectionModel *section5 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Legal Affairs (JURI)"];
+    section5.contacts = [@[[IEFAContactModel contactWithFullName:@"Yeva Gharibyan" phoneNumber:@"+374 94 280842"]] mutableCopy];
+    
+    IEFAContactSectionModel *section6 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Civil Liberties, Justice and Home Affairs (LIBE)"];
+    section6.contacts = [@[[IEFAContactModel contactWithFullName:@"Mher Makaryan" phoneNumber:@"+374 55 663938"]] mutableCopy];
+    
+    IEFAContactSectionModel *section7 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Human Rights (DROI)"];
+    section7.contacts = [@[[IEFAContactModel contactWithFullName:@"Gohar Gasparyan" phoneNumber:@"+374 94 012349"]] mutableCopy];
+    
+    IEFAContactSectionModel *section8 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Security and Defence (SEDE)"];
+    section8.contacts = [@[[IEFAContactModel contactWithFullName:@"Sue Avetyan" phoneNumber:@"+374 77 20 50 51"]] mutableCopy];
+    
+    IEFAContactSectionModel *section9 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Development (DEVE)"];
+    section9.contacts = [@[[IEFAContactModel contactWithFullName:@"Andranik Manukya" phoneNumber:@"+374 93 004750"]] mutableCopy];
+    
+    IEFAContactSectionModel *section10 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Environment, Public Health and Food Safety (ENVI)"];
+    section10.contacts = [@[[IEFAContactModel contactWithFullName:@"Bella Baghdasaryan" phoneNumber:@"+374 55 240987"]] mutableCopy];
+    
+    IEFAContactSectionModel *section11 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Foreign Affairs (AFET)"];
+    section11.contacts = [@[[IEFAContactModel contactWithFullName:@"Iren Stepanyan" phoneNumber:@"+374 95 300981"]] mutableCopy];
+    
+    IEFAContactSectionModel *section12 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Fisheries (PECH)"];
+    section12.contacts = [@[[IEFAContactModel contactWithFullName:@"Narine Hayrapetyan" phoneNumber:@"+374 93 744304"]] mutableCopy];
+    
+    IEFAContactSectionModel *section13 =
+    [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Committee on Constitutional Affairs (AFCO)"];
+    section13.contacts = [@[[IEFAContactModel contactWithFullName:@"Anush Dilanyan" phoneNumber:@"+374 95 475753"]] mutableCopy];
+    
+    self.dataSource = [@[section0, section1, section2, section3, section4, section5, section6, section7, section8, section9, section10, section11, section12, section13] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -150,7 +193,7 @@
 - (UIView *)accessoryView {
     
     UIButton *accessory = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
-    [accessory setImage:[UIImage imageNamed:@"infoIcon"] forState:UIControlStateNormal];
+    [accessory setImage:[UIImage imageNamed:@"callIcon"] forState:UIControlStateNormal];
     [accessory addTarget:self action:@selector(onCustomAccessoryTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     return accessory;
