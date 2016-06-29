@@ -20,6 +20,7 @@
 		78D44C5D1D05838000E14A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D44C5B1D05838000E14A7B /* LaunchScreen.storyboard */; };
 		78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C651D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m */; };
 		78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */; };
+		A0877BEF1D22FFA60035C3D8 /* IEFAContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0877BEE1D22FFA60035C3D8 /* IEFAContactsTableViewController.m */; };
 		A09F9DFA1D16D89400202086 /* RZTransitionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09F9DCA1D16D89400202086 /* RZTransitionsNavigationController.m */; };
 		A09F9DFB1D16D89400202086 /* RZUniqueTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A09F9DCE1D16D89400202086 /* RZUniqueTransition.m */; };
 		A09F9DFC1D16D89400202086 /* RZBaseSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09F9DD11D16D89400202086 /* RZBaseSwipeInteractionController.m */; };
@@ -91,6 +92,8 @@
 		78D44C691D05F16300E14A7B /* IEFAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEFAConstants.h; sourceTree = "<group>"; };
 		78D44C6A1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFACommitteeCollectionViewCell.h; sourceTree = "<group>"; };
 		78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFACommitteeCollectionViewCell.m; sourceTree = "<group>"; };
+		A0877BED1D22FFA60035C3D8 /* IEFAContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAContactsTableViewController.h; sourceTree = "<group>"; };
+		A0877BEE1D22FFA60035C3D8 /* IEFAContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAContactsTableViewController.m; sourceTree = "<group>"; };
 		A09F9DC91D16D89400202086 /* RZTransitionsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTransitionsNavigationController.h; sourceTree = "<group>"; };
 		A09F9DCA1D16D89400202086 /* RZTransitionsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTransitionsNavigationController.m; sourceTree = "<group>"; };
 		A09F9DCC1D16D89400202086 /* RZTransitionAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTransitionAction.h; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 				CEFCF3E11D074CEC0023D9BE /* IEFADailyScheduleViewController.m */,
 				CE2B1C241D0C45FE006ED92E /* IEFAEvantDayViewController.h */,
 				CE2B1C251D0C45FE006ED92E /* IEFAEvantDayViewController.m */,
+				A0877BED1D22FFA60035C3D8 /* IEFAContactsTableViewController.h */,
+				A0877BEE1D22FFA60035C3D8 /* IEFAContactsTableViewController.m */,
 				A0FEF1C71D08ACFB00710597 /* IEFADictionaryViewController.h */,
 				A0FEF1C81D08ACFB00710597 /* IEFADictionaryViewController.m */,
 				CE35D4E21D15994200C742EF /* IEFAMoreTableViewController.h */,
@@ -604,6 +609,7 @@
 				A09F9DFD1D16D89400202086 /* RZHorizontalInteractionController.m in Sources */,
 				78D44C661D05EE1B00E14A7B /* IEFACommitteesCollectionViewController.m in Sources */,
 				CE43872C1D1FED240006790F /* IEFAMediaVideoTableViewCell.m in Sources */,
+				A0877BEF1D22FFA60035C3D8 /* IEFAContactsTableViewController.m in Sources */,
 				CE2B1C261D0C45FE006ED92E /* IEFAEvantDayViewController.m in Sources */,
 				78D44C581D05838000E14A7B /* iefa.xcdatamodeld in Sources */,
 				CEDCBE941D12CD6500440662 /* IEFAWeatherAPIManager.m in Sources */,
