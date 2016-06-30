@@ -8,6 +8,7 @@
 
 #import "IEFAContactsTableViewController.h"
 #import "IEFAConstants.h"
+#import "IEFAContactsHeaderView.h"
 
 @interface IEFAContactModel : NSObject
 
@@ -86,6 +87,15 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"IEFAContactsHeaderView" bundle:nil] forHeaderFooterViewReuseIdentifier:@"IEFAContactsHeaderView"];
+    
+    self.tableView.estimatedRowHeight = 20;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedSectionHeaderHeight = 10;
+    
     
     IEFAContactSectionModel *section0 =
     [IEFAContactSectionModel sectionModelWithSectionHeaderTitle:@"Head Organisers"];
@@ -168,11 +178,13 @@
     return currentSection.contacts.count;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    IEFAContactsHeaderView *header = (IEFAContactsHeaderView * )[tableView dequeueReusableHeaderFooterViewWithIdentifier:@"IEFAContactsHeaderView"];
     
     IEFAContactSectionModel *currentSection = self.dataSource[section];
+    header.headerLabel.text = currentSection.sectionHeaderTitle;
     
-    return currentSection.sectionHeaderTitle;
+    return header;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -192,7 +204,7 @@
 
 - (UIView *)accessoryView {
     
-    UIButton *accessory = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    UIButton *accessory = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
     [accessory setImage:[UIImage imageNamed:@"callIcon"] forState:UIControlStateNormal];
     [accessory addTarget:self action:@selector(onCustomAccessoryTapped:) forControlEvents:UIControlEventTouchUpInside];
     

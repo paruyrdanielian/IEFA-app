@@ -23,6 +23,8 @@
 		78D44C6C1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D44C6B1D06CC2B00E14A7B /* IEFACommitteeCollectionViewCell.m */; };
 		A049F8321D245A9700A8F249 /* IEFAAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A049F8311D245A9700A8F249 /* IEFAAboutViewController.m */; };
 		A049F8351D2468F100A8F249 /* IEFASponsorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A049F8341D2468F100A8F249 /* IEFASponsorsTableViewController.m */; };
+		A056DF871D251B3400053800 /* IEFAContactsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A056DF861D251B3400053800 /* IEFAContactsHeaderView.m */; };
+		A056DF891D251BC800053800 /* IEFAContactsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A056DF881D251BC800053800 /* IEFAContactsHeaderView.xib */; };
 		A0877BEF1D22FFA60035C3D8 /* IEFAContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0877BEE1D22FFA60035C3D8 /* IEFAContactsTableViewController.m */; };
 		A09F9DFA1D16D89400202086 /* RZTransitionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09F9DCA1D16D89400202086 /* RZTransitionsNavigationController.m */; };
 		A09F9DFB1D16D89400202086 /* RZUniqueTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A09F9DCE1D16D89400202086 /* RZUniqueTransition.m */; };
@@ -102,6 +104,9 @@
 		A049F8311D245A9700A8F249 /* IEFAAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAAboutViewController.m; sourceTree = "<group>"; };
 		A049F8331D2468F100A8F249 /* IEFASponsorsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFASponsorsTableViewController.h; sourceTree = "<group>"; };
 		A049F8341D2468F100A8F249 /* IEFASponsorsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFASponsorsTableViewController.m; sourceTree = "<group>"; };
+		A056DF851D251B3400053800 /* IEFAContactsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAContactsHeaderView.h; sourceTree = "<group>"; };
+		A056DF861D251B3400053800 /* IEFAContactsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAContactsHeaderView.m; sourceTree = "<group>"; };
+		A056DF881D251BC800053800 /* IEFAContactsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IEFAContactsHeaderView.xib; sourceTree = "<group>"; };
 		A0877BED1D22FFA60035C3D8 /* IEFAContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFAContactsTableViewController.h; sourceTree = "<group>"; };
 		A0877BEE1D22FFA60035C3D8 /* IEFAContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFAContactsTableViewController.m; sourceTree = "<group>"; };
 		A09F9DC91D16D89400202086 /* RZTransitionsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTransitionsNavigationController.h; sourceTree = "<group>"; };
@@ -458,6 +463,9 @@
 				CEBC33681D1A82460048E695 /* IEFAMediaActivityIndicatorTableViewCell.m */,
 				CE43872A1D1FED240006790F /* IEFAMediaVideoTableViewCell.h */,
 				CE43872B1D1FED240006790F /* IEFAMediaVideoTableViewCell.m */,
+				A056DF851D251B3400053800 /* IEFAContactsHeaderView.h */,
+				A056DF861D251B3400053800 /* IEFAContactsHeaderView.m */,
+				A056DF881D251BC800053800 /* IEFAContactsHeaderView.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -536,6 +544,7 @@
 				CE35D4E11D1594CE00C742EF /* dictionary.pdf in Resources */,
 				78D44C5D1D05838000E14A7B /* LaunchScreen.storyboard in Resources */,
 				78D44C5A1D05838000E14A7B /* Assets.xcassets in Resources */,
+				A056DF891D251BC800053800 /* IEFAContactsHeaderView.xib in Resources */,
 				CEC014C41D13DC1800B8DB52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +655,7 @@
 				CE01F77E1D0721CB00C61C6E /* IEFAMainViewController.m in Sources */,
 				A09F9DFF1D16D89400202086 /* RZPinchInteractionController.m in Sources */,
 				78D44C4C1D05838000E14A7B /* main.m in Sources */,
+				A056DF871D251B3400053800 /* IEFAContactsHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
