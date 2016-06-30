@@ -235,7 +235,10 @@
 
 - (void)callToNumber:(NSString *)number {
     
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",number]];
+    NSString *numberWithoutSpaces = [number stringByReplacingOccurrencesOfString:@" " withString:@""];
+
+    
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",numberWithoutSpaces]];
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
         [[UIApplication sharedApplication] openURL:phoneUrl];
