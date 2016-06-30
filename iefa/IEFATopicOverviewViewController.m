@@ -19,22 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     
     NSArray *bolds = @[@"1. Topic question", @"2. Explanation of the problem and relevance of the topic", @"2. Explanation of the problem and relevance of the topic/Main conflicts",@"3. Main conflicts", @"4. Stakeholders", @"5. Measures in place and legislative background", @"6. Questions", @"7. Additional links", @"3. KeyTerms, 5.Measuresinplace Joint Action Plan", @"3. Measures in place", @"5. Questions", @"6. Additional links"];
     NSMutableAttributedString *yourAttributedString = [[NSMutableAttributedString alloc] initWithString:self.prepKitText];
+    
     for (NSString *boldString in bolds) {
         NSRange boldRange = [self.prepKitText rangeOfString:boldString];
-        [yourAttributedString addAttribute: NSFontAttributeName value:[UIFont boldSystemFontOfSize:14] range:boldRange];
+        [yourAttributedString addAttribute: NSFontAttributeName value:[UIFont boldSystemFontOfSize:20] range:boldRange];
         [self.textView setAttributedText: yourAttributedString];
-    }
+}
 
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGesture:)];
     
     // And add it to your text view.
     [self.textView addGestureRecognizer:pinchGestureRecognizer];
 
-    
-    
+
+    [self.textView setFont:[UIFont systemFontOfSize:16]];
+
     
 }
 
