@@ -20,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.playerView loadWithVideoId:self.videoID];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     //self.playerView.center = self.view.superview.center;
 }
 
