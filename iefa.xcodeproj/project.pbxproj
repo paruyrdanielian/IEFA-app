@@ -514,7 +514,7 @@
 				TargetAttributes = {
 					78D44C461D05838000E14A7B = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = RHQ48WR7Z9;
+						DevelopmentTeam = 9M27QUQSJN;
 					};
 				};
 			};
@@ -777,11 +777,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = iefa/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.iefa1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.eyparmenia.EYPArmenia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -798,11 +799,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = iefa/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.iefa1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.eyparmenia.EYPArmenia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

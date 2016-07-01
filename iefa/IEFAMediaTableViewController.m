@@ -89,10 +89,11 @@
         [self.view addSubview:self.label];
         [self.view layoutIfNeeded];
         
-        
     }
     
-    
+    if ([self isInternetConnectionAvailable] || !self.metadata){
+        [self.label setHidden:YES];
+    }
 }
 
 

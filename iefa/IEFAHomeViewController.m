@@ -59,7 +59,7 @@
     
     
     
-    NSDictionary *randomFact = [[IEFARandomFactDB randomFacts] objectAtIndex:arc4random_uniform(5)];
+    NSDictionary *randomFact = [[IEFARandomFactDB randomFacts] objectAtIndex:arc4random_uniform(20)];
     [self.randomFactImageView setImage:[UIImage imageNamed:randomFact[@"image"]]];
     self.randomFactTitle1Label.text = randomFact[@"title"];
     self.randomFactAbout1Label.text = randomFact[@"about"];
